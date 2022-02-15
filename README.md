@@ -1,5 +1,8 @@
 # Course-Note
-This is a collection of course notes taken while studying in UofT
+This is a collection of course notes taken while studying in UofT.
+This is also a practice of github actions and the skill of github page.
+Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
+
 Currently only a plan to upload all notes.
 
 TO-DO LIST FOLLOWING:
