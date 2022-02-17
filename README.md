@@ -21,6 +21,8 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
     - Use `Mathjax` to rendering formula
     - If the note need to do rendering equation, add the following html code to do so.
     - e.g. this file can shown formula due to the header code. $1+1\ne 3$
+
+
 ```HTML
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
