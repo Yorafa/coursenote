@@ -42,6 +42,10 @@ TO-DO LIST FOLLOWING:
 - Implement all learned notes
 - For CSC108&CSC148, plan to make a conclusion version of python language
 
+
+Currently, only few courses' notes available:
+- STA302
+
 ## MAT Course
 MAT a short version stands Mathematic. The MAT course I taken/will take:
 - [MAT137](https://github.yorafa.com/Course-Note/MAT137/MAT137): Calculus with Proofs
