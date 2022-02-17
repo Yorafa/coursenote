@@ -46,6 +46,7 @@ TO-DO LIST FOLLOWING:
 Currently, only few courses' notes available:
 - STA302
 
+Also, welcome to [Yorafa's Home](https://yorafa.com/) my personal blog to see few more things other than the stuff from school
 ## MAT Course
 MAT a short version stands Mathematic. The MAT course I taken/will take:
 - [MAT137](https://github.yorafa.com/Course-Note/MAT137/MAT137): Calculus with Proofs
