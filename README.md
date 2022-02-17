@@ -1,13 +1,42 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 # Course-Note
 In the first few semesters, the indirect depression, anxiety, and irritability made it difficult to calm down and study. And I feel sorrowful while seeing these subjects (low GPA), so I decide to make a notes collection to review and gain what I missed.
 
 - This is a collection of course notes taken while studying in UofT.
 - This is also a practice of GitHub actions and the skill of GitHub page.
-- Most of the mathematic/statistics equation will use latex the `$$` symbol to show up. 
+    - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
+    - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/) 
+- Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
+    - Use `Mathjax` to rendering formula
+    - If the note need to do rendering equation, add the following html code to do so.
+    - e.g. this file can shown formula due to the header code. $1+1\ne 3$
+```HTML
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+```
 
 TO-DO LIST FOLLOWING:
 
-- Deploy LATEX environment to compile mathematic equations
 - Implement all learned notes
 - For CSC108&CSC148, plan to make a conclusion version of python language
 
