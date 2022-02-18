@@ -18,7 +18,7 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
     - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
     - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/) 
 - Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
-    - Use `Mathjax` to rendering formula
+    - This site use `Mathjax` to rendering formula
     - If the note need to do rendering equation, add the following html code to do so.
     - e.g. this file can shown formula due to the header code. $1+1\ne 3$
 
@@ -92,3 +92,8 @@ CSC a short version stands Computer Science. The CSC course I taken/will take:
 ## Issues & Contribute
 
 Because most of the content is written based on my own experience, there will always be many deep-rooted wrong ideas. For these contents, you are welcome to submit an Issue for discussion, or if you are a UofT student who has a deep understanding to the course and you are welcome to submit your own notes.
+
+## Declaration
+
+All note files are summarized by the author or other collaborators based on the course content.
+Uploaders agree when uploading files that they will not violate the requirements of the course and the copyright of the instructor.
