@@ -40,6 +40,7 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
 TO-DO LIST FOLLOWING:
 
 - Implement all learned notes
+- Write js in each markdown file is too annoying, find a better way to display Latex.
 - For CSC108&CSC148, plan to make a conclusion version of python language
 
 
