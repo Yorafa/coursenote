@@ -58,7 +58,7 @@ MAT a short version stands Mathematic. The MAT course I taken/will take:
 - [MAT246](https://github.yorafa.com/Course-Note/MAT246/MAT246): Concepts in Abstract Mathematics
 - [MAT301](https://github.yorafa.com/Course-Note/MAT301/MAT301): Groups and Symmetries
 - [MAT334](https://github.yorafa.com/Course-Note/MAT334/MAT334): Complex Variables
-- [MAT337](https://github.yorafa.com/Course-Note/MAT337): Introduction to Real Analysis
+- [MAT337](https://github.yorafa.com/Course-Note/MAT337/MAT337): Introduction to Real Analysis
 - [APM346](https://github.yorafa.com/Course-Note/APM346/APM346): Partial Differential Equations
 
 ## STA Course
