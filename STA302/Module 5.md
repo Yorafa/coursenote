@@ -56,7 +56,7 @@ Adjusted coefficient of determination $R^2_{adj}=1-\frac{RSS/(n-p-1)}{SST/(n-1)}
 
 We want our regression model explain a large enough portion of the variation for us to determinate a good model, but notice as mentioned before coefficients of determination is not a test, is a tool help us to roughly describe portion of the variation.  `SST` in different datasets have different values, so that we can not have some exact values to determine a model good explain variation so that we want large `SSreg` and small `RSS`. It also means in linear model, there exists at least one of the predictors linearly related with the mean response.
 
-According to this idea, we can use hypothesis test, where the | null hypothesis test is that none of predictors linearly related **V.S.** at least one of predictors linearly related |
+According to this idea, we can use hypothesis test, where the [null hypothesis test is that none of predictors linearly related **V.S.** at least one of predictors linearly related]
 
 In this hypothesis test, we use F test $F = \frac{SSreg/p}{RSS/(n-p-1)}$ ~ $F(p, n-p-1)$ , $F > F(p, n-p-1)$ means at least one predictor linear related (small p-value to reject null hypothesis)
 
