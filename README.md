@@ -40,8 +40,10 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
 TO-DO LIST FOLLOWING:
 
 - Implement all learned notes
+
 - Write js in each markdown file is too annoying, find a better way to display Latex.
-- For CSC108&CSC148, plan to make a conclusion version of python language
+
+    
 
 
 Currently, only few courses' notes available:
@@ -59,7 +61,6 @@ MAT a short version stands Mathematic. The MAT course I taken/will take:
 - [MAT301](https://github.yorafa.com/Course-Note/MAT301/MAT301): Groups and Symmetries
 - [MAT334](https://github.yorafa.com/Course-Note/MAT334/MAT334): Complex Variables
 - [MAT337](https://github.yorafa.com/Course-Note/MAT337/MAT337): Introduction to Real Analysis
-- [APM346](https://github.yorafa.com/Course-Note/APM346/APM346): Partial Differential Equations
 
 ## STA Course
 STA a short version stands statistics. The STA course I taken/will take:
@@ -78,8 +79,6 @@ STA a short version stands statistics. The STA course I taken/will take:
 
 ## CSC Course
 CSC a short version stands Computer Science. The CSC course I taken/will take:
-- [CSC108](https://github.yorafa.com/Course-Note/CSC108/CSC108): Introduction to Computer Programming
-- [CSC148](https://github.yorafa.com/Course-Note/CSC148/CSC148): Introduction to Computer Science
 - [CSC165](https://github.yorafa.com/Course-Note/CSC165/CSC165): Mathematical Expression and Reasoning for Computer Science
 - [CSC207](https://github.yorafa.com/Course-Note/CSC207/CSC207): Software Design
 - [CSC209](https://github.yorafa.com/Course-Note/CSC209/CSC209): Software Tools and Systems Programming
