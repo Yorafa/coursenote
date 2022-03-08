@@ -1,5 +1,3 @@
-[Back to STA302 Main Page](https://github.yorafa.com/Course-Note/STA302/STA302)
-
 # Decomposing the Variance
 
 After this module should have confident in:

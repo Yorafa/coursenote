@@ -44,6 +44,39 @@ Given $a\in \mathbb{R}$, a set $S\sube \mathbb{R}$ and $\epsilon>0$
     - $A$ is closed and bounded
     - every open cover for $A$ has a finite subcover
 
+Some fact:
+
+-   $\mathbb{R}$ and $\empty$ are the only  two both open & close sets
+
+    -   Prove: 
+    1. $\empty$ vacuous satisfies arbitrary property of open and close
+    2. $\mathbb{R}^c=\empty$ , since $\empty$ is open, $\mathbb{R}$ is close. since $\empty$ is close, $\mathbb{R}$ is open.
+    3. $\mathbb{R}$ and $\empty$ are both open and close
+    4. Assume a set $A$ is both open and closed, $A\ne \mathbb{R}, A\ne \empty$
+    5.  Let $a_1\in A, b_1\in A^c, a < b$
+    6. If $\frac{a_1+b_1}{2} \in A$, then let $a_2 = \frac{a_1+b_1}{2}, b_2 = b_1$
+    If $\frac{a_1+b_1}{2} \in A^c$, then let $a_2 = a_1, b_2 = \frac{a_1+b_1}{2}$
+	7. we build sequence $(a_n)\in A, (b_n\in A^c)$ in this way
+	8. we found that $a_n = a_{n-1}$ or $\frac{a_{n-1}+b_{n-1}}{2}$ eventually to $0$, which means $a_n$ is bounded above
+	9. $\lim a_n$ exists by bounded
+	10. since $|a_n -b_n| = |(a_{n-1} - b_{n-1})\frac{1}{2}|$, $\lim a_n -b_n = 0$, $\lim b$ also exist
+	11. $\lim a_n = c = \lim b_n$ for some $c$
+	12. Since $A$ is closed, $c\in A$ and $A^c$ is close $c\in A^c$, but contradiction by definition of complement
+	13. A can not be both open and close
+-   a set is not necessary to be open or close, it can be not open and not close
+
 ## Cantor Set
 
 We define the Cantor Set $C$ to be the intersection $C=\bigcap_{n=0}^{\infin}C_n$
+
+-   e.g. $c_0 = \{x\in [0,1]\}$, 
+-   $c_1 = \{x\in [0,\frac{1}{3}] \cup [\frac{2}{3},1]\}$
+-   $c_2 = \{x\in [0,\frac{1}{9}] \cup [\frac{2}{9},\frac{1}{3}]\cup [\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1]\}$
+-   $c_3 = \{x\in [0,\frac{1}{27}] \cup [\frac{2}{27},\frac{1}{9}]\cup  [\frac{2}{9},\frac{1}{3}]\cup [\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},\frac{25}{27}]\cup[\frac{26}{27},1]\}$
+-   repeat kind of process to get $c_n$
+-   Then we find that  $C=\bigcap_{n=0}^{\infin}C_n\ne\empty$
+-    $C$ is bounded
+-   $C$ is closed, since arbitrary intersection of closed set is closed
+-   $C$ is compact
+-   $C$ is uncountable
+-   $C$ is perfect set
