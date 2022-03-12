@@ -3,13 +3,13 @@
 To connect two sets, we always use function to map one set to another. If you learn linear algebra or set before, you should familiar with that.
 
 1. Let function $f$ maps set $A$ to set $B$ 
-   - Surjective(Onto) Function: $\forall b\in B,\exist a\in A,f(a)=b$
+   - Surjective(Onto) Function: $\forall b\in B,\exists a\in A,f(a)=b$
    - Injective(one-to-one) Function: $\forall a_1,a_2\in A,a_1\ne a_2\implies f(a_1)\ne f(a_2)$
      - Equivalent: $\forall a_1,a_2\in A,f(a_1)=f(a_2)\implies a_1=a_2$
 2. If a set $A$ and a set $B$ has a bijective function, then $A$ and $B$ have the same cardinality.
    - Recall cardinality is used to refer to the size of a set
 3. If a set $A$ has a bijective function $f$ where $f:\mathbb{N}\mapsto A$, then A is countable.
-   - Notice infinite set can be countable, e.g. $\mathbb{N},\mathbb{Q}$
+   - Notice inftyite set can be countable, e.g. $\mathbb{N},\mathbb{Q}$
    - $\mathbb{R}$ is uncountable
 4. **Schroder-Bernstein Theorem**: For sets $A$ and $B$, there exist a injective function $f:A\mapsto B$ and another injective function $g:B\mapsto A$, then $A$ and $B$ have the same cardinality.
 5. Power Set: denote $P(A)$ as the power set of set A, where $P(A)=$ the set of all subset of $A$
@@ -17,10 +17,10 @@ To connect two sets, we always use function to map one set to another. If you le
 
 ## Property
 
-Given $a\in \mathbb{R}$, a set $S\sube \mathbb{R}$ and $\epsilon>0$
+Given $a\in \mathbb{R}$, a set $S\subseteq \mathbb{R}$ and $\epsilon>0$
 
 1. $\epsilon-neighborhood$ is the set $V_{\epsilon}(a)=\{x\in\mathbb{R}:|x-a|<\epsilon\}$
-2. $S$ is $open$ set if $\forall s\in S$, $\exists V_{\epsilon}(s)\sube S$
+2. $S$ is $open$ set if $\forall s\in S$, $\exists V_{\epsilon}(s)\subseteq S$
    - The union of an arbitrary collection of open sets is open
    - The intersection of a finite collection of open sets is open
 3. A point $x$ is a $limit \ point$ of $A$ if $\forall V_{\epsilon}(x)\ \cap A \ne x$ (here$\ne$ try to present except x, there is another value)
@@ -37,7 +37,7 @@ Given $a\in \mathbb{R}$, a set $S\sube \mathbb{R}$ and $\epsilon>0$
 10. $A$ is $bounded$ if $\exist M>0, \forall a\in A, |a|\le M$
 11.  $A$ is $compact$ if every sequence in $A$ has a subsequence that converges to a limit $\in A$
 12. $A$ is compact $\iff$ $A$ is closed and bounded
-13. $open \ cover$ is a collection of open set that union contains the set $A$. Let  $\{L_n\}$ be the open cover then $A\sube \cup_n L_n$ 
+13. $open \ cover$ is a collection of open set that union contains the set $A$. Let  $\{L_n\}$ be the open cover then $A\subseteq \cup_n L_n$ 
 14. $finite \ subcover$ is a finite sub-collection of open sets from open cover that union still contain $A$. 
 15. **Heine-Borel Theorem**: any one of following can implies other two
     - $A$ is compact
@@ -46,13 +46,13 @@ Given $a\in \mathbb{R}$, a set $S\sube \mathbb{R}$ and $\epsilon>0$
 
 Some fact:
 
--   $\mathbb{R}$ and $\empty$ are the only  two both open & close sets
+-   $\mathbb{R}$ and $\emptyset$ are the only  two both open & close sets
 
     -   Prove: 
-    1. $\empty$ vacuous satisfies arbitrary property of open and close
-    2. $\mathbb{R}^c=\empty$ , since $\empty$ is open, $\mathbb{R}$ is close. since $\empty$ is close, $\mathbb{R}$ is open.
-    3. $\mathbb{R}$ and $\empty$ are both open and close
-    4. Assume a set $A$ is both open and closed, $A\ne \mathbb{R}, A\ne \empty$
+    1. $\emptyset$ vacuous satisfies arbitrary property of open and close
+    2. $\mathbb{R}^c=\emptyset$ , since $\emptyset$ is open, $\mathbb{R}$ is close. since $\emptyset$ is close, $\mathbb{R}$ is open.
+    3. $\mathbb{R}$ and $\emptyset$ are both open and close
+    4. Assume a set $A$ is both open and closed, $A\ne \mathbb{R}, A\ne \emptyset$
     5.  Let $a_1\in A, b_1\in A^c, a < b$
     6. If $\frac{a_1+b_1}{2} \in A$, then let $a_2 = \frac{a_1+b_1}{2}, b_2 = b_1$
     If $\frac{a_1+b_1}{2} \in A^c$, then let $a_2 = a_1, b_2 = \frac{a_1+b_1}{2}$
@@ -67,14 +67,14 @@ Some fact:
 
 ## Cantor Set
 
-We define the Cantor Set $C$ to be the intersection $C=\bigcap_{n=0}^{\infin}C_n$
+We define the Cantor Set $C$ to be the intersection $C=\bigcap_{n=0}^{\infty}C_n$
 
 -   e.g. $c_0 = \{x\in [0,1]\}$, 
 -   $c_1 = \{x\in [0,\frac{1}{3}] \cup [\frac{2}{3},1]\}$
 -   $c_2 = \{x\in [0,\frac{1}{9}] \cup [\frac{2}{9},\frac{1}{3}]\cup [\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1]\}$
 -   $c_3 = \{x\in [0,\frac{1}{27}] \cup [\frac{2}{27},\frac{1}{9}]\cup  [\frac{2}{9},\frac{1}{3}]\cup [\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},\frac{25}{27}]\cup[\frac{26}{27},1]\}$
 -   repeat kind of process to get $c_n$
--   Then we find that  $C=\bigcap_{n=0}^{\infin}C_n\ne\empty$
+-   Then we find that  $C=\bigcap_{n=0}^{\infty}C_n\ne\emptyset$
 -    $C$ is bounded
 -   $C$ is closed, since arbitrary intersection of closed set is closed
 -   $C$ is compact

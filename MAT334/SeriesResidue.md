@@ -4,19 +4,19 @@
 
 ### Power Series
 
-$$P(z) = \sum_{n=0}^{\infin} a_n(z-z_0)^n$$
+$$P(z) = \sum_{n=0}^{\infty} a_n(z-z_0)^n$$
 
 ### Taylor Series
 
-$$T_f(z) = \sum_{n=0}^{\infin} \frac{f^{n}(z_0)}{n!}(z-z_0)^n$$
+$$T_f(z) = \sum_{n=0}^{\infty} \frac{f^{n}(z_0)}{n!}(z-z_0)^n$$
 
 ### Laurent Series
 
-For a complex function $f(z)$ about a point $c$ , the Laurent Series of this function is $f(z) =\sum_{n=-\infin}^{\infin} a_n(z-c)^n$ 
+For a complex function $f(z)$ about a point $c$ , the Laurent Series of this function is $f(z) =\sum_{n=-\infty}^{\infty} a_n(z-c)^n$ 
 
 ### Convergence & Divergence
 
-Weierstrass M Test: Let $|b_j(z)|\leq M_j$ in a region $R$ with $M_j$ constant. If $\sum_{j=1}^{\infin} M_j$ converges, then the series $S(z)=\sum_{j=1}^{\infin} b_j(z)$ converges uniformly in $R$.
+Weierstrass M Test: Let $|b_j(z)|\leq M_j$ in a region $R$ with $M_j$ constant. If $\sum_{j=1}^{\infty} M_j$ converges, then the series $S(z)=\sum_{j=1}^{\infty} b_j(z)$ converges uniformly in $R$.
 
 Ratio Test (Corollary of M Test): for a series $\sum z^n$ the ration test of this series is $lim_{n\to\infty} |\frac{z^{n+1}}{z^n}|$
 

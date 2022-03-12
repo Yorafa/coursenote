@@ -57,7 +57,7 @@ According to Euler's Identity $e^{i\pi}=cosx+isinx$, we can transform $z$ from p
 
 ### Infinite Point
 
-For calculation and thinking purpose we define $\infin = \frac{1}{0}$ as a theoretical point. (In calculus course, we see $\infin$ as a sign to present always increase)
+For calculation and thinking purpose we define $\infty = \frac{1}{0}$ as a theoretical point. (In calculus course, we see $\infty$ as a sign to present always increase)
 
 ### Corresponding set on sphere
 
@@ -70,7 +70,7 @@ Similar as sets in real, we also can similar ideas to conclude complex sets.
 Let $z_0\in\mathbb{C}$ 
 
 - neighborhood:  $\forall\epsilon>0$, the set $\{z:|z-z_0|<\epsilon\}$ is the neighborhood of $z_0$
-  - For infinite point $B(\infin)$ present the set $\{z:|z|>k,\forall k\in\mathbb{C}\}$
+  - For infinite point $B(\infty)$ present the set $\{z:|z|>k,\forall k\in\mathbb{C}\}$
   - interior point: $z_0$ is an interior point of a set of $S$ if $\exist$ neighborhood set $\in S$
 - open: $\forall z\in S$, $z$ is an interior point implies $S$ is an open set
   - boundary point: $z_0$ is a boundary point of the set $S$ if every neighborhood of $z_0$ has a point $\in S$ and a point $\notin S$

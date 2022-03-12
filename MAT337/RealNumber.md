@@ -10,7 +10,7 @@ Rational Number: $\mathbb{Q} = \{\frac{a}{b}:a,b\in\mathbb{Z},b\ne0\}$
 
 Similarly, we also can't solve some question such as $a^2=2$ where such $a$ does not exists. We extend the rational number to real number. 
 
-**Density of $\mathbb{Q}$ in $\mathbb{R}$**: $\forall a,b\in\mathbb{R}, a<b, \exist r\in\mathbb{Q},a<r<b$
+**Density of $\mathbb{Q}$ in $\mathbb{R}$**: $\forall a,b\in\mathbb{R}, a<b, \exists r\in\mathbb{Q},a<r<b$
 
 ## Arithmetic on Real Number
 
@@ -21,7 +21,7 @@ We also have some ancient but effective properties.
 **Archimedean Property** of $\mathbb{R}$:
 
 - $\forall x,y>0$, $\exists n\in\mathbb{N}$, $nx>y$
-- Alternative form, $\forall \epsilon\in\mathbb{R},(\epsilon>0\implies\exist n\in\mathbb{N}:\frac{1}{n}<\epsilon)$
+- Alternative form, $\forall \epsilon\in\mathbb{R},(\epsilon>0\implies\exists n\in\mathbb{N}:\frac{1}{n}<\epsilon)$
 - Alternative form, $\forall z>0$, $\exists k\in\mathbb{N}, 10^{-k}<z$
   - We can prove this one use infinite decimal expansion. Express $z$ to observe the digit $z_{k-1}\ge1$ then we get $z\ge 10^{-(k-1)}>10^{-k}$
 
@@ -29,10 +29,10 @@ We also have some ancient but effective properties.
 
 A subset $S\subset\mathbb{R}$ may have a boundary or be bounded:
 
-- If it is bounded above, then $\exist M\in\mathbb{R},\forall s\in S, s\le M$. $M$ in this case is the upper bound for $S$.
+- If it is bounded above, then $\exists M\in\mathbb{R},\forall s\in S, s\le M$. $M$ in this case is the upper bound for $S$.
   - If $\forall L\in \mathbb{R}, L$ is a upper bound of $S$, $M\le L$ then we call $M$ is the least upper bound (supremum)
 
-- If it is bounded below, then $\exist M\in\mathbb{R},\forall s\in S, s\ge M$. $M$ in this case is the lower bound for $S$.
+- If it is bounded below, then $\exists M\in\mathbb{R},\forall s\in S, s\ge M$. $M$ in this case is the lower bound for $S$.
   - If $\forall G\in \mathbb{R}, G$ is a upper bound of $S$, $M\ge G$ then we call $M$ is the greatest lower bound (infimum)
 
 - If a set is bounded above **and** below, then it's a bounded set.
