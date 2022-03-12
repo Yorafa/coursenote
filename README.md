@@ -7,19 +7,18 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
     - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/) 
 - Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
     - This site use `Mathjax` to rendering formula
-    - If the note need to do rendering equation, add the following html code to do so.
-    - e.g. this file can shown formula due to the header code. $1+1\ne 3$
+    - For convince reason, this site add `Mathjax` script on `default.html`
+        - this action cleans all default theme, I will try to write new `css` for this site
 
 TO-DO LIST FOLLOWING:
 
 - Implement all learned notes
 
-- Write js in each markdown file is too annoying, find a better way to display Latex.
-
     
 
 
 Currently, only few courses' notes available:
+- MAT337
 - STA302
 
 Also, welcome to [Yorafa's Home](https://yorafa.com/) my personal blog to see few more things other than the stuff from school
