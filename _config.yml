@@ -1,2 +1,17 @@
+title: Yorafa's Course Notes
+email: tianle.wang@mail.utoronto.ca
+description: >- # this means to ignore newlines until "baseurl:"
+  Reviewing and learning about course contents
+
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: 
+github_username:  Yorafa
+
 theme: jekyll-theme-minimal
 markdown: kramdown
+
+plugins:
+  - jekyll-feed
+
+# exclude:

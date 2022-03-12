@@ -1,15 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-
 # Course-Note
 In the first few semesters, the indirect depression, anxiety, and irritability made it difficult to calm down and study. And I feel sorrowful while seeing these subjects (low GPA), so I decide to make a notes collection to review and gain what I missed.
 
@@ -21,21 +9,6 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
     - This site use `Mathjax` to rendering formula
     - If the note need to do rendering equation, add the following html code to do so.
     - e.g. this file can shown formula due to the header code. $1+1\ne 3$
-
-
-```HTML
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-```
 
 TO-DO LIST FOLLOWING:
 
