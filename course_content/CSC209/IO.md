@@ -12,7 +12,6 @@ tags: CSC209
 For convenience reason, we want to quick read/write value from `stdout`/``stdin` with variable. We have idea of format. 
 
 For example `printf("%d\n", var);` print `int` type `var`
-
 -   `"%d"`: define the variable type, if the type of var is different will raise error, but `char` can present `int` by ASCII, vice versa
 -   `"\n"`: mean new line
 -   `var`: the respective variable of format
@@ -23,7 +22,7 @@ For example, we can have some format like `"the %d person is %c\n"`  follow two 
 
 Notice for format that read, for example `"the %d person is %c\n"` we should input `the 1 person is A ` to correctly read `1` and `A` into variable.
 
-| Input   | Meaning               | 类型   |
+| Input   | Meaning               | Type   |
 | ------- | --------------------- | ------ |
 | c       | a single character    | char   |
 | s       | a string              | char * |

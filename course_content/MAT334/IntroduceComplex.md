@@ -1,3 +1,10 @@
+---
+layout: articles
+tag: MAT334
+sidebar:
+  nav: home
+---
+
 # Introduce Complex
 
 Complex Representative: Cauchy, Reimann, Weierstrass

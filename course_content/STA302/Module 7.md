@@ -50,4 +50,3 @@ $DFBETAS_{j(i)}>\frac{2}{\sqrt{n}}$
 
 ## Detection and Impact
 
-C
