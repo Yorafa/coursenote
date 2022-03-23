@@ -4,18 +4,13 @@ In the first few semesters, the indirect depression, anxiety, and irritability m
 - This is a collection of course notes taken while studying in UofT.
 - This is also a practice of GitHub actions and the skill of GitHub page.
     - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
-    - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/) 
+    - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/)
 - Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
-    - This site use `Mathjax` to rendering formula
-    - For convince reason, this site add `Mathjax` script on `default.html`
-        - this action cleans all default theme, I will try to write new `css` for this site
+- Since design a page will spend lots time, design use jekyll theme [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) from [kitian616](https://github.com/kitian616)
 
 TO-DO LIST FOLLOWING:
 
 - Implement all learned notes
-
-    
-
 
 Currently, only few courses' notes available:
 - MAT337
