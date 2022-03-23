@@ -1,16 +1,17 @@
 ---
-layout: page
-title: Course Note
+layout: home
 sidebar:
   nav: home
 ---
+
+# Course Note
 
 In the first few semesters, the indirect depression, anxiety, and irritability made it difficult to calm down and study. And I feel sorrowful while seeing these subjects (low GPA), so I decide to make a notes collection to review and gain what I missed.
 
 - This is a collection of course notes taken while studying in UofT.
 - This is also a practice of GitHub actions and the skill of GitHub page.
-    - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
-    - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/)
+  - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
+  - Change default markdown compile to [kramdown](https://kramdown.gettalong.org/)
 - Most of the mathematic/statistics equation will use latex the `$$` symbol to show up.
 - Since design a page will spend lots time, design use jekyll theme [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) from [kitian616](https://github.com/kitian616)
 
