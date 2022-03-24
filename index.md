@@ -41,7 +41,7 @@ STA a short version stands statistics. The STA course I taken/will take:
 - [STA130](../course_content/STA130/STA130): An Introduction to Statistical Reasoning and Data Science
 - [STA257](../course_content/STA257/STA257): Probability and Statistics I
 - [STA261](../course_content/STA261/STA261): Probability and Statistics II
-- [STA302](../course_content/STA302/STA302): Methods of Data Analysis I
+- [STA302](./course_content/STA302/STA302): Methods of Data Analysis I
 - [STA314](../course_content/STA314/STA314): Statistical Methods for Machine Learning I
 - [STA347](../course_content/STA347/STA347): Probability
 - [STA414](../course_content/STA414/STA414): Statistical Methods for Machine Learning II
