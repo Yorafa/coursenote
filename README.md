@@ -1,6 +1,4 @@
 # Course-Note
-In the first few semesters, the indirect depression, anxiety, and irritability made it difficult to calm down and study. And I feel sorrowful while seeing these subjects (low GPA), so I decide to make a notes collection to review and gain what I missed.
-
 - This is a collection of course notes taken while studying in UofT.
 - This is also a practice of GitHub actions and the skill of GitHub page.
     - Notice: Github Page use [Jekyll](https://jekyllrb.com/) service to convert plain text file into static websites.
@@ -12,17 +10,19 @@ TO-DO LIST FOLLOWING:
 
 - Implement all learned notes
 
-Currently, only few courses' notes available:
-- MAT337
-- STA302
+To access the [Course-Note page](https://github.yorafa.com/Course-Note/pages/README.html)
 
-Also, welcome to [Yorafa's Home](https://yorafa.com/) my personal blog to see few more things other than the stuff from school
-
-To access the [page](https://github.yorafa.com/Course-Note/pages/README.html)
-
-## Issues & Contribute
+## Issues
 
 Because most of the content is written based on my own experience, there will always be many deep-rooted wrong ideas. For these contents, you are welcome to submit an [Issue](https://github.com/Yorafa/Course-Note/issues) for discussion, or if you are a UofT student who has a deep understanding to the course and you are welcome to submit your own notes.
+
+## Contribute
+
+Before everything start, ensure followed [Jekyll](https://jekyllrb.com/) instruction to set up all service, such as node.js, npm, ruby, gem, jekyll.
+
+If want to contribute course-related notes, then go to `course_content` directory and then update the course main page(e.g. `MAT337/MAT337.md`)  and `Course-Note/index.md` if needed to access the new page.
+
+Then go to the `Course-Note` directory open terminal, type `bundle exec jekyll serve` to see if everything worked well, then open pull request for those new updates.
 
 ## Declaration
 

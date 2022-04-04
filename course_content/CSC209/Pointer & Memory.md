@@ -60,16 +60,7 @@ b = address_a + 1;
 - long: 8 bytes
 - pointer: 8 bytes
 
-## Memory
 
-- Buffer 
-- Code 
-- Global Data(Static and Constant)
-- Heap 
-- Stack
-- OS
-
-## Code
 
 
 ## Global Data

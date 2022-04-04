@@ -61,18 +61,14 @@ The plot Residuals V.S. Predictor and Residuals V.S. fitted value can be used to
     
     $$E(U | X=x) = g(\beta_0 + \beta_1 x_1 + \dots + \beta_px_p)$$
     
-    2.   Conditional mean of each predicotr is a linear function with another predictor: $E(X_i|X_j)=\alpha_0+\alpha_1X_j$, we can also have statement like "any two predictors are linearly related" or "any two predictors can be expressed as a linear model"
+    2.   Conditional mean of each predictor is a linear function with another predictor: $E(X_i|X_j)=\alpha_0+\alpha_1X_j$, we can also have statement like "any two predictors are linearly related" or "any two predictors can be expressed as a linear model"
     
     - In addition, if two conditions hold and g is not an identity function, we can use $Y$ V.S. $\hat Y$ to help decide how to correct non-linearity.
 
 Whatif 1 or 2 condition does not hold?
 - the pattern in residue plots only show incorrect model instead of showing exactly what is wrong.
 
-Specially for condition 2:
-
--   
-
-Notice: we should check additional conditions when assessing model assumptions, if conditions fail, we can not have useful conlusion for multiple regression
+Notice: we should check additional conditions when assessing model assumptions, if conditions fail, we can not have useful conclusion for multiple regression
 
 ### QQ Plot
 

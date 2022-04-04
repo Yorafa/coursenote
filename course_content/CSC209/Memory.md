@@ -1,6 +1,6 @@
 ---
 layout: articles
-tags: CSC209
+tags: CSC209, Memory Model
 ---
 # C Memory Model
 
