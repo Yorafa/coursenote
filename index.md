@@ -8,6 +8,7 @@ sidebar:
 
 Currently, only few courses' notes available:
 - [CSC209](./course_content/CSC209/CSC209): Software Tools and Systems Programming
+- [MAT301](/course_content/MAT301/MAT301):Groups and Symmetries 
 
 Also, welcome to [Yorafa's Home](https://yorafa.com/) my personal blog to see few more things other than the stuff from school
 ## Issues
@@ -18,7 +19,7 @@ Because most of the content is written based on my own experience, there will al
 
 Before everything start, ensure followed [Jekyll](https://jekyllrb.com/) instruction to set up all service, such as node.js, npm, ruby, gem, jekyll. Then fork the [code](https://github.com/Yorafa/Course-Note) into your computer.
 
-If want to contribute course-related notes, then go to `course_content` directory and then update the course main page(e.g. `MAT337/MAT337.md`)  and `Course-Note/index.md` if needed to access the new page.
+If want to contribute course-related notes, then go to `course_content` directory and then update the course main page(e.g. `MATxxx/MATxxx.md`)  and `Course-Note/index.md` if needed to access the new page.
 
 Then go to the `Course-Note` directory open terminal, type `bundle exec jekyll serve` to see if everything worked well, then open pull request for those new updates.
 
