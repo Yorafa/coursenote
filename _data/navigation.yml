@@ -57,3 +57,7 @@ home:
     children:
       - title: CSC209
         url: /course_content/CSC209/CSC209.html
+      - title: CSC236
+        url: /course_content/CSC236/CSC236.html
+      - title: MAT301
+        url: /course_content/MAT301/MAT301.html
