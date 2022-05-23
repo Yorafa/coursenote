@@ -8,7 +8,8 @@ sidebar:
 
 Currently, only few courses' notes available:
 - [CSC209](./course_content/CSC209/CSC209): Software Tools and Systems Programming
-- [MAT301](/course_content/MAT301/MAT301):Groups and Symmetries 
+- [CSC236](./course_content/CSC236/CSC236): Introduction to the Theory of Computation
+- [MAT301](./course_content/MAT301/MAT301):Groups and Symmetries 
 
 Also, welcome to [Yorafa's Home](https://yorafa.com/) my personal blog to see few more things other than the stuff from school
 ## Issues

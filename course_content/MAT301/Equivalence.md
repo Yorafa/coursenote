@@ -9,14 +9,14 @@ sidebar:
 
 # Equivalence relations
 
-An equivalence relation on set on a set X is a rtelation `~` on the elements of X which satisfies the following properties:
+An **equivalence relation** on set on a set X is a relation `~` on the elements of X which satisfies the following properties:
 
-1.   reflexive : $\forall x \in X, x \sim x$
-2.   symmetric: $\forall x \in X,\forall y \in Y, x \sim y \implies y \sim x$
-3.   transitive $\forall x \in X, \forall y \in Y, \forall z \in Z, x \sim y \and y\sim z \implies x \sim z$ 
-4.   Equivalence class of $x$ is $E_x = \{y\in X : y\sim x\} = \bar x$
+1.   **reflexive** : $\forall x \in X, x \sim x$
+2.   **symmetric**: $\forall x \in X,\forall y \in Y, x \sim y \implies y \sim x$
+3.   **transitive** $\forall x \in X, \forall y \in Y, \forall z \in Z, x \sim y \and y\sim z \implies x \sim z$ 
+4.   **Equivalence class** of $x$ is $E_x = \{y\in X : y\sim x\} = \bar x$
 
-Partition: let subsets of $x$ notices by $p$, the powerset of x by $P$
+**Partition**: let subsets of a set $x$ notices by $p$, the powerset of x by $P$
 
 1.   $\cup_{p\in P} \ p = x$
 2.   $\forall p_1, p_2 \in P, p_1 \and p_2 = \empty$
