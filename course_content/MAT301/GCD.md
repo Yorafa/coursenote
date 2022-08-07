@@ -9,4 +9,10 @@ Co-prime:
 
 -   $gcd(a,b) = 1 \implies a,b$ are co-prime
 
+## LCM
 
+LCM(Least Common Multiple):
+
+-   $lcm(a,b) = d$ means $k_1a = k_2b =d$ and $d$ is the smallest positive integer.
+
+    

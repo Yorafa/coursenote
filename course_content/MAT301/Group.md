@@ -31,16 +31,18 @@ e.g. $(\{0\}, 0, \cdot)$ , $(\mathbb{R}, 0, +)$, $(\mathbb{R}\backslash\{0\}, 0,
 4.   $\forall a,b\in G, a\cdot b\in G$
 5.   $ \langle g \rangle =\{g^n:n\in\Z\}\sube G$
 
+**Order**:
+
+-   The number of elements of a group (order of group)
+-   The smallest positive integer $n, g^n = e \implies |g| = n$ or infinite order (order of element of group)
+    -   $|g| = n \implies g^k\cdot g^l = g^{k+l(mod \ n)}$
+
+-   $a^k = e = a^n\implies a^{gcd(k,n)}= e$ or $|a| = gcd\{n\in\N : a^n = e\}$
+
 **Group Class**
 
 1.   Finite Group: $|G|$ means the number of elements in $G$ or order of a group. If $|G| < \infin$
 2.   Abelian: $\forall a,b \in G, a\cdot b = b \cdot a \implies G$  is abelian
-
-**Subgroup**:
-
--   $H\sube G$ and $H$ is a group with respect the binary operation on $G$
-
-e.g. $(\Z_6, 0, +)$ has subgroups $(\{0\}, 0, +)$, $(\Z_6, 0, +)$, $(\{0,2,4\}, 0, +)$, $(\{0,3\}, 0, +)$
 
 **Center**:
 
@@ -51,21 +53,6 @@ e.g. $(\Z_6, 0, +)$ has subgroups $(\{0\}, 0, +)$, $(\Z_6, 0, +)$, $(\{0,2,4\}, 
 -   let $a \in$ group $G$, denote the centralizer of $a\in G$ as $C(a)$ which satisfied $\{g\in G : ga = ag\}$
 
 Diff: one for elements satisfied all element of $G$, one for elements satisfied $a\in G$; $Z(G) \sube C(a)$
-
-**Subgroup Test:** Let $G$ be a group
-
--    let $H\sube G$ be a subset. If $\forall a,b \in H, a\cdot b^{-1} \in H$, $H$ is a subgroup of $G$. (One-step test)
--   Let $H$ be nonempty subset of $G$. $a,b\in H, ab\in H \and a^{-1}\in H \implies H$ is a subgroup of $G$  (two-step test)
--   Let $H$ be nonempty finite subset of $G$. If $H$ is closed under the operation of $G$, $H$ is a subgroup of $G$. (finite subgroup test)
--   The center of  $G$ is a subgroup of $G$
--   The centralizer of $G$ is a subgroup of $G$
--   $\langle g \rangle, g\in G$ is a subgroup of $G$ (cyclic subgroup)
-    -   If $g$ is co-prime of $n$ for group $\Z_n$, then $\langle g \rangle = \Z_n$
-
-**Cyclic Group**:
-
--   subgroups of cyclic groups are cyclic
--   Let $H \le G$ be a subgroup, and let $g\in G$, then $g\in H$ is equivalent to $\langle g \rangle \sube H$
 
 ---
 

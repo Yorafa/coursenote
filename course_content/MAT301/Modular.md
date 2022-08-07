@@ -1,3 +1,9 @@
+---
+layout: articles
+tags: mat301
+sidebar:
+  nav: home
+---
 # Modular Arithmetic
 
 let m be a fixed natural number greater than 1.  we say b modulo m if a - b is divisible by m. $a\equiv b(mod \ m)$
