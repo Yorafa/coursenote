@@ -12,7 +12,7 @@ Let $G_1, \ldots, G_n$ be groups. $G_1\times\cdots\times G_n$ is defined as $(g_
 -   identity of this group is $(eG_1,\ldots, eG_n)$
 -   inverse of this group is $(g_1,\ldots, g_n)^{-1} = (g_1^{-1},\ldots, g_n^{-1})$
 -   Direct products are commutative. There is a "natural" group isomorphism $G_1\times G_2 \cong G_2\times G_1$
--   Direct products are associative. There is a "natural" group isomorphism $(G_1\times G_2)\times G_3 \cong G_1\times (G_2,G_3)$
+-   Direct products are associative. There is a "natural" group isomorphism $(G_1\times G_2)\times G_3 \cong G_1\times (G_2\times G_3)$
 
 Let $G_1,G_2$ be finite groups
 
@@ -34,7 +34,7 @@ Let $G_i$ be groups and consider $H_i \lhd G_i$, $\frac{G_1\times \cdots\times G
 
 # Internal direct products
 
-Let $G$ be a group. $\exists H,K \le G$ are subgroups, $HK =G \land H\cap K =\{e\} \implies G$ is **internal direct product** of $H$ and $K$ or $G = H\times K$. More specifically, there is a finite normal subgroups sequence $(H_i)_{i = 1,\ldots,n}$, $G = H_1\ldots H_n = \{h_1h_2\ldots h_n : h_i\in H_i\} \land (H_1\ldots H_i)\cap H_{i+1} = \{e\} \implies G$ is **internal direct product** of $H_i$
+Let $G$ be a group. $\exists H,K \le G$ are subgroups, $(HK =G) \land (H\cap K =\{e\}) \implies G$ is **internal direct product** of $H$ and $K$ or $G = H\times K$. More specifically, there is a finite normal subgroups sequence $(H_i)_{i = 1,\ldots,n}$, $G = H_1\ldots H_n = \{h_1h_2\ldots h_n : h_i\in H_i\} \land (H_1\ldots H_i)\cap H_{i+1} = \{e\} \implies G$ is **internal direct product** of $H_i$
 
 For $G = H\times K, i: H\times K \to G, i(h,k) = hk$ is  a group isomorphism. Moreover, $G$ is the internal direct product of normal subgroups $H_i, s.t,G = H_1\times \ldots\times H_n \implies i:H_1\times \ldots\times H_n\to G, i(h_1,\ldots,h_n)=h_1\ldots h_n$ is a group isomorphism
 

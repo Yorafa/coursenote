@@ -14,7 +14,8 @@ $S_n$: (Symmetric group) stand the group of injective functions from $\{1,\ldots
 -   $|S_n| = n!$
 -   even permutation in $S_n$ forms a subgroup of $S_n$
 -   $\sigma \in S_n, \sigma = (i_1j_1)\ldots(i_mj_m)$ then $sgn = 1$ when even, else odd
--   sign function of multiplication $S_n$ is a homomorphi
+-   sign function of multiplication $S_n$ is a homomorphism
+-   Any subgroup of $S_n$ acts on the $n-$element set $\{1,\ldots,n\}$
 
 $A_n$: alternating group of degree $n$ or the group of even permutations of $n$ symbols
 

@@ -7,7 +7,7 @@ sidebar:
 
 # Classification of finte abelian groups
 
-A group $G$ is called finitely generated if every element can be written down as a product of $g_i$ and their inverses.
+A group $G$ is called finitely generated if every element can be written down as a product of $g_i$s and their inverses.
 
 Let $G$ be a finitely generated Abelian group. $\exists t\in \Z_{\ge0},$ the invariant factors $(k_i)_{i=1,\ldots,m}\in \N$ satisfying $k_1|k_2|\ldots|k_m$ such that  $G\cong \Z^t\times \Z/k_1\Z\times \cdots\times \Z/k_m\Z$, $t, k_i$ are uniquely defined by $G$. We can also have form $G\cong \Z^t\times\prod_i \Z/p_i^{m_i}\Z$
 
@@ -15,7 +15,7 @@ Let $G$ be a finitely generated Abelian group. $\exists t\in \Z_{\ge0},$ the inv
 
 Let $G$ be a finitely generated Abelian group. 
 
--   A set of elements $\{a_1,\ldots,a_n\}$ is called a **basis** of $G$. Every element of $G$ can be uniquely written down as $k_1a_1+\cdots + k_na_n$
+-   A set of elements $\{a_1,\ldots,a_n\}$ is called a **basis** of $G$. Every element of $G$ can be uniquely written down as $k_1a_1+\cdots + k_na_n, k_i \in \Z$
 -   $G$ with a basis is called a free Abelian group
 
 All bases of a free Abelian group $G$ have the same number of elements. Every free Abelian group is isomorphic to $\Z^n$, that is, every free Abelian group $G$ has a rank of $rk(G) = n$
@@ -25,7 +25,7 @@ Let $N\subset L$ be a subgroup of a free Abelian group of rank $n$, then $N$ is 
 Define **integer-valued elementary transformations** $A$ any types of follows:
 
 -   $v_i,v_j$ are rows/columns, and $a\in \Z \implies v_i\mapsto v_i + av_j$
--   any transpoistion of two rows/columns
+-   any transposition of two rows/columns
 -   multiplying a row/column by $-1$
 
 Recall: a diagonal $n\times m$ matrix is $\forall i\ne j, d_{ij} = 0$ or we can have form $diag(d_i,\ldots,d_{min(n,m)})$
