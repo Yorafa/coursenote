@@ -1,63 +1,16 @@
-header:
-  - titles:
-      # @start locale config
-      en: &EN            Home
-      en-GB: *EN
-      en-US: *EN
-      en-CA: *EN
-      en-AU: *EN
-      zh-Hans: &ZH_HANS  首页
-      zh: *ZH_HANS
-      zh-CN: *ZH_HANS
-      zh-SG: *ZH_HANS
-      zh-Hant: &ZH_HANT  首頁
-      zh-TW: *ZH_HANT
-      zh-HK: *ZH_HANT
-      # @end locale config
-    url: /index.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       Archive
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      # @end locale config
-    url: /archive.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       About
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-
-      # @end locale config
-    url: /about.html
-
-# sidebar
-home:
-  - title: Course
-    children:
-      - title: CSC209
-        url: /course_content/CSC209/CSC209.html
-      - title: CSC236
-        url: /course_content/CSC236/CSC236.html
-      - title: MAT301
-        url: /course_content/MAT301/MAT301.html
+# main links
+main:
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  - title: "Notes"
+    url: /notes/
+  - title: "Recent Post"
+    url: /
