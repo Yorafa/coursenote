@@ -433,7 +433,7 @@ defaults:
   # sat347
   - scope:
       path: ""
-      type: sat347
+      type: sta347
     values:
       layout: single
       author_profile: true

@@ -4,7 +4,7 @@ title: "C Memory Model"
 
 Model like this:
 
-| Buffer     |
+| Buffer    |
 | ---------- |
 | **Code**   |
 | **Global** |
