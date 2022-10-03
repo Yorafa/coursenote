@@ -36,6 +36,7 @@ Given $a\in \mathbb{R}$, a set $S\subseteq \mathbb{R}$ and $\epsilon>0$:
     - $A$ is compact
     - $A$ is closed and bounded
     - every open cover for $A$ has a finite subcover
+13. A set $A$ is **dense** in another set $B$, $\forall n\in B, n\in A \lor \exists \epsilon > 0, |n-\epsilon|\in A$
 
 
 

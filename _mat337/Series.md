@@ -28,6 +28,8 @@ A sequence $(a_n)^{\infty}_{n=1}$ is a **geometric sequence**  with ratio $r$ if
 
 -   geometric sequence converge when $|r| < 1$. And the sum of such geometric sequence is $\sum_{n=0}^{\infty}ar^n = \frac{a}{1-r}$
 
+## Convergence Test
+
 (**THE COMPARISON TEST**): Let $(a_n)$ and $(b_n)$ be 2 sequence of real numbers where $\forall n\ge 1, |a_n| \le b_n$
 
 -   $(b_n)$ converge $\implies (a_n)$ converge where $|\sum_{n = 1}^{\infty} a_n| \le \sum_{n = 1}^{\infty} b_n$
@@ -38,6 +40,14 @@ A sequence $(a_n)^{\infty}_{n=1}$ is a **geometric sequence**  with ratio $r$ if
 A sequence is **alternating** if it has the form $((-1)^n a_n)$ or $((-1)^{n+1} a_n)$ where $\forall n\ge 1,a_n \ge 0$
 
 (**LEIBNIZ ALTERNATING SERIES TEST**): Suppose that $(a_n)^{\infty}_{n=1}$ is a monotone decreasing sequence and $a_n \ge 0$ where $\lim\limits_{n\to \infty} = 0$. Then alternating series $ \sum_{n= 1}^{\infty} (-1)^n a_n$ converges.
+
+**(THE LIMIT COMPARISON TEST):** If $\sum\limits_{n=1}^{\infty} a_n$ and $\sum\limits_{n=1}^{\infty} b_n$ are series with $b_n \ge 0$ such that $\limsup\limits_{n\to \infty} \frac{|a_n|}{b_n} < \infty$ and $\sum\limits_{n=1}^{\infty} b_n < \infty$, then the series $\sum\limits_{n=1}^{\infty} a_n$ converges.
+
+**(THE RATIO TEST):** Suppose that $(a_n)^{\infty}_{n = 1} $ is a sequence of positive terms. If $\limsup\limits_{n\to \infty} \frac{a_{n+1}}{a_n} < 1$, then $\sum\limits_{n=1}^{\infty} a_n$ converges. Conversely, $\liminf\limits_{n\to \infty} \frac{a_{n+1}}{a_n} > 1$ , then $\sum\limits_{n=1}^{\infty} a_n$ diverges.
+
+**(THE INTEGRAL TEST):** Let $f(x)$ be a positive, monotone decreasing function on $[1,\infty)$. The sequence $(f(n))$ is summable if and only if $\int^{\infty}_{1} f(x)dx < \infty$.
+
+## Absolutely Convergent
 
 $\sum_{n = 1}^{\infty} a_n$ is called **absolutely convergent** $\implies \sum_{n = 1}^{\infty} |a_n|$ converges. A series converges but is not absolutely convergent is called conditionally convergent.
 
