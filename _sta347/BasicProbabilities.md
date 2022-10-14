@@ -51,7 +51,7 @@ Uniform Probability on Finite Space: $P(A) = \frac{|A|}{|S|}$ where $A$ is the e
 
 **Binomial  Formula:** $(a+b)^n = \sum\limits_{k=0}^n nCk\cdot a^kb^{n-k}$
 
-**Multinomial Formula:** $(a_1 + a_2 + \cdots + a_l)^n = \sum_{k_1 + k_2 + \ldots + k_l} \frac{n!}{k_1!k_2!\ldots k_l!} \prod_{i=1}^l a_i^{k_i}$
+**Multinomial Formula:** $(a_1 + a_2 + \cdots + a_l)^n = \sum_{k_1, k_2 , \ldots , k_l} \frac{n!}{k_1!k_2!\ldots k_l!} \prod_{i=1}^l a_i^{k_i}$
 
 In probabilities, we have 3 kinds of probability need to calculate where: Marginal probability $P(A)$, Joint Probability $P(A\cap B)$ and Conditional Probability $P(A|B)$.
 

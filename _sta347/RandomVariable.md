@@ -21,7 +21,7 @@ A random variable is discrete if there is a finite of countable sequences of dis
 
 -   Let $k = x- 1, P_X(k) = \theta(1-\theta)^k, k = 0, 1,2,\ldots$
 
-**(The NEGATIVE BINOMIAL DISTRIBUTION)**:  $$P(Y = k) = {r - 1+ k\choose r-1} \  \theta^r(1-\theta)^k; x = 0, 1,\ldots, n$$
+**(The NEGATIVE BINOMIAL DISTRIBUTION)**:  $$P(Y = k) = {r - 1+ k\choose r-1} \  \theta^r(1-\theta)^k; k = 0, 1,\ldots$$
 
 **(The POISSON DISTRIBUTION)**:  $$P(X = x) = {n\choose x}  (\frac{\lambda}{n})^x(1-\frac{\lambda}{n})^{n-x} = \frac{\lambda^x}{x!}\exp(-\lambda), x = 0, 1,2,\ldots$$
 
@@ -34,6 +34,8 @@ A random variable is discrete if there is a finite of countable sequences of dis
 A random variable $X$ is continuous if $ P(X=x) = 0, \forall x\in \R$
 
 -   The probability function of continuous random variable called **Probability Density Function(PDF)** which write as $f(x) = \lim\limits_{\Delta x\to 0} \frac{P(x < X < x + \Delta x)}{\Delta x}$ and  $\int_{ - \infty}^{\infty} f(x)dx = 1$
+    -   A **density function** $\iff \int_{ - \infty}^{\infty} f(x)dx = 1 \land \forall x\in \R^1, f(x) \ge 0$
+
 -   The probability of  a interval $(a,b)$ is the same as $[a,b]$ which both are $P(a\le x\le b) = \int_a^bf(x)dx$
 
 **(The UNIFORM DISTRIBUTION)**:  $f(x) = \begin{cases} \frac{1}{R-L} & L\le x\le R\\ 0 & \mbox{Otherwise} \end{cases}$
@@ -41,6 +43,7 @@ A random variable $X$ is continuous if $ P(X=x) = 0, \forall x\in \R$
 **(The NORMAL($\mu, \sigma^2$) DISTRIBUTION PDF)**: $f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp(-\frac{(x - \mu)^2}{2 \sigma^2})$ where $\mu$ is mean, $\sigma^2$ is the variance.
 
 -   $\mu = 0, \sigma = 1$ is the Standard Normal distribution
+-   $\int_{-\infty}^{\infty}\exp(-\frac{(x - \mu)^2}{2 \sigma^2}) = \sqrt{2\pi} \sigma$
 
 **(The EXPONENTIAL DISTRIBUTION)**:  $f(x) = \begin{cases} \lambda \exp(-\lambda x) & x\ge 0 \\ 0 & x < 0 \end{cases}$
 
@@ -50,7 +53,7 @@ A random variable $X$ is continuous if $ P(X=x) = 0, \forall x\in \R$
 -   $\Gamma(\alpha + 1) = \alpha\Gamma(\alpha)$, that is, $\forall n\in \N, \Gamma(n) = (n - 1)!$
 -   $\Gamma(1/2) = \sqrt{\pi}$
 
-Cumulative distribution function is the function to interpret subset like $(-\infty, x]$ which write as $F_X: \R \to [0,1]$, which defined $F_X(x) = P(X\le x) =\int_{-\infty} ^x f(y)dy$
+**Cumulative Distribution Function(CDF)** is the function to interpret subset like $(-\infty, x]$ which write as $F_X: \R \to [0,1]$, which defined $F_X(x) = P(X\le x) =\int_{-\infty} ^x f(y)dy$
 
 -   According the definition we find that $P(a\le X \le b) = F_X(b) - F_X(a)$
 -   $\lim\limits_{n\to -\infty} F_X(x) = 0, \lim\limits_{n\to \infty} F_X(x) = 1$
@@ -63,13 +66,15 @@ We also have CDF represent for it, where $F_{X,Y}(x,y) = P(X\le x, Y\le y) = P(X
 
 For $a < X \le b, c< Y \le d$, the continuous random variables' probability of joint is $P(a < X \le b, c< Y \le d) = F_{X,Y}(b,d)-F_{X,Y}(b,c)-F_{X,Y}(a,d)+F_{X,Y}(a,c)$, the distinct random variables' probability is $p_{X,Y}(x,y) = P(X=x, Y= y)$
 
+**(Multinomial Distribution):** $f(x_1,\ldots, x_k; n; p_1,\ldots,p_k) = \begin{cases}\frac{n!}{x_1!\cdots x_k!}p_1^{x_1}\times\cdots p_k^{x_k}, & \text{when} \sum_{i=1}^k x_i = n \\ 0 & \text{ot} \end{cases}$
+
 Sometime it is too complicated to get the result, so that we have marginal distribution where the marginal distribution of $X$ is $F_X(x) = \lim\limits_{y\to \infty}F_{X,Y}(x,y)$ , similarly, the marginal distribution of $Y$ is $F_Y(y) = \lim\limits_{x\to \infty}F_{X,Y}(x,y)$
 
 according to the CDF and the marginal CDF, we can write the probability function as $\int\int f_{x,y}(x,y)dxdy = 1$ and the marginal pf of $X$ is $f_X(x) = \int_y f_{X,Y}(x,y) dy$ and the marginal pf of $Y$ is $f_Y(y) = \int_X f_{X,Y}(x,y) dx$
 
 -   if $X,Y$ are independent, then $f_{X,Y}(x,y) = f_X(x)f_Y(y)$
 
-**(The BETA DISTRIBUTION)**:  $f(x) = \frac{1}{B(\alpha, \beta) }x^{\alpha - 1}(1-x)^{\beta - 1} = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)} x^{\alpha - 1}(1-x)^{\beta - 1} $
+**(The BETA DISTRIBUTION)**:  $f(x) = \frac{1}{B(\alpha, \beta) }x^{\alpha - 1}(1-x)^{\beta - 1} = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha - 1}(1-x)^{\beta - 1} $
 
 -   Beta function: $B(\alpha, \beta) = \int_0 ^1 t^{\alpha - 1}(1-t)^{\beta -1}dt = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$ and can be extended to even more
 

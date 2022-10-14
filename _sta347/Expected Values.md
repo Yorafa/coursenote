@@ -33,7 +33,7 @@ The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\s
 
 ## Covariance
 
-Let $X$ and $Y$ be two random variables. Their covariance is defined by $Cov(X, Y) = \mathbb{E}[X - \mu_X]\mathbb{E}[Y - \mu_Y] = \mathbb{E}[XY] - \mu_X\mathbb{E}[Y]- \mu_Y\mathbb{E}[X] + \mu_Y\mu_X = \mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$
+Let $X$ and $Y$ be two random variables. Their covariance is defined by $Cov(X, Y) = \mathbb{E}[X - \mu_X][Y - \mu_Y] = \mathbb{E}[XY] - \mu_X\mathbb{E}[Y]- \mu_Y\mathbb{E}[X] + \mu_Y\mu_X = \mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$
 
 -   if $X\perp Y, Cov(X,Y)  =0$
 -   $Cov(X,X) = Var[X]$

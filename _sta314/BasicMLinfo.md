@@ -21,6 +21,8 @@ Parametric statistical method as the name, this kind of method more focus on the
 
 Cons: the choose(guess) model may not always match the true unknown form of $f$. If we want to get closer model, we may need more flexible model, but may lead to overfitting, follow the errors, noise.
 
+Iead of penalization is useful for parametric model where: $\hat\beta = \argmin\limits_{\beta} L(\beta, D_{train}) + Pen(\beta)$ and we will talk about in other pages.
+
 ## Non-parametric
 
 Non-parametric method is the way avoiding the assumption of function $f$, it provide a wider range of possible shapes for $f$.

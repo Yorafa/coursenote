@@ -1,19 +1,19 @@
 ---
-title: "Measurement of the fit and linear models"
+title: "Measurement of the fit"
 ---
 
 ## Quantitative
 
 $\DeclareMathOperator*{\argmin}{argmin}$
 
-Mean squared error(MSE) with equation $\mathbb{E}[(Y - \hat f(X))^2]$  is the way we find our function closer $\hat f$ to the true $f$, that is, $MSE(\hat f) := \frac{1}{n} \sum_{i = 1}^N (y_i - \hat f(x_i))^2 = \mathbb{E}[(Y - \hat f(X))^2]$ 
+Mean squared error(MSE) with equation $\mathbb{E}[(Y - \hat f(X))^2]$  is the way we find our function closer $\hat f$ to the true $f$, that is, $MSE(\hat f) := \sum_{i = 1}^N (y_i - \hat f(x_i))^2 = \mathbb{E}[(Y - \hat f(X))^2]$ 
 
 -    we call it's a training MSE as it uses $D_{train}$
--   the one $\hat f$ we want is the suitable $\argmin\limits_{g}MSE(g)$ where too small will cause overfitting.
+-   the one $\hat f$ we want is the suitable $\argmin\limits_{g}MSE(g)$ through $D_{train}$ where too small sample size will cause overfitting.
 
 After we get such $\hat f$, we can use $D_{test}$ to look at test MSE, where $MES_T(\hat f) = \frac{1}{m}\sum_{i = 1}^m(y_{Ti} - \hat f(x_{Ti}))^2$
 
--   If we don't have  such $D_{test}$ we  will use resampling technique which called cross-validation.
+-   If we don't have  such $D_{test}$ we  can use resampling technique which called [cross-validation](NoTest#With Estimating the Expected MSE )
 -   And the final model is the $\hat f$ which make the smallest test $MSE$, that is, the $\hat f$ make smallest test $MSE$ and $MSE(\hat f) $  is what we want.
 
 Notice, there exists some **<u>Bias-Variantrade-off</u>** among the MSE. For the given $x$, we have the conditional expected $MSE$ :
