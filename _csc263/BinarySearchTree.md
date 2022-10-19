@@ -9,6 +9,8 @@ Let $x$ be a node in a **Binary Search Tree(BST)**. If $y$ is a node in the left
 -   A **predecessor** of a BST is the maximum of its left children tree.
 -   When we say left/right most, means the most we can recursive the left/right 'till not.
 
+A BST usually with the methods:
+
 `Insert(BST, x):` Insert x into BST
 
 `Delete(BST, x):` Delete x from BST

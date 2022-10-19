@@ -25,3 +25,4 @@ e.g. for $\{27,50,15,9,34,12\}$  $rank(34) = 5, select(3) = 15$
 1.   if 1 + root left tree's count + residue  == r, then root is what we want
 2.   if 1 + root left tree's count + residue > r,  residue = residue + root's left tree's count + 1,  and then we move forward to compare with right tree
 3.   if 1 + root left tree's count + residue < r, then we move forward to compare with left tree
+

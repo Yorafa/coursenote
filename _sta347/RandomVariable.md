@@ -6,6 +6,9 @@ A random variable is function from the  sample space $S$ to the set of all real 
 
 -   Discrete(countable)
 -   Continuous(Uncountable)
+-   Joint
+
+For each type random variables, we conclude serval distribution where probability distribution depicts the expected outcomes of given random.
 
 ## Intro to Discrete
 
@@ -44,6 +47,8 @@ A random variable $X$ is continuous if $ P(X=x) = 0, \forall x\in \R$
 
 -   $\mu = 0, \sigma = 1$ is the Standard Normal distribution
 -   $\int_{-\infty}^{\infty}\exp(-\frac{(x - \mu)^2}{2 \sigma^2}) = \sqrt{2\pi} \sigma$
+-   $U = \sum_{i = 1}^n a_iX_i$ and $V = \sum_{i = 1}^n b_iX_i$, $Cov(U,V) = \sum_{i=1}^na_ib_i\sigma_i^2$.  For normal distribution only , $Cor(U,V) = 0\implies U,V$ are independent
+-   the sum of normal distribution still is normal, where $\sum_i X_i \sim N(\sum_i \mu_i, \sum_i \sigma_i^2)$
 
 **(The EXPONENTIAL DISTRIBUTION)**:  $f(x) = \begin{cases} \lambda \exp(-\lambda x) & x\ge 0 \\ 0 & x < 0 \end{cases}$
 
@@ -83,3 +88,39 @@ according to the CDF and the marginal CDF, we can write the probability function
 ## Conditional Distribution of Random Variable
 
 Let $X$ and $Y$ be jointly absolutely continuous random variables with the joint density function $f_{X,Y}(x,y)$. The conditional density of $Y$ given that $X = x$ is the function $f_{Y|X}(y|x) = \frac{f_{X,Y}(x,y)}{f_X(x)}$ 
+
+## Sampling Distribution
+
+Sample distribution is a probability distribution on sample statistics. More formally, let $Y = h(x_1, \ldots, h_n)$ be any function. The probability distribution of $Y$ is called a Sampling Distribution.
+
+Stand error of Normal Distribution among samples $SD = \sigma/\sqrt{n}$
+
+(**Chi-Square Distribution**): let $Z_i\sim N(0,1), Y=g(Z_i) = \sum_{i = 1}^kZ_i^2$ where $Z_i$ are independent to each other then  $Y \sim \mathcal{X}^2(k)$ 
+
+-   k is the degree of freedom. $Y\sim \text{Gamma}(k/2,k/2)$ 
+-   Let $\bar X$ be the mean and $s^2 = \frac{\sum_{i=1}^n(X_i - \bar X)^2}{n-1} = TSS/(n-1)$ is the sample variance where $X_i \overset{\text{i.i.d}}\sim N(\mu, \sigma^2)$. Then $(n-1)s^2/\sigma^2 \sim \mathcal{X}^2(n-1)$ . Furthermore, mean and sample variance are independent.
+-   $E(Y) = k, Var(Y)= 2k$
+
+**(T-Distribution):** Let $X, X_1, \ldots, X_n \overset{\text{i.i.d}}\sim N(0,1)$ so that we have $Y = \sum_{i=1}^nX_i^2, Y\sim\mathcal{X}^2(n)$. We define $X/\sqrt{Y/n} \sim t_n$. Let $U = X/\sqrt{Y/n}$, then we have the PDF $f_U(u)= \frac{\Gamma((n+1)/2)}{\sqrt{\pi} \Gamma(n/2)} (1 + u^2/n)^{-(n+1)/2} n^{-1/2}$
+
+-   $\lim\limits_{n\to \infty} t_n \to N(0,1)$
+-   $n = 1 \implies $ Cauchy Distribution
+
+**(F-Distribution):** Let $X_1, \ldots, X_m \overset{\text{i.i.d}}\sim N(0,1)$ and let $Y_1, \ldots, Y_n \overset{\text{i.i.d}}\sim N(0,1)$. Let $Z_x = \sum_{i=1}^m X_i^2, Z_y = \sum_{i=1}^n Y_i^2$. we define $\frac{Z_x/m}{Z_y/n}\sim F(m,n)$. Let $U = \frac{Z_x/m}{Z_y/n}$, then we have PDF $f_U(u)= \frac{\Gamma((m+n)/2)}{\Gamma(m/2)\Gamma(n/2)} (\frac{m}{n}u)^{\frac{m}{2} - 1}(1 + \frac{m}{n}u)^{-\frac{m+n}{2}}(\frac{m}{n})$ for $u>0$
+
+-   $U\sim F(m,n)\implies 1/U \sim F(n,m)$
+-   $U_n \sim F(m,n)\implies \lim_{n\to \infty}mU_n \sim \mathcal{X}^2(m)$
+-   $U\sim t_k\implies U^2\sim F(1,k)$
+
+Try to prove all of those sampling distribution use change of variable.
+
+Some order statistics example:
+
+e.g. Since we want obtain more statistics, we need to order. Let $X_1, \ldots, X_n$ be i.i.d random variables, let $X_{(1)}, \ldots, x_{(n)}$ ne ordered random variable from $X_1, \ldots, X_n$. Then $X_{(1)}$ is the smallest and $X_{(n)}$ is the largest.
+
+-   $F_{X_{(n)}}(x) = P(X_{(n)} \le x) = P(X_{(1)} \le x,X_{(2)} \le x,\ldots, X_{(n)} \le x) = P(X_1 \le x, \ldots, X_n \le x) = \prod_i P(X_i \le x) = [F_{X_1}(x)]^n$ since independent and largest less $x$ so that smallest less $x$ so that all equal to smallest
+-   $f_{X_{(n)}}(x) = \frac{d}{dx}F_{X_{(n)}}(x) = n[F_{X_1}(x)]^{n-1}f_{X_1}(x)$
+-   $F_{X_{(1)}}(x) = P(X_{(1)} \le x) = 1 - P(X_{(1)} > x) = 1-P(X_{(1)} > x,X_{(2)} > x,\ldots, X_{(n)} > x) = P(X_1 > x, \ldots, X_n > x) = 1 - \prod_i P(X_i > x) = 1 - [1 - F_{X_1}(x)]^n$
+-   $f_{X_{(1)}}(x) = \frac{d}{dx}F_{X_{(1)}}(x) = n[1 - F_{X_1}(x)]^{n-1}f_{X_1}(x)$
+
+e.g. $X_1, \ldots, X_n \overset{i.i.d}\sim U(0,1)$, then $f_{X_{(1)}}(X) = n(1-x)^{n-1} = \frac{\Gamma(n+1)}{\Gamma(n)\Gamma(1)} x^{1-1}(1-x)^{n-1},f_{X_{(n)}}(X) = n(x)^{n-1} = \frac{\Gamma(n+1)}{\Gamma(n)\Gamma(1)} x^{n-1}(1-x)^{1-1}$ so that $X_{(n)} \sim Beta(n, 1)$ and $X_{(1)} \sim Beta(1, n)$

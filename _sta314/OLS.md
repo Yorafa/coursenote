@@ -6,7 +6,7 @@ title: "Ordinary Least Square and Model Selection"
 
 -   The Loss function for OLS is  $L(\beta,D_{train}) = RSS = ||y-X\beta||^2_2$ , Penality is $Pen(\beta) = 0$
 -   $\hat \beta = (X^TX)^{-1}X^Ty$ is the solution of OLS where $X$ is full column rank.
--   OLS with larger variance but no bias
+-   OLS with larger variance but no bias for the model which is truely linear
 
 After we get $\hat\beta$ , we first assume each error terms are linear independent with $\mathbb{E}[\epsilon] = 0, Var(\epsilon_i) = \sigma^2$ and then check:
 

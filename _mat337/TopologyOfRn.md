@@ -27,3 +27,10 @@ A set $\{v_1, \ldots, v_m\} \subset \R^n$ is **orthonormal** if $\lang v_i, v_j\
 -   if such set with size n, aka, $|\{v_1, \ldots, v_n\}| = n$, it's linear independent.
 
 **(LEMMA 4.1.3)**: Let $\{v_1, \ldots, v_m\} $ be an orthonormal set in $\R^n$, $\forall a_i \in \R, ||\sum_{i =1}^m a_i v_i || = (\sum_{i =1}^m |a_i|^2)^{1/2}$. 
+
+## Close and Open
+
+
+
+## Compact
+

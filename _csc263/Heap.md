@@ -4,13 +4,13 @@ title: "Heap"
 
 Heap is a binary tree with the max/min among its children value in its root,  and also, for all of its child tree, their root also is the max/min among their child tree.
 
-`Heapify():`
+`Heapify(heap, i):` For node $i$, keep $i$ is maintain order compare to its children
 
-`Insert():`
+`Insert(heap, i):` insert $i$ and compare it to its parent to keep order
 
-`Extract():`
+`Extract(heap):` return the max/min value
 
-`HeapSort():`
+`HeapSort(heap):` return a sorted list
 
 ## Implement
 

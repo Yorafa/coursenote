@@ -8,7 +8,7 @@ The key point of **Ridge Regression** is to find a model minimize $[\sum_{i=1}^n
 -   we define the estimate of coefficient is $\hat\beta^R_{\lambda} = \argmin\limits_{\beta}  RSS + \lambda\sum_{j = 1}^p\beta_j^2$
 -   $\lambda\sum_{j = 1}^p\beta_j^2$ is the shrinkage/regularization penalty where shrink $\beta_j$ toward 0;
 -   So we have the Loss function for Ridge is  $L(\beta,D_{train}) = RSS = ||y-X\beta||^2_2$ , Penality is $Pen(\beta) = \sum_{j = 1}^p\beta_j^2 = ||\beta||_2^2$ which is the the $\ell_2$ penalty
--   To minimize the penalty effects of coefficient toward predictors, we use standardized predictors: $\tilde x_{ij} = \frac{x_{ij}}{\sqrt{\frac{1}{n}TSS}}$ where standard means $\sigma = 1$ 
+-   ridge regression requires the data to be standardized such that each predictor variable has a mean of 0 and a standard deviation of 1., we use standardized predictors: $\tilde x_{ij} = \frac{x_{ij}}{\sqrt{\frac{1}{n}TSS}}$ where standard means $\sigma = 1$ 
 
 ## Cons and Pros
 

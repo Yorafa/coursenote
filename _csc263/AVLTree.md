@@ -8,6 +8,8 @@ A tree is an **AVL Tree** if it is binary search tree and AVL balanced.
 -   **AVL balanced** means that each node of this tree satisfied balance factor in range $[-1, 1]$
 -   we also call balance factor in range $[-1, 1]$ as **AVL invariant**
 
+AVL have the same methods as the BST do, but need more about keep balanced
+
 ## Implement
 
 To have AVL Tree, we should modify the implement of BST.

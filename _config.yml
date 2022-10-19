@@ -308,6 +308,9 @@ collections:
   sta347:
     output: true
     permalink: /:collection/:path/
+  sta437:
+    output: true
+    permalink: /:collection/:path/
   mat301:
     output: true
     permalink: /:collection/:path/
@@ -434,6 +437,17 @@ defaults:
   - scope:
       path: ""
       type: sta347
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false # true
+      share: true
+      related: true
+  # sta437
+  - scope:
+      path: ""
+      type: sta437
     values:
       layout: single
       author_profile: true
