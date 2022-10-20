@@ -1,4 +1,6 @@
-# Vim Learning
+---
+title: "Vim Intro"
+---
 
 ## Vim Modes
 

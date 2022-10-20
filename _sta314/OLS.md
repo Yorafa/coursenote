@@ -2,7 +2,7 @@
 title: "Ordinary Least Square and Model Selection"
 ---
 
-**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \argmin\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \argmin\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2 $
+**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2 $
 
 -   The Loss function for OLS is  $L(\beta,D_{train}) = RSS = ||y-X\beta||^2_2$ , Penality is $Pen(\beta) = 0$
 -   $\hat \beta = (X^TX)^{-1}X^Ty$ is the solution of OLS where $X$ is full column rank.
@@ -12,14 +12,13 @@ After we get $\hat\beta$ , we first assume each error terms are linear independe
 
 -   Unbiasedness: $\mathbb{E}[\hat \beta] = \beta$
 -   The covariance matrix of $\hat \beta$ is: $Cov(\hat \beta) = \sigma^2(X^TX)^{-1}$
-
 -   The above two properties imply the $l_2$ estimation error $\mathbb{E} [||\hat \beta - \beta||_2^2] = \sigma^2Tr[(X^TX)^{-1}]$ where $X^TX = nI_{p+1}$ so that we have final answer $\mathbb{E} [||\hat \beta - \beta||_2^2] = \frac{\sigma^2(p+1)}{n}$.
 -   The $MSE$ of estimating $\beta$ increases as $p$ gets larger which show the larger variance. 
 -   If $p>n$, then OLS estimator is not unique and its variance is infinite. 
 
 To reduce our work to find a better model and avoid $p> n$ situation, we always want to remove all the predictors without significances. That is, we always process model selection to get best training on linear model. Or we can use [Lasso](Lasso),  [Ridge](Ridge) or elastic net regression to shrinks the coefficient towards zero which the similar concept as remove those coefficient.
 
--   elastic net is the combination of lasso and ridge where : $\hat\beta^R_{\lambda} = \argmin\limits_{\beta}  RSS + \lambda[(1-\alpha)||\beta||_1 + \alpha||\beta||^2_2], \alpha\in[0,1]$, but we dont talk more about this.
+- elastic net is the combination of lasso and ridge where: $\hat\beta^R_{\lambda} = \argmin\limits_{\beta}  RSS + \lambda[(1-\alpha)||\beta||_1 + \alpha||\beta||^2_2], \alpha\in[0,1]$, but we dont talk more about this.
 
 ## Model Selection
 

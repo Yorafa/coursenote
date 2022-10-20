@@ -5,14 +5,24 @@ title: "Classification"
 
 We may have a classification problem for a qualitative result from an unordered set $C$. The main goal of us is to:
 
--   build a classifier $\hat f: \R^p \to C$ to assigns a future observations $x\in \R^p$ to a class label. To obtain this function, similarly as the MSE, we have to minimize the **expected error rate:** $E[1\{Y\ne \hat f (X)\}]$
+-   build a classifier $\hat f: \R^p \to C$ to assigns a future observations $x\in \R^p$ to a class label. To obtain this function, similarly as the MSE, we have to minimize the **expected error rate:** $E[1\\{Y\ne \hat f (X)\\}]$
 
 
-The best classifier is known as the **Bayes classifier** denote it as $f^*$  which is the classifier we aim for. It defined as $\forall X= x, f^*(x) = j $ if $j = \arg\max\limits_{k\in C} P[Y=k | X= x]$. **It always exists** in classification problems.
 
-- $E[1\{Y\ne \hat f (X)\}| X = x] = 1 - \max\limits_{k\in C} P[Y=k | X= x]$ is the smallest expected error rate among all which is the same as the irreducible error.
+The best classifier is known as the **Bayes classifier** denote it as 
+$f^{\*}$
+which is the classifier we aim for. It defined as 
+$\forall X= x, f^{\*}(x) = j$
+if 
+$j = \arg\max\limits_{k\in C} P[Y=k \| X= x]$. 
+**It always exists** in classification problems.
 
-The reason why we can't use the common regression way (i.e. OLS) to do classification is that for a given feature we have $E[Y|X] = \beta_0 + \beta X$ where the coefficients from the regression esitimation which might not what we want.
+- $E[1\\{Y\ne \hat f (X)\\}| X = x] = 1 - \max\limits_{k\in C} P[Y=k \| X= x]$ 
+is the smallest expected error rate among all which is the same as the irreducible error.
+
+The reason why we can't use the common regression way (i.e. OLS) to do classification is that for a given feature we have 
+$E[Y\|X] = \beta_0 + \beta X$
+where the coefficients from the regression esitimation which might not what we want.
 
 ## Logistic Regression
 
@@ -24,4 +34,3 @@ That is, we can use maximum likelihood to estimate the parameters. The function 
 We use Z-statics as the statistical properties of MLE where $Z = \frac{\hat \beta_j }{SE[\beta_j]}$ 
 
 The logistic loss we define as the log-likelihood of the model, since most of the negative log-likelihood is convex we can use Gradient Descent to find the optimal solution. We also call this negative log-likelihood as the loss function.
-- 
