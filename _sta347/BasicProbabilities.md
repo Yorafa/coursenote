@@ -64,6 +64,7 @@ Let $A,B,C \subseteq S$ where $B \cup C = S$ then we have $A = A \cap S = A\cap(
 
 **(Bayes Theorem)**: $P(A\cap B) = P(A|B)P(B) = P(B|A)P(A)$ so that  $P(B|A) = \frac{P(A|B)P(B)}{P(A)}$ and verse visa. More stronger we have $P(A) = \sum_{i = 1} P(A|B_i)P(B_i)$ so that $P(B|A) = \frac{P(A|B)P(B)}{\sum_{i = 1} P(A|B_i)P(B_i)}$
 
+**Independent implies uncorrelated**, but converse is false.
 
 
 ## Recall

@@ -56,7 +56,7 @@ Back to topic, for a multivariate data set, we can use a matrix to represent it.
 - we can also re-write it by features where $X = \begin{bmatrix}X_{1}' \\ X_{2}' \\ \vdots \\ X_{n}' \end{bmatrix}$ where $X_i$ is a $p\times 1$ vector presents the $i$th observation of the data set with $p$ features.
   - Each $X_i$ form a random sample from $f(x) = f_X(x_1, x_2, \ldots, x_p)$
   - Measurement of $p$ variables in a $X_i$ is correlated.
-  - but measurments from different $X_i$ is independent to each other
+  - but measurments from different $X_i$ is independent to each other]
 
 ## Descriptive Statistics Among Samples
 

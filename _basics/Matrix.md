@@ -55,8 +55,10 @@ If $x'Ax > 0, \forall x\ne 0 $, we call $A$ is **positive definite matrix**. we 
 A square matrix is **Idempotent Matrices** if $A^2 = A$
 
 -   $I - A$ is also Idempotent
--   We also call it **Projection Matrices**
+-   If $A$ is also sysmetric,also call it **Projection Matrices**
 
 A square matrix $A$ is an **Orthogonal Projection Matrices** if $A^2 = A = A'$
 
 -   $A$ also is Idempotent and symmetric
+
+If a matrix in matrix of matrix form where only the diagonal matrix, then it is **Block Diagonal Matrix**
