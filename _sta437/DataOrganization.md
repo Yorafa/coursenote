@@ -83,9 +83,9 @@ For the data $X_{n\times p}$, we can write as $X = \begin{bmatrix} Y_1 & Y_2 & \
 - The projection of $Y_i$ on $(1 / \sqrt{n})1_n$ is $\bar X_i 1_n$ where $X_i$ present the $i$th feature of the data set
 
 
-We also have deviation vectore which the collection of the distance of each element from $Y_i$ to its projection on $(1 / \sqrt{n}) 1_n$\: $d_i = Y_i - \bar X_i 1_n$ where in matrix form is $\begin{bmatrix} y_{i1} - \bar x_i \\\ y_{i2} - \bar x_i \\\ \vdots \\\ y_{in} - \bar x_i \end{bmatrix}$
+We also have deviation vectore which the collection of the distance of each element from $Y_i$ to its projection on 
 
-
+$(1 / \sqrt{n}) 1_n$\: $d_i = Y_i - \bar X_i 1_n$ where in matrix form is $\begin{bmatrix} y_{i1} - \bar x_i \\\ y_{i2} - \bar x_i \\\ \vdots \\\ y_{in} - \bar x_i \end{bmatrix}$
 
 - $d_i\perp \bar X_i 1_n$
 - $d_i'd_i = \langle d_i, d_i \rangle = \sum_{j=1}^n (x_{ji} - \bar X_i)^2$ where the sample variance can be write as $s_{ii} = \frac{1}{n-1}d_i'd_i$
