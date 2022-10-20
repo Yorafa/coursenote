@@ -2,7 +2,7 @@
 title: "Parametric V.S. Non-parametric"
 ---
 
-The reason why we do machine learning is that we want to have a model that predict/classify/..., but the fact is that every actual fact may exists errors, that is, we never have a perfect model.
+The reason why we do machine learning is that we want to have a model that predict/classify/..., but the fact is that every actual fact may exists errors, that is, we hard to have a perfect model.
 
 Let $X$ be the input event, $Y$ be the output outcome, we can always assume there exist a function $f$ represent some magic where $Y = f(X) + \epsilon$, $\epsilon$ represent the error terms. 
 
@@ -55,4 +55,9 @@ Unsupervised method is the way find groups of samples that behave similarly, fin
 
 -   Useful as pre-processing step for supervised learning
 
-    
+$\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\P}{\mathbb{P}}$
