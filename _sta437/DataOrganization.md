@@ -48,7 +48,7 @@ A **deterministic matrix** is a matrix does not include any random variables, e.
 We also have change of variable, for a deterministic matrix $C_{q\times p}$, let $Y = CX$, then:
 - $E[Y] = CE[X] = C\mu_X$
 - $\Sigma_Y = C\Sigma_XC'$
-    
+  
 
 Back to topic, for a multivariate data set, we can use a matrix to represent it. Let a $n\times p$ matrix $X$ present a data set, then we have $X = \begin{bmatrix}x_{11} & x_{12} & \cdots & x_{1p} \\\ x_{21} & x_{22} & \cdots & x_{2p} \\\ \vdots & \vdots & \vdots & \vdots \\\ x_{n1} & x_{n2} & \cdots & x_{np} \end{bmatrix}$
 - each row of $X_{n\times p}$ represents a multivariate observation
@@ -80,18 +80,18 @@ $\bar x_j = \frac{1}{n} \sum_{i=1}^n x_{ij}$
 Let $1_n$ be the $n\times 1$ vector with full of $1$ then the vector $(1 / \sqrt{n})1_n$ has unit length and forms equal angles with each of the $n$ coordinates.
 
 For the data $X_{n\times p}$, we can write as $X = \begin{bmatrix} Y_1 & Y_2 & \cdots & Y_p \end{bmatrix}$:
-- The projection of $Y_i$ on $(1 / \sqrt{n})1_n$ is $\bar X_i 1_n$ where $X_i$ present the $i$th feature of the data set
+- The projection of $Y_i$ on $(1 / \sqrt{n})1_n$ is $\bar X_i 1_n$ where $\overline X_i = E[Y_i]$ present the $i$th feature of the data set
 
 
-We also have deviation vectore which the collection of the distance of each element from $Y_i$ to its projection on 
+We also have deviation vector which the collection of the distance of each element from $Y_i$ to its projection on $(1 / \sqrt{n}) 1_n$ \: $d_i = Y_i - \bar X_i 1_n$ 
 
-$(1 / \sqrt{n}) 1_n$\: $d_i = Y_i - \bar X_i 1_n$ where in matrix form is $\begin{bmatrix} y_{i1} - \bar x_i \\\ y_{i2} - \bar x_i \\\ \vdots \\\ y_{in} - \bar x_i \end{bmatrix}$
-
+- $d_i$ in matrix form is $\begin{bmatrix} y_{i1} - \bar x_i \\\ y_{i2} - \bar x_i \\\ \vdots \\\ y_{in} - \bar x_i \end{bmatrix}$
 - $d_i\perp \bar X_i 1_n$
 - $d_i'd_i = \langle d_i, d_i \rangle = \sum_{j=1}^n (x_{ji} - \bar X_i)^2$ where the sample variance can be write as $s_{ii} = \frac{1}{n-1}d_i'd_i$
 - $d_i'd_k = \langle d_i, d_k \rangle = \sum_{j=1}^n (x_{ji} - \bar X_i)(x_{jk} - \bar X_k)$ where the sample covariance can be write as $s_{ik} = \frac{1}{n-1}d_i'd_k$
-- $d_i'd_k = \norm{d_i - \bar X_i 1_n} \norm{d_k - \bar X_k 1_n} \cos(\theta_{ik}) = \langle d_i, d_k \rangle$ where $\theta_{ik}$ is the angle between $d_i$ and $d_k$
-- Since $\rho_{ik} = \frac{s_{ik}}{s_i s_k} = \frac{(n-1) d_i' d_k}{\sqrt{ (n-1) d_i'd_i}\sqrt{(n-1)d_k'd_k}} = \frac{d_i'd_k}{\sqrt{d_i'd_i}\sqrt{d_k'd_k}} = $ $\frac{\langle d_i, d_k \rangle}{\norm{d_i} - \bar X_i 1_n} {\norm {d_k - \bar X_k 1_n }} = \cos(\theta_{ik})$ 
+  - recall the dot product has the form $A\cdot B = \norm{A}\norm{B}\cos(\theta)$
+  - where $\theta_{ik}$ is the angle between $d_i$ and $d_k$
+- $\rho_{ik} = \frac{s_{ik}}{s_i s_k} = \frac{(n-1) d_i' d_k}{\sqrt{ (n-1) d_i'd_i}\sqrt{(n-1)d_k'd_k}} = \frac{d_i'd_k}{\sqrt{d_i'd_i}\sqrt{d_k'd_k}} = \cos(\theta_{ik})$ 
 
 
 We can have some other projection:

@@ -1,10 +1,11 @@
 ---
 title: "Introduction to Real Number"
 ---
+Beyond real number, let's review some about rational number first. Rational number aka the extension of natural number where we want to separate a integer.
 
 ## Rational number
 
-Beyond real number, let's review some about rational number first. Rational number aka the extension of natural number where we want to separate a integer. That's $\forall q\in \Q, q = a/b, a,b \in \N, b\ne 0$
+That's we define ration number as $\forall q\in \Q, q = a/b, a,b \in \N, b\ne 0$
 
 We would like to use decimal expansion to present rational number. But the interesting thing found here, we have many decimal expansions, how can we found the related one. For the finite decimal expansion, we just simply use $10^n$ where $n$ is the number of digits after dot to times such expansion then we have a integer, and now we can present it as $a/b$ so that all finite decimal expansions are rational. How about infinite decimal expansion? Some of them are eventually periodic, some of them are not. Among those expansion, how can we judge if it's a rational number?
 
@@ -39,7 +40,7 @@ $\forall n\in \mathbb{N}$ we define the list number $\dots,x_n,x_{n+1},\dots$ is
 
 Let $L\in \R$, $(a_n)^{\infty}_{n=1}, a_n \in \R$ be a sequence.
 
--   $\forall \epsilon > 0, \exists N\in \N \ s.t. \forall n \ge N, |a_n - L| < \epsilon \implies L$ is the limit of sequence $(a_n)^{\infty}_{n=1}$ denote as $\lim\limits_{n\to \infty} a_n = L$
+-   $\forall \epsilon > 0, \exists N\in \N \ s.t. \forall n \ge N, \|a_n - L\| < \epsilon \implies L$ is the limit of sequence $(a_n)^{\infty}_{n=1}$ denote as $\lim\limits_{n\to \infty} a_n = L$
 -   We also say $\lim\limits_{n\to \infty} a_n = L$ as $(a_n)^{\infty}_{n=1}$ converges to $L$
 
 **(SQUEEZE THEOREM)** Suppose that there are three sequences $(a_n), (b_n), (c_n)$ satisfy $a_n \le b_n \le c_n, \forall n \ge 1$ and $\lim\limits_{n\to \infty} a_n = \lim\limits_{n\to \infty} c_n = L \implies \lim\limits_{n\to \infty} b_n = L$.
@@ -61,15 +62,15 @@ $\limsup\limits_{n\to\infty} = \lim\limits_{n\to \infty}(\sup\limits_{m\ge n} x_
 
 ## Subsequences
 
-A **subsequences** of a sequence $(a_n)^{\infty}_{n=1}$ is a sequence $(a_{n_k})_{k = 1} ^{\infty}$
+A **subsequences** of a sequence $(a_n)^{\infty}_{n=1}$ can be denote as $(a_{n_k})_{k = 1} ^{\infty}$ which also is a sequence.
 
 **(BOLZANO-WEIERSTRASS THEOREM)**: Every bounded sequence of real numbers has a convergent subsequence.
 
 ## Cauchy Sequences
 
-**(2.8.1. Proposition)**: Let $(a_n)^{\infty}_{n=1}$ be a sequence converging to $L$. $\forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N, |a_n - a_m| < \epsilon$
+**(2.8.1. Proposition)**: Let $(a_n)^{\infty}_{n=1}$ be a sequence converging to $L$. $\forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N, \|a_n - a_m\| < \epsilon$
 
-A sequence $(a_n)^{\infty}_{n=1}$ of real numbers is called a **Cauchy Sequence** $\iff \forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N,$$ |a_n - a_m| < \epsilon $
+A sequence $(a_n)^{\infty}_{n=1}$ of real numbers is called a **Cauchy Sequence** $\iff \forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N,$$ \|a_n - a_m\| < \epsilon $
 
 -   Obviously, Cauchy sequence of real numbers converges.
 

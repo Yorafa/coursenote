@@ -6,7 +6,7 @@ we first define **vector** which is a collection of data in $n\times1$ as $\begi
 
 -   Just in case, $n\times p$ means $n$ rows and $p$ column
 
-We define a **transpose** of a matrix(the example from above) is $\begin{bmatrix} x_{11} & x_{21} & \cdots & x_{n1} \\ \cdots & \cdots & \cdots & \cdots \\ x_{1p} & x_{2p} & \cdots & x_{np}\end{bmatrix}$ which from $n\times p$ to $p\times n$, we also denote as $v^T$/$v'$
+We define a **transpose** of a matrix(the example from above) is $\begin{bmatrix} x_{11} & x_{21} & \cdots & x_{n1} \\ \cdots & \cdots & \cdots & \cdots \\ x_{1p} & x_{2p} & \cdots & x_{np}\end{bmatrix}$ which from $n\times p$ to $p\times n$, we also denote as $v^T$ or $v'$
 
 Since we have vector, we also has its belong, the **vector space**. In the most of courses, vector spaces are defined over the field $\R$, moreover over the n-dimensional Euclidean space $\R^n$
 

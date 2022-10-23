@@ -49,3 +49,4 @@ Notice: it (binary relation) is very different with the binary operation of grou
 -   Let $R$ be an equivalence relation on a set $A$. The set of Equivalence Classes is a partition of $A$. 
 -   Or we can say $\forall a \in A, \exist [a]_R, a\in[a]_R, [a]_R$ is unique
 
+$(a_n)_{n=1}^{\infty} = (a_n)_{n=1}^{\infty}$

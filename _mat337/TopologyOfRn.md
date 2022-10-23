@@ -30,6 +30,17 @@ A set $\{v_1, \ldots, v_m\} \subset \R^n$ is **orthonormal** if $\lang v_i, v_j\
 
 ## Close and Open
 
+**Limit Point**: A point $a$ is a **limit point** of a set $S$ if there exists a sequence $\{x_n\}$ in $S$ such that $\lim\limits_{n\to \infty} x_n = a$
+
+**Closed Set**: A set $S$ is **closed** if $a$ is a limit point of $S$ for every $a \in S$
+
+**Closure**: The **closure** of a set $S$ is the set of all limit points of $S$
+
+-   Every Closure is the smallest closed set containing $S$
+
+**Cluster Point**: 
+
+**Open Set**
 
 
 ## Compact
