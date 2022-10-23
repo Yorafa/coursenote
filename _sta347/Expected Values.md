@@ -57,7 +57,7 @@ Let $X$ be <u>discrete</u> random variable, we define the **Probability Generati
 -   $r''_X(0) = 2P(X=2)$
 -   $r^k_X(0) = k! P(X=k)$
 
-For any random variable $X$, we have **Moment Generating Function(MGF)** which defined as the raw moment given that the expectation exists: $m_X(s) = \mathbb{E}[e^{sX}]; s\in \R$. Assume $m_X(s) < \infty, s\in (-s_0, s_0),s_0>0$ which leads to:
+For any random variable $X$, we have **Moment Generating Function(MGF)** which defined as the raw moment given that the expectation exists: $m_X(s) = \mathbb{E}[e^{sX}]; s\in \R$. Assume $m_X(s) < \infty, s\in (-s_0, s_0),s_0>0$ which leads to: 
 
 -   $m_X(0) = 1$
 -   $m'_X(0) = \mathbb{E}[X]$
