@@ -1,5 +1,5 @@
 ---
-title: "Vim Intro"
+title: "Vim Learning"
 ---
 
 ## Vim Modes
