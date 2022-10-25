@@ -19,7 +19,7 @@ Let $(a_n)^{\infty}_{n=1}$ be a sequence of numbers, we define a **infinite seri
 
 $\sum_{i = 1}^{\infty} a_i$ converges $\iff \forall \epsilon > 0, \exists N\in \N, s.t. \forall n\ge N, |\sum_{k = n+1}^{\infty} a_k| < \epsilon \iff \forall \epsilon > 0, \exists N\in \N, s.t. \forall n,m\ge N, |\sum_{k = n+1}^{m} a_k| < \epsilon$
 
-(**3.2.1 PROPOSITION**): Consider a sequence $(a_n)$,  $\forall k > 1, a_k \ge 0 \and s_n = \sum_{k=1}^n a_k$
+(**3.2.1 PROPOSITION**): Consider a sequence $(a_n)$,  $\forall k > 1, a_k \ge 0 \land s_n = \sum_{k=1}^n a_k$
 
 -   $(s_n)_{n=1}^{\infty}$ is bounded above $\iff \sum_{n= 1}^{\infty} a_n$ converge
 -   $(s_n)_{n=1}^{\infty}$ is unbound $\iff \sum_{n= 1}^{\infty} a_n$ diverge
