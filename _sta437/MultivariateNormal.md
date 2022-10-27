@@ -14,7 +14,11 @@ where $\mathbf{\mu}$ is the mean vector, $\mathbf{\Sigma}$ is the $p\times p$ va
 
 That's, we write the random vector $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$, where when $\det(\Sigma)=0$, we call it a degenerate distribution. Moreover $\det(2\pi\Sigma) = (2\pi)^p\det(\Sigma)$, so the PDF of the multivariate normal distribution also can write as: $f(\mathbf{x}) = \frac{1}{\sqrt{\det(2\pi\Sigma)}}e^{-\frac{1}{2}(\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu})}$
 
-- e.g. for bivariate normal distribution: $f(x,y) = \frac{1}{2\pi\sqrt{\sigma_1^2\sigma_2^2(1-\rho^2)}}e^{-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_1)^2}{\sigma_1^2}+\frac{(y-\mu_2)^2}{\sigma_2^2}-\frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}\right]}$. If $\rho = 0 \implies f(x,y) = f(x)f(y)$, so $\rho$ is the correlation where no correlation means the two variables are independent.
+- e.g. for bivariate normal distribution: $f(x,y) = \frac{1}{2\pi\sqrt{\sigma_1^2\sigma_2^2(1-\rho^2)}}e^{-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_1)^2}{\sigma_1^2}+\frac{(y-\mu_2)^2}{\sigma_2^2}-\frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}\right]}$. If $\rho = 0 \implies f(x,y) = f(x)f(y)$, so $\rho$ is the correlation where no correlation means the two variables are independent for normal distribution.
+
+The maximum likelihood estimator of $\mu$ is $\hat{\mu} = \frac{1}{n}\sum_{i=1}^n\mathbf{x}_i$ and the maximum likelihood estimator of $\Sigma$ is $\hat{\Sigma} = \frac{1}{n}\sum_{i=1}^n(\mathbf{x}_i-\hat{\mu})(\mathbf{x}_i-\hat{\mu})^T$
+
+- Firstly, the likelihood estimator is 
 
 ## Key Properties
 
@@ -26,16 +30,27 @@ Suppose $X$ follows the multivariate normal distribution with mean vector $\math
 
 Let $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$, then the following are true:
 
-For the 1st., denote $a'X = a_1X_1 + \cdots + a_pX_p$, then $a'X \sim \mathcal{N}(a'\mathbf{\mu}, a'\mathbf{\Sigma}a)$
+<u> For the 1st., </u> denote $a'X = a_1X_1 + \cdots + a_pX_p$, then $a'X \sim \mathcal{N}(a'\mathbf{\mu}, a'\mathbf{\Sigma}a)$
   e.g. $a = [1, 0, \ldots, 0]$, then $a'X \sim \mathcal{N}(\mu_1, \sigma_1^2)$ also can prove $X_1$ follows $\mathcal{N}(\mu_1, \sigma_1^2)$ where $a'X = X_1$.
 
-For the 2nd., we partition $X$ into $X_{1; q\times 1}$ and $X_{2; (p-q)\times 1}$, then $X = [X_{1}; X_{2}]$, then $X_{1}$ and $X_{2}$ are independent, so $X_{1}$ and $X_{2}$ are multivariate normal distributed, and $X_{1}$ is distributed as $\mathcal{N}(\mu_{1}, \Sigma_{11})$ and $X_{2}$ is distributed as $\mathcal{N}(\mu_{2}, \Sigma_{22})$ where $\Sigma_{11}$ is the $q\times q$ submatrix of $\Sigma$ and $\Sigma_{22}$ is the $(p-q)\times (p-q)$ submatrix of $\Sigma$. That is, $\Sigma = \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}$, where $\Sigma_{12}$ is the $q\times (p-q)$ submatrix of $\Sigma$ and $\Sigma_{21}$ is the $(p-q)\times q$ submatrix of $\Sigma$. And $\mu_1 = (\mu_{11} + \ldots + \mu_{1q} )/ q$ and $\mu_2 = (\mu_{1(q+1)} + \ldots + \mu_{1p})/(p-q)$.
+<u>For the 2nd.,</u> we partition $X$ into $X_{1; q\times 1}$ and $X_{2; (p-q)\times 1}$, then $X = [X_{1}; X_{2}]$, then $X_{1}$ and $X_{2}$ are independent, so $X_{1}$ and $X_{2}$ are multivariate normal distributed, and $X_{1}$ is distributed as $\mathcal{N}(\mu_{1}, \Sigma_{11})$ and $X_{2}$ is distributed as $\mathcal{N}(\mu_{2}, \Sigma_{22})$ where $\Sigma_{11}$ is the $q\times q$ submatrix of $\Sigma$ and $\Sigma_{22}$ is the $(p-q)\times (p-q)$ submatrix of $\Sigma$. That is, $\Sigma = \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}$, where $\Sigma_{12}$ is the $q\times (p-q)$ submatrix of $\Sigma$ and $\Sigma_{21}$ is the $(p-q)\times q$ submatrix of $\Sigma$. And $\mu_1 = (\mu_{11} + \ldots + \mu_{1q} )/ q$ and $\mu_2 = (\mu_{1(q+1)} + \ldots + \mu_{1p})/(p-q)$.
 - we can have a matrix $A_{q\times p} = \begin{bmatrix} I_{q\times q} & 0 \\\ 0 & 0 \end{bmatrix}$ to do the partition where $AX = X_{1}$ where $A \Sigma A^T = \Sigma_{11}$.
 
-For the 3rd.,  $\Sigma_{12} = 0 \iff \Sigma_{11}$ and $\Sigma_{22}$ are independent, so $X_{1}$ and $X_{2}$ are independent, where the joint function $f(x_1, x_2) = f(x_1)f(x_2)$.
+<u>For the 3rd.,</u>  $\Sigma_{12} = 0 \iff \Sigma_{11}$ and $\Sigma_{22}$ are independent, so $X_{1}$ and $X_{2}$ are independent, where the joint function $f(x_1, x_2) = f(x_1)f(x_2)$.
+
+- For binary random variable, uncorrelated can implies independent.
+
+<u>For the 4th.,</u> $X$ partition into $X_1,X_2$, and $\Sigma_{22} > 0$, then $X_1|X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2), \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21})$ where $X_1|X_2 = x_2$ is the conditional distribution of $X_1$ given $X_2 = x_2$.
+
+- Let $Y_1 = X_1 - \Sigma_{12}\Sigma_{22}^{-1}X_2$ and $Y_2 = x_2$ then we have $\begin{bmatrix} Y_1 \\ Y_2\end{bmatrix} = \begin{bmatrix} I & \Sigma_{12}\Sigma_{22}^{-1} \\ 0 & I  \end{bmatrix} \begin{bmatrix} X_1 \\ X_2\end{bmatrix}$
+- then $\Sigma_y = A \Sigma_x A^T = \begin{bmatrix} I & \Sigma_{12}\Sigma_{22}^{-1} \\ 0 & I  \end{bmatrix} \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix} \begin{bmatrix} I & 0 \\ -\Sigma_{12}\Sigma_{22}^{-1} & I  \end{bmatrix} = \begin{bmatrix} \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21} & 0 \\ 0 & \Sigma_{22} \end{bmatrix}$
+- $Y_1 \perp Y_2$
+
+## Jocobian Matrix
+
+Let $U = A(V+C)$ then we have function $f_U(u) = \frac{f_V(v)}{|A|}|_{u = A(V+C)}$
 
 
-For the 4th., $X$ partition into $X_1,X_2$, and $\Sigma_{22} > 0$, then $X_1\|X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2), \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21})$ where $X_1\|X_2 = x_2$ is the conditional distribution of $X_1$ given $X_2 = x_2$.
 ## Example, Try to prove the following truth
 Let $X\sim N(0,1)$ and H is $Bernoulli(0.5)$ with value $\{1, -1\}$, then $Y = HX$ is also normal distributed. We can prove this by using the fact that $Y = HX = H\sqrt{1}X$ where $X$ is standard normal distributed, so $Y$ is also standard normal distributed.
 - the density of $Y$ is still noraml distributed where $F(Y) = P[Y \leq y] = P[HX \leq y \| H = 1]P[H = 1] +  P[HX \leq y \| H = -1]P[H = -1]$ $= 0.5P(X \leq y \| H = 1) + 0.5 P[X \geq -y \| H = -1] = 0.5F_X(y) + 0.5(1- F_X(-y))$ where $F_X$ is the CDF of $X$ so that $Y$ and $X$ have the same distribution.

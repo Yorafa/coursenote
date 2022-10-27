@@ -18,6 +18,15 @@ Let $X_1, X_2,\ldots$ be an infinite sequence of random variables and let $Y$ be
 
 Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable.  the sequence $\{X_n\}$ is <u> **almost surely** </u> to $X$ if $P(\{s: X_n(s) \to X(s) \}) = 1$. We denote it as $X_n \overset{\text{a.s.}}\to X$. Sometimes we also call it Convergence with probability 1.
 
+- $P(\lim\limits_{n\to \infty} X_n = X) = 1 \implies P(\lim\limits_{n\to \infty} |X_n - X| > \epsilon \text{ i.o}) = 0$
+- $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{P}\to X$ no converse
+
+E.g. $S=[0,1], U \sim \text{Uniform}(0,1)$, let $X_n(s) =  I(U > \frac{1}{n^2})$ then $X_n \overset{\text{a.s.}}\to 1$ by Bonel Canelli Lemma.
+
+- Let $\epsilon > 0$, $\exists X, s.t., \sum_{n=1}^{\infty} P(|X_n - X| > \epsilon) < \infty \implies X_n \overset{\text{a.s.}}\to X$. Assume $X=1$. Then we have $\sum_{n=1}^{\infty} P(|X_n - 1| > \epsilon) = \sum_{n=1}^{\infty} P(X_n - 1 > \epsilon) + P(-X_n - 1 > \epsilon) = \sum_{n=1}^{\infty}P(1-X_n > \epsilon) = \sum_{n=1}^{\infty} P(X_n = 0) = \sum_{n=1}^{\infty} P(U \le \frac{1}{n^2}) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} < \infty$ which $X_n \overset{\text{a.s.}}\to 1$ by Bonel Canelli Lemma.
+-  Let $\epsilon > 0$, $\exists X, s.t., \sum_{n=1}^{\infty} P(|X_n - X| > \epsilon) < \infty \implies X_n \overset{\text{a.s.}}\to X$. Assume $X_n=I(U > \frac{1}{n}$
+
+
 **Strong Law of Large Number:** Let $X_1, X_2,\ldots$ be a sequence of indpendent random variables. Then $\forall \epsilon > 0, P(\lim_{n\to \infty} M_n = \mu) = 1$ or we say $M_n \overset{\text{a.s.}}\to \mu$
 
 

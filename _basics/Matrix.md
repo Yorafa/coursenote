@@ -83,3 +83,7 @@ A square matrix $A$ is an **Orthogonal Projection Matrices** if $A^2 = A = A'$
 -   $A$ also is Idempotent and symmetric
 
 If a matrix in matrix of matrix form where only the diagonal matrix, then it is **Block Diagonal Matrix**
+
+## Extra Topic
+
+Hadamard Transformation: question in the quiz $Q_{2\times 2}$ in the combination of $\frac{\sqrt{2}}{2}$ and $-\frac{\sqrt{2}}{2}$ totally 8 of them are orthogonal.

@@ -14,7 +14,7 @@ The key point of **Ridge Regression** is to find a model minimize $[\sum_{i=1}^n
 
 Pros:
 
--   A better job for prediction than the OLS approach by reducing the coefficient estimates.
+-   A better job for prediction than the OLS approach by reducing the coefficient estimates (less variance)
 -   Computionally efficient than OLS, especially when u want to get best model from best subset selection
 
 Cons:

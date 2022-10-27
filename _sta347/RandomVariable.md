@@ -62,7 +62,10 @@ e.g. $X_1, \ldots, X_n \overset{i.i.d}\sim U(0,1)$, then $f_{X_{(1)}}(X) = n(1-x
 
 **Borel-Cantelli Lemma:**
 
-1. $\sum_{n=1}^{\infty} P(A_n) \le \infty \implies P(A_n \text{ i.o}) = 0$
+1. $\sum_{n=1}^{\infty} P(A_n) < \infty \implies P(A_n \text{ i.o}) = 0$. Then $\sum_{n=1}^{\infty} P(|X_n - X| > \epsilon) < \infty \implies X_n \overset{a.s.}\to X$ but converse is not true.
    - Assume $\sum_{n=1}^{\infty} P(A_n) \le \infty$
-   -  $P(A) = P(\bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty} A_m) \le \lim\limits_{n\to\infty} P(\bigcup_{m=n}^{\infty} A_m) \le \lim\limits_{n\to\infty} \sum_{m=n}^{\infty} P(A_m) = 0$ by drecreasing sequence of events and continunity from above.
+   -  $P(A) = P(\bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty} A_m) = \lim\limits_{n\to\infty} P(\bigcup_{m=n}^{\infty} A_m) \le \lim\limits_{n\to\infty} \sum_{m=n}^{\infty} P(A_m) = 0$ by drecreasing sequence of events and continunity from above.
 2. $\sum_{n=1}^{\infty} P(A_n) = \infty$ and all $A_n$ are independent $\implies P(A_n \text{ i.o}) = 1$
+   - $1 - P(A_n \text{ i.o}) = P(A_n^c \text{ a.a}) = P(\bigcup_{n=1}^{\infty} \bigcap_{m=n}^{\infty} A_m^c) = \lim\limits_{n\to\infty} P(\bigcap_{m=n}^{\infty} A_m^c) = \lim\limits_{n\to\infty} \lim\limits_{k\to\infty} P(\bigcap_{m=n}^{k}A_m^c) = \lim\limits_{n\to\infty} \lim\limits_{k\to\infty} \prod_{m=n}^{k} P(A_m^c) = \lim\limits_{n\to\infty} \lim\limits_{k\to\infty} \prod_{m=n}^{k} (1 - P(A_n)) \le \lim\limits_{n\to\infty} \lim\limits_{k\to\infty} \prod_{m=n}^{k} e^{-P(A_m)} \le \lim\limits_{n\to\infty} e^{-\sum_{m=n}^{\infty} P(A_m)} \le e^{-\infty} = 0$
+   - that is, $P(A_n \text{ i.o}) = 1$
+

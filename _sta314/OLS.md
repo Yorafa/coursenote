@@ -20,6 +20,8 @@ To reduce our work to find a better model and avoid $p> n$ situation, we always 
 
 - elastic net is the combination of lasso and ridge where: $\hat\beta^R_{\lambda} = \argmin\limits_{\beta}  RSS + \lambda[(1-\alpha)||\beta||_1 + \alpha||\beta||^2_2], \alpha\in[0,1]$, but we dont talk more about this.
 
+The estimate of beta is unbiased. $E[\hat\beta] = E[\frac{1}{n}X^Ty]= E[\frac{1}{n}X^T(X\beta + \epsilon)] = \frac{1}{n}X^TX\beta + E[\frac{1}{n}X^T\epsilon] =\beta$
+
 ## Model Selection
 
 The way we always use is Subset Selection. We identify a subset of the $p$ predictors that we believe to be related to the response. 
@@ -63,7 +65,7 @@ Forward Stepwise Selection:
 -   can be used in high-dimensional setting with $n<p$
 -   may not find the best possible since greedy
 
-Forward Stepwise Selection:
+Backward Stepwise Selection:
 
 -   less computation
 -   only used in $n>p$
