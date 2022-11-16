@@ -13,3 +13,12 @@ Priority Queue is an ADT that the item in it will be sorted in given priority. B
 ## Implement
 
 The easiest implement of a priority queue we can just simply use the heap. See more about heap.
+
+
+## Worst-Case Time complexity
+
+| Operation | Time Complexity |
+|:---------:|:---------------:|
+| Insert    | O(log n)        |
+| FindMax   | O(1)            |
+| ExtractMax| O(log n)        |

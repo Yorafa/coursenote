@@ -62,7 +62,7 @@ $\limsup\limits_{n\to\infty} = \lim\limits_{n\to \infty}(\sup\limits_{m\ge n} x_
 
 ## Subsequences
 
-A **subsequences** of a sequence $(a_n)^{\infty}_{n=1}$ can be denote as $(a_{n_k})_{k = 1} ^{\infty}$ which also is a sequence.
+A **subsequences** of a sequence $(a\_n)^{\infty}\_{n=1}$ can be denote as $(a\_{n\_k})\_{k = 1}^{\infty}$ which also is a sequence.
 
 **(BOLZANO-WEIERSTRASS THEOREM)**: Every bounded sequence of real numbers has a convergent subsequence.
 

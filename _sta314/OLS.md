@@ -70,3 +70,8 @@ Backward Stepwise Selection:
 -   less computation
 -   only used in $n>p$
 -   may not find the best possible since greedy
+
+
+## Gradient Descent
+
+We have gradient descent for $\hat \beta^{(k+1)} = \hat \beta^{(k)} - \alpha \sum_{i=1}^n[ -y_i + x_i^T\hat \beta^{(k)}]x_{i}$

@@ -46,7 +46,7 @@ Let $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$, then the following are 
 - then $\Sigma_y = A \Sigma_x A^T = \begin{bmatrix} I & \Sigma_{12}\Sigma_{22}^{-1} \\ 0 & I  \end{bmatrix} \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix} \begin{bmatrix} I & 0 \\ -\Sigma_{12}\Sigma_{22}^{-1} & I  \end{bmatrix} = \begin{bmatrix} \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21} & 0 \\ 0 & \Sigma_{22} \end{bmatrix}$
 - $Y_1 \perp Y_2$
 
-## Jocobian Matrix
+## Jacobian Matrix
 
 Let $U = A(V+C)$ then we have function $f_U(u) = \frac{f_V(v)}{|A|}|_{u = A(V+C)}$
 

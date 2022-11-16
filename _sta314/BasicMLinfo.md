@@ -55,9 +55,4 @@ Unsupervised method is the way find groups of samples that behave similarly, fin
 
 -   Useful as pre-processing step for supervised learning
 
-$\DeclareMathOperator*{\argmin}{argmin}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\P}{\mathbb{P}}$
+

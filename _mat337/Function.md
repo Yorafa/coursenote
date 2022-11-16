@@ -21,6 +21,8 @@ If a function $f$ satisfied $\norm{f(x) - f(y)} \le C\norm{x-y}, \forall x,y\in 
     -   $\varepsilon_i(t) =te_i$ which from $\R \to \R^n$
     -   Every other linear map is a linear combination of the maps $\varepsilon_i \pi_j$
 
+**MEAN VALUE THEOREM**: a function $f$ is continuous on $[a,b]$ and differentiable on $(a,b) \implies \exists c\in (a,b), s.t. f'(c) = \frac{f(b) - f(a)}{b-a}$
+
 ## Discontinuity
 
 $f$ is discontinuous at $a$, $a$ is a **Removable Singularity** where $\lim\limits_{x\to a} f(x) \ne f(a)$ but $\lim\limits_{x\to a-} f(x) = \lim\limits_{x\to a+} f(x)$

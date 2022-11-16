@@ -102,3 +102,16 @@ vector<int> heapsort(vector<int>& unknown){
 } // nlogn + nlogn in reverse order;
 ```
 
+## Worst-Case Time Complexity
+
+| Operation | Time Complexity |
+|:---------:|:---------------:|
+| Heapify   |      O(log n)   |
+| Insert    |      O(log n)   |
+| Extract   |      O(log n)   |
+| HeapSort  |      O(n log n) |
+| ExtractMax/ExtractMin | O(log n)|
+| Maximum/Minimum | O(1)|
+| decrease/increase key | O(log n)|
+| delete | O(log n)|
+| Union | O(n)|

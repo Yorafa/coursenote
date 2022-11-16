@@ -145,3 +145,12 @@ AVL-SEARCH(root, k):
     return root
 ```
 
+## Worst-Case Time Complexity
+
+| Operation | Time Complexity |
+|:---------:|:---------------:|
+|   Search  |      O(log n)   |
+|   Insert  |      O(log n)   |
+|   Delete  |      O(log n)   |
+
+

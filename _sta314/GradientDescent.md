@@ -4,6 +4,8 @@ title: "Gradient Descent"
 
 Gradient descent is a optimization iterative algorithm for finding the minimum of a function. To find a local minimum of a function using gradient descent is to do derivatives to find the critical point. It asks a convex function to execut. That is, we can use grandient descent to find the minimum of a MSE.
 
+A function $f$ is **convex** if for any $x_0,x_1$ in the domain of $f$.  $f((1-\lambda)x_0 + \lambda x_1) \leq (1-\lambda)f(x_0) + \lambda f(x_1)$ for all $\lambda \in [0,1]$.
+
 Let $\hat w = \min\limits_{w} \mathcal{J}(w)$. We initialize such $w$ to something reasonable and repeat adjusting $w$ them in the direction of steepest descent. That is, according to the direction of the greatest increase in $\mathcal{J}(w)$ at $w$ is its gradient $\frac{\partial \mathcal{J}}{\partial w}$ (thats why we need convex), then we update $w$ in the opposite direction of the gradient descent.
 
 - In general we can have equation $w_j^{(k+1)} \leftarrow w_j^{(k)} - \alpha \frac{\partial \mathcal{J}}{\partial w_j}|_{w = w^{(k)}}$, where $\alpha$ is the learning rate.

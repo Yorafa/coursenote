@@ -38,11 +38,11 @@ We define a **squared matrix** if it has the same number of rows and columns.
     -   $tr(A+B) = tr(A) + tr(B)$
     -   $tr(AB) = tr(BA)$
     -   $tr(P^{-1}AP) = tr(A)$ $P$ satisfied the inverse and multiplication condition
--   Only squared matrix has inverse but only when satisfied $A^{-1}\cdot A = I$, or we can said iff $rank(A) = $ #A's row/column
+-   Only squared matrix has inverse but only when satisfied $A^{-1}\cdot A = I$, or we can said iff $rank(A) =$ #A's row/column
     -   full rank means $\det \ne 0$
 
 
-We define a matrix $Q \in \R^{k\times k}$ is a **Orthogonal/orthnormal Matrices** $\iff QQ' = Q'Q = I$ where $Q' = Q^{-1}$
+We define a matrix $Q \in \R^{k\times k}$ is a **Orthogonal/orthonormal Matrices** $\iff QQ' = Q'Q = I$ where $Q' = Q^{-1}$
 
 -   The determinant of an orthogonal matrix is +1 or -1.
 
@@ -59,9 +59,9 @@ We define a matrix $A$ is **symmetric** if $A = A'$
 -   $x'Ax = [x_1,x_2,\ldots,x_k] \begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1k} \\ a_{12} & a_{22} & \cdots & a_{2k} \\ \cdots & \cdots & \cdots & \cdots \\a_{1k} & a_{2k} & \cdots & a_{kk}\end{bmatrix} \begin{bmatrix}x_1\\x_2\\\vdots\\x_k\end{bmatrix} = a_{11}x_1^2 + a_{22}x_2^2 + \ldots + a_{kk}x^k_k + 2(a_{12}x_1x_2 + a_{13}x_1x_3 + \ldots + a_{k-1, k}x_{k-1}x_k)$ 
 - If $A = -A'$, then $A$ is **anti-symmetric**
 - If $x'Ax \ge 0$, we call $A$ is **nonnegative definite matrix**. we define as $A \succeq 0$. Or equivalent all its eigenvalues are $\ge 0$
-- If $x'Ax > 0, \forall x\ne 0 $, we call $A$ is **positive definite matrix**. we define as $A \succ 0$. Or equivalent all its eigenvalues are strictly positive
+- If $x'Ax > 0, \forall x\ne 0$, we call $A$ is **positive definite matrix**. we define as $A \succ 0$. Or equivalent all its eigenvalues are strictly positive
   -  The inverse(always exists) of a symmetric positive definite matrix is also symmetric positive definite.
-- $A = P\Lambda P'$ and $A^{-1} = P\Lambda^{-1}P'$ where $\Lambda = \text{diag}[\lambda_1, \ldots, \lambda_k$, $P = [e_1, \ldots, e_k]$, and we call it spectral decomposition.
+- $A = P\Lambda P'$ and $A^{-1} = P\Lambda^{-1}P'$ where $\Lambda = \text{diag}[\lambda_1, \ldots, \lambda_k]$, $P = [e_1, \ldots, e_k]$, and we call it spectral decomposition.
   - $A = P\Lambda P'$ then $A^{1/2} = P\Lambda^{1/2}P'$
     - $A^{1/2}$ is still symmetric
     - $A^{1/2}A^{1/2} = A$

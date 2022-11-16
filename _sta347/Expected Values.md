@@ -17,6 +17,8 @@ If there exists some other function $g$, then the expectation of $g$ is:
 
 $\mathbb{E}(X) = \int_{0}^{\infty} P(X > t)dt - \int_{-\infty}^{0} P(X < t)dt$ where both probability $< \infty$
 
+Linearity property of expectations only work finite where : $\sum_{i=1}^n E[X_i] = E[\sum_{i=1}^n X_i]$. When it approaches to infinite we have conditions to make it work. 
+
 ## Variance
 
 Variance present the spread deviation of a random variable.

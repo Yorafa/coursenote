@@ -20,14 +20,20 @@ Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another rand
 
 - $P(\lim\limits_{n\to \infty} X_n = X) = 1 \implies P(\lim\limits_{n\to \infty} |X_n - X| > \epsilon \text{ i.o}) = 0$
 - $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{P}\to X$ no converse
+- Almost surely **not** says $\lim\limits_{n\to \infty} E[X_n] = E[X]$, but $E[\lim\limits_{n\to \infty} X_n] = E[X]$.
 
 E.g. $S=[0,1], U \sim \text{Uniform}(0,1)$, let $X_n(s) =  I(U > \frac{1}{n^2})$ then $X_n \overset{\text{a.s.}}\to 1$ by Bonel Canelli Lemma.
 
 - Let $\epsilon > 0$, $\exists X, s.t., \sum_{n=1}^{\infty} P(|X_n - X| > \epsilon) < \infty \implies X_n \overset{\text{a.s.}}\to X$. Assume $X=1$. Then we have $\sum_{n=1}^{\infty} P(|X_n - 1| > \epsilon) = \sum_{n=1}^{\infty} P(X_n - 1 > \epsilon) + P(-X_n - 1 > \epsilon) = \sum_{n=1}^{\infty}P(1-X_n > \epsilon) = \sum_{n=1}^{\infty} P(X_n = 0) = \sum_{n=1}^{\infty} P(U \le \frac{1}{n^2}) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6} < \infty$ which $X_n \overset{\text{a.s.}}\to 1$ by Bonel Canelli Lemma.
--  Let $\epsilon > 0$, $\exists X, s.t., \sum_{n=1}^{\infty} P(|X_n - X| > \epsilon) < \infty \implies X_n \overset{\text{a.s.}}\to X$. Assume $X_n=I(U > \frac{1}{n}$
 
 
 **Strong Law of Large Number:** Let $X_1, X_2,\ldots$ be a sequence of indpendent random variables. Then $\forall \epsilon > 0, P(\lim_{n\to \infty} M_n = \mu) = 1$ or we say $M_n \overset{\text{a.s.}}\to \mu$
+
+**BOUNDED CONVERGENCE THEOREM:** If $X_n \overset{a.s.}\to X$ and $X_n$ uniformly bounded ($\exists M < \infty, |X_n| \le M, \forall n$), then $\lim\limits_{n\to \infty} E[X_n] = E[X]$.
+
+**MONOTONE CONVERGENCE THEOREM:** $X_n \overset{a.s.}\to X$ and $0\le X_1\le X_2\le \ldots \implies \lim\limits_{n\to \infty} E[X_n] = E[X]$.
+
+**DOMINATED CONVERGENCE THEOREM:** $X_n \overset{a.s.}\to X$ and there is another random variable $Y$ with $E[|Y|] < \infty$ and $|X_n| \le Y, \forall n \implies \lim\limits_{n\to \infty} E[X_n] = E[X]$.
 
 
 ## Convergence in Distribution
