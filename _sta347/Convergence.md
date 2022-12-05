@@ -16,7 +16,7 @@ Let $X_1, X_2,\ldots$ be an infinite sequence of random variables and let $Y$ be
 
 ## Almost Sure Convergence
 
-Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable.  the sequence $\{X_n\}$ is <u> **almost surely** </u> to $X$ if $P(\{s: X_n(s) \to X(s) \}) = 1$. We denote it as $X_n \overset{\text{a.s.}}\to X$. Sometimes we also call it Convergence with probability 1.
+Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable.  the sequence $\{X_n\}$ is <u> **almost surely** </u> to $X$ if $P(\{s: X_n(s) \overset{P}\to X(s) \}) = 1$. We denote it as $X_n \overset{\text{a.s.}}\to X$. Sometimes we also call it Convergence with probability 1.
 
 - $P(\lim\limits_{n\to \infty} X_n = X) = 1 \implies P(\lim\limits_{n\to \infty} |X_n - X| > \epsilon \text{ i.o}) = 0$
 - $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{P}\to X$ no converse
@@ -51,4 +51,4 @@ Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another rand
     -   if both $\overset{P}\to$, only true will limit is finite.
 -   $X_n \overset{D}\to X$ and $Y_n \overset{P}\to Y \implies X_nY_n \overset{P}\to X Y$
 
-**Continuous Mapping Theorem:** Let $X_n \overset{P}\to X$  and $g$ be an absolutely continuous function, then $g(X_n) \overset{P}\to g(X)$
+**Continuous Mapping Theorem:** Let $X_n \to X$  and $g$ be an absolutely continuous function, then $g(X_n) \to g(X)$ (i.e. for all three convergence)

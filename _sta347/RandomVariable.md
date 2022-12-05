@@ -57,8 +57,10 @@ e.g. $X_1, \ldots, X_n \overset{i.i.d}\sim U(0,1)$, then $f_{X_{(1)}}(X) = n(1-x
 ## Events
 
 **Tail Events:** Let assume $A_1, \ldots, A_n \subset S$ be a sequence of events. Then define the tail event $\limsup\limits_{n\to\infty} A_n = \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k = \{A_n \text{ i.o}\}$ and $\liminf\limits_{n\to\infty} A_k = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k = \{A_n \text{ a.a}\}$
-- $P(\{A_n \text{ i.o}) = 1 - P(\{A_n^c \text{ a.a})$
-- i.o stand for infinite often, a.a stand for almost always
+- $P(\{A_n \text{ i.o. }\}) = 1 - P(\{A_n^c \text{ a.a. }\})$
+- i.o. stand for infinite often, a.a stand for almost always
+- always > almost always > infinite often > almost never > never
+- i.o. stand for this event infinite often happen, a.a. stand for this event almost always happen
 
 **Borel-Cantelli Lemma:**
 

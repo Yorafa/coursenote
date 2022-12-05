@@ -12,11 +12,11 @@ title: "Distributions"
 
 -   Let $k = x- 1, P_X(k) = \theta(1-\theta)^k, k = 0, 1,2,\ldots$
 
-**(The NEGATIVE BINOMIAL DISTRIBUTION)**:  $$P(Y = k) = {r - 1+ k\choose r-1} \  \theta^r(1-\theta)^k; k = 0, 1,\ldots$$
+**(The NEGATIVE BINOMIAL DISTRIBUTION)**:  $P(Y = k) = {r - 1+ k\choose r-1} \  \theta^r(1-\theta)^k; k = 0, 1,\ldots$
 
-**(The POISSON DISTRIBUTION)**:  $$P(X = x) = {n\choose x}  (\frac{\lambda}{n})^x(1-\frac{\lambda}{n})^{n-x} = \frac{\lambda^x}{x!}\exp(-\lambda), x = 0, 1,2,\ldots$$
+**(The POISSON DISTRIBUTION)**:  $P(X = x) = {n\choose x}  (\frac{\lambda}{n})^x(1-\frac{\lambda}{n})^{n-x} = \frac{\lambda^x}{x!}\exp(-\lambda), x = 0, 1,2,\ldots$
 
-**(The HYPERGEOMETRIC DISTRIBUTION)**:  $$P(X=x) = ({M \choose x} \ {N-M \choose n-x})/ {N \choose n}; x \ge \max(0, n - (N-M)) \& \ x \le \min(M,n)$$
+**(The HYPERGEOMETRIC DISTRIBUTION)**:  $P(X=x) = ({M \choose x} \ {N-M \choose n-x})/ {N \choose n}; x \ge \max(0, n - (N-M)) \& \ x \le \min(M,n)$
 
 ## Continuous Distributions
 
@@ -71,7 +71,7 @@ Stand error of Normal Distribution among samples $SD = \sigma/\sqrt{n}$
 **(T-Distribution):** Let $X, X_1, \ldots, X_n \overset{\text{i.i.d}}\sim N(0,1)$ so that we have $Y = \sum_{i=1}^nX_i^2, Y\sim\mathcal{X}^2(n)$. We define $X/\sqrt{Y/n} \sim t_n$. Let $U = X/\sqrt{Y/n}$, then we have the PDF $f_U(u)= \frac{\Gamma((n+1)/2)}{\sqrt{\pi} \Gamma(n/2)} (1 + u^2/n)^{-(n+1)/2} n^{-1/2}$
 
 -   $\lim\limits_{n\to \infty} t_n \to N(0,1)$
--   $n = 1 \implies $ Cauchy Distribution
+-   $n = 1 \implies$ Cauchy Distribution
 
 **(F-Distribution):** Let $X_1, \ldots, X_m \overset{\text{i.i.d}}\sim N(0,1)$ and let $Y_1, \ldots, Y_n \overset{\text{i.i.d}}\sim N(0,1)$. Let $Z_x = \sum_{i=1}^m X_i^2, Z_y = \sum_{i=1}^n Y_i^2$. we define $\frac{Z_x/m}{Z_y/n}\sim F(m,n)$. Let $U = \frac{Z_x/m}{Z_y/n}$, then we have PDF $f_U(u)= \frac{\Gamma((m+n)/2)}{\Gamma(m/2)\Gamma(n/2)} (\frac{m}{n}u)^{\frac{m}{2} - 1}(1 + \frac{m}{n}u)^{-\frac{m+n}{2}}(\frac{m}{n})$ for $u>0$
 
@@ -85,7 +85,7 @@ Try to prove all of those sampling distribution use change of variable.
 
 ## Compound Distribution
 
-Let $X_1,\ldots,X_n$ be i.i.d sequence of Random variables. Let $n$ be non-negative integer valued random variable independent of $\{X_i\}$. Then $S = \sum_{i=1}^n X_i$ is a random variabl ewith compound distribution.
+Let $X_1,\ldots,X_n$ be i.i.d sequence of Random variables. Let $n$ be non-negative integer valued random variable independent of $\{X_i\}$. Then $S = \sum_{i=1}^n X_i$ is a random variable with compound distribution.
 
 - $E[S] = E[n] E[X_1]$
   - $E[S] = E[\sum_{i=1}^n X_i]$ where $E[X_i] = E[X_1] < \infty$ and define a indicator function $I_i = I_{1,\ldots, n}(i)$

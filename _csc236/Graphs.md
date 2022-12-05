@@ -20,7 +20,7 @@ A **graph** $G= (V, E)$ is a pair of sets $(V, E)$ where  $V$ is a set of vertic
     -   A cycle is called **Hamiltonian** if every vertex appear in the cycle exactly once (except for the start/end vertex which appears twice)
     -   A **simple** circle contains no repeated edge
 -   A $k$**-(vertex) coloring** of $G$ is a function $f: V\to C$ , $\forall u,v \in V, \{u,v\}\in E \lor \{v,u\}\in E \implies f(u) \ne f(v)$
--   **Connected**: $\forall u,v \in V,  v\ne u, $ there is some path from $u$ to $v$
+-   **Connected**: $\forall u,v \in V,  v\ne u$ there is some path from $u$ to $v$
 -   **acyclic**: no cycle in graph
 -   **independent set**: $I \subseteq V$ , $\forall v,u\in I, \cancel{\exist} e\in E, e = \{v,u\}\lor e=\{u,v\} \implies I$ is an independent set 
 -   In an undirected graph, the **degree** of a vertex $\nu$ is the number of edges incident on $\nu$ . In a directed graph, the **in-degree** of vertex $\nu$  is the number of edges incident to $\nu$  (the size of set $\{(x,\nu):x\in E\}$) and the **out-degree** is the number of edges incident from *v* (the size of set $\{(\nu,x):x\in E\}$).

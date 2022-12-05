@@ -2,15 +2,15 @@
 title: "Support Vector Machine"
 ---
 
-The trainning pointes with equality constraintts $y_i(x_i^Tw + b) \ge M$ are called **support vectors**. We have **Support Vector Machine** (SVM) which is a classifier that finds the optimal hyperplane that separates the classes. SVM-like algorithms are often called max-margin or large-margin. Since the Primal-formulation is convex specially is a quadratic program. We can use SGD/GD to solve it. And its more common to solved by dual formulation.
+The trainning pointes with equality constraints $y_i(x_i^Tw + b) \ge M$ are called **support vectors**. We have **Support Vector Machine** (SVM) which is a classifier that finds the optimal hyperplane that separates the classes. SVM-like algorithms are often called max-margin or large-margin. Since the Primal-formulation is convex specially is a quadratic program. We can use SGD/GD to solve it. And its more common to solved by dual formulation.
 - Primal problem is a minimization problem
 - Dual problem is a maximization problem
 
-When the data is linearly separrable, and we don't want to have any misclassifications, we will use SVM with a **hard margin**. When a linear boundary is not feasible or we are allowed to have some misclassifications in hope of achieving better generalitiy, we can opt for a **soft margin**.
+When the data is linearly separable, and we don't want to have any misclassifications, we will use SVM with a **hard margin**. When a linear boundary is not feasible or we are allowed to have some misclassifications in hope of achieving better generalitiy, we can opt for a **soft margin**.
 
 ## Hard Margin
 
-We can write the Lagrangian function $L(w, b, \alpha) = \|w\|_2^2 + \sum_{i=1}^n \alpha_i[1-y_i(x_i^Tw + b)]$ where $\alpha_i \ge 0$ and $y_i(x_i^Tw + b) \ge 1$ (a kind of loss function). We then do derivative w.r.t the $w$ and $b$ and set them to 0 to get the optimal $w$ and $b$ where $w = \sum_{i=1}^n \alpha_i y_i x_i$ and $\sum_{i=1}^n \alpha_i y_i = 0$. And then we insert back to get the dual problem solve $\max\limits_{\alpha}\sum_{i=1}^n \alpha_i - \frac{1}{4}\sum_{i=1}^n \sum_{j=1}^n \alpha_i \alpha_j y_i y_j x_i^Tx_j$.
+We can write the Lagrangian function $L(w, b, \alpha) = \|w\|_2^2 + \sum_{i=1}^n \alpha_i[1-y_i(x_i^Tw + b)]$ where $\alpha_i \ge 0$ and $y_i(x_i^Tw + b) \ge 1$ (in case do minimization). We then do derivative w.r.t the $w$ and $b$ and set them to 0 to get the optimal $w$ and $b$ where $w = \sum_{i=1}^n \alpha_i y_i x_i$ and $\sum_{i=1}^n \alpha_i y_i = 0$. And then we insert back to get the dual problem solve $\max\limits_{\alpha}\sum_{i=1}^n \alpha_i - \frac{1}{4}\sum_{i=1}^n \sum_{j=1}^n \alpha_i \alpha_j y_i y_j x_i^Tx_j$.
 
 The K.K.T. conditions ensure the relationship between the primal and dual formulations where:
 - both optimal objective values are equal

@@ -16,3 +16,9 @@ title: "Some Common Series Used"
 **Multinomial Series:** $(a_1 + a_2 + \cdots + a_l)^n = \sum_{k_1, k_2 , \ldots , k_l} \frac{n!}{k_1!k_2!\ldots k_l!} \prod_{i=1}^l a_i^{k_i}$
 
 **Negative Binomial Series:** $(a-b)^{-n} = \sum\limits_{k=0}^{\infty} (-n)Ck\cdot a^kb^{-n-k}$
+
+## Commmon limitation
+
+$\lim\limits_{n\to 0} \frac{a^n - 1}{n} = \ln a$
+
+$\lim\limits_{n\to \infty} (1+ \frac{ax}{n})^n = e^{ax}$

@@ -2,7 +2,7 @@
 title: "Discriminant Analysis"
 ---
 
-**Discriminant Anaylsis** parametrizes the distribution of $ X | Y = 1$ and $X | Y = 0$.
+**Discriminant Anaylsis** parametrizes the distribution of $X | Y = 1$ and $X | Y = 0$.
 
 - Logistic regression model may unstable for classes are well separated. Discriminant analysis is more stable.
 
@@ -37,7 +37,7 @@ Some estimation under LDA by training data:
 step:
 1. Estimate $\mu$ and $\sigma$.
 2. Plug in above estimators and estimate $\delta_k$.
-3. Classfiy
+3. Classify
 
 ### LDA on Multivariate Normal (more predictors)
 
@@ -51,7 +51,7 @@ Some estimation under LDA by training data:
 - $\hat{\pi}_k = \frac{n_k}{n}$; 
 - $\hat{\mu}_k = \frac{1}{n_k}\sum_{i = 1}^nI(y_i = k)x_i$; 
 - $\hat{\Sigma} = \frac{1}{n - K}\sum_{k = 1}^K\sum_{i = 1}^nI(y_i = k)(x_i - \hat{\mu}_k)(x_i - \hat{\mu}_k)^T$
-- $\hat{\delta}_k(x) = \frac{1}{2}x^T\hat{\Sigma}^{-1}\hat{\mu}_k - \frac{1}{2}\hat{\mu}_k^T\hat{\Sigma}^{-1}\hat{\mu}_k + \log(\hat{\pi}_k)$
+- $\hat{\delta}_k(x) = x^T\hat{\Sigma}^{-1}\hat{\mu}_k - \frac{1}{2}\hat{\mu}_k^T\hat{\Sigma}^{-1}\hat{\mu}_k + \log(\hat{\pi}_k)$
 
 For binary case, we can have linear form to present the classifcation where $\log (\frac{p_1(x)}{1-p_1(x)}) =\log (\frac{p_1(x)}{p_0}) = c_0 + c_1x_1 + \dots + c_px_p$ which is the same as logistic regression.
 
@@ -74,7 +74,7 @@ Some estimation under LDA by training data:
 - $\hat{\pi}_k = \frac{n_k}{n}$; 
 - $\hat{\mu}_k = \frac{1}{n_k}\sum_{i = 1}^nI(y_i = k)x_i$; 
 - $\hat{\Sigma}_k = \frac{1}{n_k - 1}\sum_{i = 1}^nI(y_i = k)(x_i - \hat{\mu}_k)(x_i - \hat{\mu}_k)^T$
-- $\hat{\delta}_k(x) = \frac{1}{2}x^T\hat{\Sigma}^{-1}\hat{\mu}_k - \frac{1}{2}\hat{\mu}_k^T\hat{\Sigma}^{-1}\hat{\mu}_k + \log(\hat{\pi}_k)$
+- $\hat{\delta}_k(x) = -\frac{1}{2}x^T\hat{\Sigma_k}^{-1}x + x^T\hat{\Sigma_k}^{-1} \hat{\mu}_k - \frac{1}{2}\hat{\mu}_k^T\hat{\Sigma_k}^{-1}\hat{\mu}_k + \log(\hat{\pi}_k) - \frac{1}{2}\log(|\hat{\Sigma}_k|)$
 
 
 LDA have $(K-1) + pK + p(p+1)/2$ parameters to estimate, and QDA $(K-1) + pK + p(p+1)K/2$ parameters to estimate
@@ -98,3 +98,5 @@ When we have a classifier, we can calculate the FNR and FPR. For LDA, we do clas
 We also have **ROC curve** where is a popular graphic for simultaneously displaying FPR and TPR for all possible thresholds. The area under the ROC curve is called **AUC**. AUC is a measure of the overall performance of the classifier. High AUC is good (=1 the best).
 
 FN is type II error and FP is type I error.
+
+

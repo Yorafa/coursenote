@@ -23,9 +23,9 @@ Linearity property of expectations only work finite where : $\sum_{i=1}^n E[X_i]
 
 Variance present the spread deviation of a random variable.
 
-The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1} $
+The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1}$
 
-The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\sum_{x\in \R}(x-\mu_x)^2P(X=x) \\ \int_{x\in \R}(x-\mu_x)^2f(x) \end{cases} $ where $\mu_x = \mathbb{E}[X]$
+The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\sum_{x\in \R}(x-\mu_x)^2P(X=x) \\ \int_{x\in \R}(x-\mu_x)^2f(x) \end{cases}$ where $\mu_x = \mathbb{E}[X]$
 
 -   $Var[X] \ge 0$
 -   $Var[aX  +B] = a^2V[X], a, B\in \R$

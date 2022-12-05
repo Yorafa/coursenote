@@ -30,4 +30,3 @@ A optimial SGD is **mini-batch** SGD. It uses a small batch of training examples
 Although sometimes we have formula for direct answer, but try think with $p$ parameters as $p$ large. GD will be more efficient than direct formula.
 - Linear regression solution is $\hat w = (X^TX)^{-1}X^Ty$, the inverse of Matrix is $O(p^3)$, but GD is $O(np)$.
 - Huge difference when $p >> \sqrt{n}$.
-
