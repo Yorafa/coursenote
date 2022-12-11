@@ -2,7 +2,7 @@
 title: "Ordinary Least Square and Model Selection"
 ---
 
-**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2 $
+**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2$
 
 -   The Loss function for OLS is  $L(\beta,D_{train}) = RSS = ||y-X\beta||^2_2$ , Penality is $Pen(\beta) = 0$
 -   $\hat \beta = (X^TX)^{-1}X^Ty$ is the solution of OLS where $X$ is full column rank.
