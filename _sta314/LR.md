@@ -38,8 +38,6 @@ After we get the final model, the prediction we have $\hat y = x^T\hat \beta$ at
 
 In linear model, the $\epsilon_ i$ are uncorrelated, else the estimated standard error will not be close to the true standard error.
 
-## $R^2$
-
 $R^2$ is the proportion of the variation in the outcome that is predictable from the predictors where $R^2 = 1 - \frac{RSS}{TSS} = (\frac{Cov(X_i)}{\prod\sigma_{x_i}})^2$
 
 -   $0 \le R^2 \le 1$.
