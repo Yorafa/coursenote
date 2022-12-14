@@ -4,6 +4,8 @@ title: "Multivariate Normal Distribution"
 
 Multivariate Normal Distribution is a generalization of the normal distribution to multiple dimensions. It is often a good approximation to the true distribution where by Central Limit Theorem, multivariate normal distribution is the sample distribution of many multivariate random variables.
 
+<!--more-->
+
 We define a $p$-dimensional random vector $\mathbf{X}$ has a multivariate normal distribution if every linear combination of its components is normally distributed. 
 
 Recall $X\sim N(\mu, \sigma)$ with the PDF of the normal distribution is given by $f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$ the exponential term can be rewritten as $-\frac{(x-\mu)^2}{2\sigma^2} = -\frac{1}{2}(x-\mu) \sigma^{-2} (x-\mu)$, that is, in multivariate way, the exponent part can be write as: $\frac{1}{2}(\mathbf{x}-\mathbf{\mu})'\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu})$
@@ -16,9 +18,11 @@ That's, we write the random vector $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Si
 
 - e.g. for bivariate normal distribution: $f(x,y) = \frac{1}{2\pi\sqrt{\sigma_1^2\sigma_2^2(1-\rho^2)}}e^{-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_1)^2}{\sigma_1^2}+\frac{(y-\mu_2)^2}{\sigma_2^2}-\frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}\right]}$. If $\rho = 0 \implies f(x,y) = f(x)f(y)$, so $\rho$ is the correlation where no correlation means the two variables are independent for normal distribution.
 
-The maximum likelihood estimator of $\mu$ is $\hat{\mu} = \frac{1}{n}\sum_{i=1}^n\mathbf{x}_i$ and the maximum likelihood estimator of $\Sigma$ is $\hat{\Sigma} = \frac{1}{n}\sum_{i=1}^n(\mathbf{x}_i-\hat{\mu})(\mathbf{x}_i-\hat{\mu})^T$
-
-- Firstly, the likelihood estimator is 
+Let $X \sim \mathcal{N}_p(\mathbf{\mu}, \mathbf{\Sigma})$ with density function $f(\mathbf{x}) = \frac{1}{(2\pi)^{1/2}\det(\Sigma)^{1/2}}e^{-\frac{1}{2}(\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu})}$, then such $X$ with probability density contour $\{x: (\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu}) = c^2\}$ which is basically the surface of an ellipsoid centered at $\mu$.
+- the axes of each  ellipsoid of constant density are in the direction of the eigenvectors of $\Sigma^{-1}$
+- their lenghts are proportional to the reciprocals ($x*x^{-1} = id$, $x$ and $x^{-1}$ the reciprocals of each other) of the square roots fo the eigenvalues of $\Sigma^{-1}$
+- Since the inverse of positive definite matrix is also positive definite, then we have axes $\pm c\sqrt{\lambda_i}e_i$ where $\Sigma e_i = \lambda_i e_i$
+- Since multivariate normal, the constant of $(\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu})$ follows $\chi^2_p$ distribution. The probability $1 - \alpha$ is assigned to $\{x: (\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu}) \leq \chi^2_p(\alpha)\}$ where $\chi^2_p(\alpha)$ is the $100\alpha$th percentile of $\chi^2_p$ distribution.
 
 ## Key Properties
 
@@ -50,6 +54,21 @@ Let $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$, then the following are 
 
 Let $U = A(V+C)$ then we have function $f_U(u) = \frac{f_V(v)}{|A|}|_{u = A(V+C)}$
 
+## MLE
+
+for random samples $X_1, \ldots, X_n$, the joint function of all those observations is $\prod_{i=1}^n \frac{1}{(2\pi\Sigma)^{n/2}} \exp(-\frac{1}{2}(X_i - \mu)^T\Sigma^{-1}(X_i - \mu)) = \frac{1}{(2\pi\Sigma)^{n/2}} \exp(-\frac{1}{2}\sum_{i=1}^n (X_i - \mu)^T\Sigma^{-1}(X_i - \mu))$.
+- The sample mean and sample variance $\bar x$ and $S$ are sufficient statistics for $\mu$ and $\Sigma$.
+
+To have maximum likelihood estimator for popluation use the samples, we do log derivative to find the maximum point, where the likelihood function after log is $\log(\frac{1}{(2\pi\Sigma)^{n/2}}) - \frac{1}{2}\sum_{i=1}^n (X_i - \mu)^T\Sigma^{-1}(X_i - \mu)$.
+- We also have $\sum_{i=1}^n (X_i - \mu)^T\Sigma^{-1}(X_i - \mu) = tr[\Sigma^{-1} \sum_{i=1}^n (X_i - \mu)(X_i - \mu)^T]$
+- And $\sum_{i=1}^n (X_i - \mu)(X_i - \mu)^T = \sum_{i=1}^n(x_i - \bar x)(x_i - \bar x)^T + n(\bar x - \mu)(\bar x - \mu)^T$
+- Then we can conclude $L(\mu, \Sigma) = \log(\frac{1}{(2\pi\Sigma)^{n/2}}) - \frac{1}{2}tr[\Sigma^{-1} \sum_{i=1}^n (X_i - \mu)(X_i - \mu)^T] - \frac{n}{2}tr[\Sigma^{-1}(\bar x - \mu)(\bar x - \mu)^T] = \log(\frac{1}{(2\pi\Sigma)^{n/2}}) - \frac{1}{2}tr[\Sigma^{-1} \sum_{i=1}^n (X_i - \mu)(X_i - \mu)^T] - \frac{n}{2}(\bar x - \mu)^T \Sigma^{-1} (\bar x - \mu)$
+- That is, we have estimator of $\mu$ is $\bar x$ and estimator of $\Sigma$ is $\frac{1}{n}\sum_{i=1}^n (X_i - \bar x)(X_i - \bar x)^T$
+
+
+## Conditional Distribution
+
+Let $(X_1, \ldots, X_n)$ be a random vector follow multivariate normal distribution with mean $\mu$ and covariance matrix $\Sigma$. If we want to calculate the distribution of $(X_i ... )| (X_j ...)$, then we can use the formula $\mu_{i|j} = \mu_i + \Sigma_{ij}\Sigma_{jj}^{-1}(x_j - \mu_j)$ and $\Sigma_{i|j} = \Sigma_{ii} - \Sigma_{ij}\Sigma_{jj}^{-1}\Sigma_{ji}$
 
 ## Example, Try to prove the following truth
 Let $X\sim N(0,1)$ and H is $Bernoulli(0.5)$ with value $\{1, -1\}$, then $Y = HX$ is also normal distributed. We can prove this by using the fact that $Y = HX = H\sqrt{1}X$ where $X$ is standard normal distributed, so $Y$ is also standard normal distributed.
@@ -59,7 +78,7 @@ Let $X\sim N(0,1)$ and H is $Bernoulli(0.5)$ with value $\{1, -1\}$, then $Y = H
 - $P[\|X\| \ge 1, \|Y\| \ge 1] = c = P[\|Y\| \ge 1 \| \|X\| \ge 1]P[\|X\| \ge 1] = c$, that is, $X$ and $Y$ are not independent (else equal to $c^2$).
 - $[X, Y]'$ is not normal distributed, they are normal only when they both follows the bivariate normal distribution.
 
-Let $X \sim \mathcal{N}_3(\mathbf{\mu}$ with $\Sigma = \begin{bmatrix} 4 & 1 & 0 \\\ 1 & 3 & 0 \\\ 0 & 0 & 2\end{bmatrix}$.
+Let $X \sim \mathcal{N}_3(\mathbf{\mu})$ with $\Sigma = \begin{bmatrix} 4 & 1 & 0 \\\ 1 & 3 & 0 \\\ 0 & 0 & 2\end{bmatrix}$.
 - $X_1$ and $X_2$ are dependent
 - $(X_1, X_2)$ and $X_3$ are independent
 

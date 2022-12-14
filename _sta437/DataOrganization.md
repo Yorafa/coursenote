@@ -2,6 +2,8 @@
 title: "Basic Information to Multivariate Data"
 ---
 
+<!--more-->
+
 For a multivariate data, denote it with $p$ variables where $p \ge 2$, and with $n$ observations(item/experimental unit). We also denote as $x_{jk}$ where the measurement of kth variable on the jth item or experimental unit.
 
 -   $p =1\implies$ univariate data

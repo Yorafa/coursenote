@@ -25,6 +25,13 @@ We define the **rank** of a matrix $A$ as the maximum number of linearly indepen
 -   $rank(A_{n\times p}) \le \min(n,p)$
 -   $rank(A) = rank(A') = rank(AA') = rank(A'A)$
 
+Let $(A - \lambda I)V = 0$, then $\lambda$ is the **eigenvalue** and $V$ is the **eigenvector** of $A$. Or
+If $\det(A - \lambda I) = 0$ is the solution of $Ax = \lambda x$, then $\lambda$ is the **eigenvalue** and $x$ is the **eigenvector**
+
+-   $tr(A_{k\times k}) = \sum_{i = 1}^k \lambda_i$
+-   $|A_{k\times k}| = \prod_{i=1}^k \lambda_i$
+-   $P^{-1}AP$ and $A$ have the same eigenvalues
+
 ## Different Kind of Matrix
 We define a **squared matrix** if it has the same number of rows and columns. 
 
@@ -46,22 +53,22 @@ We define a matrix $Q \in \R^{k\times k}$ is a **Orthogonal/orthonormal Matrices
 
 -   The determinant of an orthogonal matrix is +1 or -1.
 
-If $\det(A - \lambda I) = 0$ is the solution of $Ax = \lambda x$, then $\lambda$ is the **eigenvalue** and $x$ is the **eigenvector**
-
--   $tr(A_{k\times k}) = \sum_{i = 1}^k \lambda_i$
--   $|A_{k\times k}| = \prod_{i=1}^k \lambda_i$
--   $P^{-1}AP$ and $A$ have the same eigenvalues
 
 We define a matrix $A$ is **symmetric** if $A = A'$
 
--   let $(\lambda_i, e_i)$ be the eigenvalues and eigenvectors of the symmetric, then $\lambda\in \R$ and $\forall i\ne j, e_i'e_j = 0$
+-   let $(\lambda_i, e_i)$ be the eigenvalues and eigenvectors of the symmetric, then $\lambda\in \R$ and $\forall i\ne j, e_i'e_j = 0$ that is $e_i$ are orthogonal to each other.
 -   and also $A = \sum_{i=1}^k\lambda_i e_ie_i'$
 -   $x'Ax = [x_1,x_2,\ldots,x_k] \begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1k} \\ a_{12} & a_{22} & \cdots & a_{2k} \\ \cdots & \cdots & \cdots & \cdots \\a_{1k} & a_{2k} & \cdots & a_{kk}\end{bmatrix} \begin{bmatrix}x_1\\x_2\\\vdots\\x_k\end{bmatrix} = a_{11}x_1^2 + a_{22}x_2^2 + \ldots + a_{kk}x^k_k + 2(a_{12}x_1x_2 + a_{13}x_1x_3 + \ldots + a_{k-1, k}x_{k-1}x_k)$ 
 - If $A = -A'$, then $A$ is **anti-symmetric**
-- If $x'Ax \ge 0$, we call $A$ is **nonnegative definite matrix**. we define as $A \succeq 0$. Or equivalent all its eigenvalues are $\ge 0$
-- If $x'Ax > 0, \forall x\ne 0$, we call $A$ is **positive definite matrix**. we define as $A \succ 0$. Or equivalent all its eigenvalues are strictly positive
-  -  The inverse(always exists) of a symmetric positive definite matrix is also symmetric positive definite.
-- $A = P\Lambda P'$ and $A^{-1} = P\Lambda^{-1}P'$ where $\Lambda = \text{diag}[\lambda_1, \ldots, \lambda_k]$, $P = [e_1, \ldots, e_k]$, and we call it spectral decomposition.
+
+For a symmetric matrix $A$, if $x'Ax \ge 0$, we call $A$ is **nonnegative definite matrix**. we define as $A \succeq 0$. Or equivalent all its eigenvalues are $\ge 0$
+
+For a symmetric matrix $A$, if $x'Ax > 0, \forall x\ne 0$, we call $A$ is **positive definite matrix**. we define as $A \succ 0$. Or equivalent all its eigenvalues are strictly positive
+-  The inverse(always exists) of a symmetric positive definite matrix is also symmetric positive definite.
+-  Given a positive definite matrix $B$ and a sclar $b > 0$, $\forall$ positive definite matrix $A$, $\frac{1}{|A|^b}\exp(-tr(A^{-1}B)/2) \le \frac{1}{|B|^b} (2b)^{pb}\exp(-bp)$. Such equality holds when $A = \frac{1}{2b}B$.
+- Let say $A$ is $p\times p$ with eigenvalues $\lambda_1 \ge \lambda_2 \ge \ldots \ge \lambda_p > 0$ and associated normalized eigenvectors $e_1, \ldots, e_p$. Then we have $\max\limits_{x \ne 0} \frac{x'Ax}{x'x} = \lambda_1$ when $x=e_1$,..., $\min\limits_{x \ne 0} \frac{x'Ax}{x'x} = \lambda_p$ when $x=e_p$ and $\min\limits_{x \perp e_1, \ldots, e_k} \frac{x'Ax}{x'x} = \lambda_{k+1}$ when $x=e_{k+1}$
+
+$A = P\Lambda P'$ and $A^{-1} = P\Lambda^{-1}P'$ where $\Lambda = \text{diag}[\lambda_1, \ldots, \lambda_k]$, $P = [e_1, \ldots, e_k]$, and we call it **spectral decomposition**, for convenience purpose we use the normalized eigenvectors $e_1, \ldots, e_k$ as the columns of $P$ where $P'P = I$/$e_i'e_i = 1$.
   - $A = P\Lambda P'$ then $A^{1/2} = P\Lambda^{1/2}P'$
     - $A^{1/2}$ is still symmetric
     - $A^{1/2}A^{1/2} = A$
@@ -75,12 +82,12 @@ We define a matrix $A$ is **symmetric** if $A = A'$
 A square matrix is **Idempotent Matrices** if $A^2 = A$
 
 -   $I - A$ is also Idempotent
--   If $A$ is also symmetric,also call it **Projection Matrices**
 -   The trace of an idempotent matrix is always integer-valued. 
 
 A square matrix $A$ is an **Orthogonal Projection Matrices** if $A^2 = A = A'$
 
 -   $A$ also is Idempotent and symmetric
+-   THe eigenvalues of a projection matrix are either 0 or 1
 
 If a matrix in matrix of matrix form where only the diagonal matrix, then it is **Block Diagonal Matrix**
 
