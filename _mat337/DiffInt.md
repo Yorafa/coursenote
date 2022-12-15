@@ -58,7 +58,7 @@ Define $L(f) = \sup_p L(f,P)$ and $U(f) = \inf_p U(f,P)$ the bounded function $f
 
 **THEOREM 6.3.8**: Every continuous function $f$ on $[a,b]$ is Riemann integrable.
 
-## The fundamenta Theorem of Calculus
+## The fundamental Theorem of Calculus
 
 **Lemma 6.4.1**: suppose that $f$ is integrable on $[a,b]$ and bounded by $M$. then $|\int_a^b f(x)dx| \le M(b-a)$.
 

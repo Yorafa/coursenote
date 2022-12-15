@@ -6,14 +6,14 @@ In other course, the function we use is usually $f: \R \to \R$, but this course 
 
 ## Limits and Continuity
 
-We define $f: S \to \R^m$,  where $S \in \R^n$,  its **limit** exists at $a$ if $\forall \epsilon > 0, \exists \delta > 0, \norm{x - a} < \delta \implies \norm{f(x) - v} < \epsilon$ where we write as $\lim\limits_{x\to a} f(x) = b$
+We define $f: S \to \R^m$,  where $S \in \R^n$,  its **limit** exists at $a$ if $\forall \epsilon > 0, \exists \delta > 0, \|x - a\| <\delta \implies \|f(x) - v\| < \epsilon$ where we write as $\lim\limits_{x\to a} f(x) = b$
 
 -   It obviously to see that we change all the absolute value to norm value than in $\R$
 -   If limit exists, we can also say $f$ is continuous at $a$
 
 Continue on the above function, we say $f$ is **continuous on** $S$ if $\forall s\in S, \lim\limits_{x\to s} f(x)$ exists. 
 
-If a function $f$ satisfied $\norm{f(x) - f(y)} \le C\norm{x-y}, \forall x,y\in S$, we call this function **Lipschitz Function**
+If a function $f$ satisfied $\|f(x) - f(y)\| \le C\|x-y\|, \forall x,y\in S$, we call this function **Lipschitz Function**
 
 -   Every Lipschitz Function is continuous
 -   Every linear map $A:\R^n \to \R^m$ is Lipschitz. There are two map function we use commonly, also be called as **coordinate functions**
@@ -27,11 +27,11 @@ If a function $f$ satisfied $\norm{f(x) - f(y)} \le C\norm{x-y}, \forall x,y\in 
 
 $f$ is discontinuous at $a$, $a$ is a **Removable Singularity** where $\lim\limits_{x\to a} f(x) \ne f(a)$ but $\lim\limits_{x\to a-} f(x) = \lim\limits_{x\to a+} f(x)$
 
-- $ \lim\limits_{x\to a+} f(x) = L$ is the limit of $f$ as $x$ approaches $a$ from the right. In $\delta-\epsilon$ way is that $\forall \epsilon > 0, \exists \delta > 0, a < x < a + r \implies \norm{f(x) - L} < \epsilon$. Similarly for the left limit.
+- $ \lim\limits_{x\to a+} f(x) = L$ is the limit of $f$ as $x$ approaches $a$ from the right. In $\delta-\epsilon$ way is that $\forall \epsilon > 0, \exists \delta > 0, a < x < a + r \implies \|f(x) - L\| < \epsilon$. Similarly for the left limit.
 - If $f$ has limit at $a$ from both sides, but with different values, we say $f$ has a **Jump Discontinuity** at $a$.
   - A function $f$ is **Piecewise Continuous** if on every finite subinterval, it has only finite number of discontinuities and all of them are jump discontinuities.
 
-The limit of function $f$ as $x$ approaches $a$ is $\infty$ if $\forall N > 0, \exists \delta > 0, \norm{x - a} < \delta \implies f(x) > N$. Similarly for $-\infty$.
+The limit of function $f$ as $x$ approaches $a$ is $\infty$ if $\forall N > 0, \exists \delta > 0, \|x - a\| < \delta \implies f(x) > N$. Similarly for $-\infty$.
 
 We define the characteristic function of a set $S$ as $f(x) = 1$ if $x \in S$ and $f(x) = 0$ otherwise.
 
@@ -59,7 +59,7 @@ If the following range exists in $\R^m$, then:
 
 - $f(a)$ and $f(b)$ are called **extrema** of $f$ on $C$ which is maximum and minimum value of $f$ on $C$.
 
-A function $f$ from $S$ to $\R^m$ is **uniformly continuous** on $S$ if $\forall \epsilon > 0, \exists \delta > 0, \norm{x - y} < \delta \implies \norm{f(x) - f(y)} < \epsilon$
+A function $f$ from $S$ to $\R^m$ is **uniformly continuous** on $S$ if $\forall \epsilon > 0, \exists \delta > 0, \|x - y\| < \delta \implies \|f(x) - f(y)\| < \epsilon$
 
 - Every Lipschitz function is uniformly continuous
 - Every linear map from $\R^n$ to $\R^m$ is uniformly continuous
