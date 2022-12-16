@@ -63,11 +63,22 @@ $|S| < \infty, \forall i,j \in S, \sum_{i\in S}p_{ij} = 1, \sum_{j\in S}p_{ij} =
 
 A Markov Chain is **reversible** or **time reversible** with respect to probability distribution $\pi$, if $\forall i,j \in S, \pi_ip_{ij} = \pi_jp_{ji}$.
 - use to understand whether stationary distribution exists.
-- A chain is reversiblewith respect to $\pi\implies \pi$ is a stationary distribution. (converse is not true)
+- A chain is reversible with respect to $\pi\implies \pi$ is a stationary distribution. (converse is not true)
   - e.g. $p_{12} = p_{21} = p_{31} = 1$, $\pi = (1/3, 1/3, 1/3)$. Then we have $\pi_{1} p_{13} \ne \pi_{3} p_{31}$, so it is not reversible.
 
-Markov Chain with transitions $p_{ij}$ on a state space $S$, and a state $i\in S$, the period of $i$ is the greatest common divisor of the set $\{n\ge 1: p_{ii}^{(n)} = P(X_n = i| X_0 = i)\}$.
-- A chain is aperiodic if the period of every state is 1.
+Markov Chain with transitions $p_{ij}$ on a state space $S$, and a state $i\in S$, the **period** of $i$ is the greatest common divisor of the set $\{i: \forall n\ge 1, p_{ii}^{(n)} = P(X_n = i| X_0 = i)\}$.
+- A chain is **aperiodic** if the period of every state is 1.
 
 **THEOREM**: Suppose a Markov chain is irreducible and aperiodic and has a stationary distribution $\{\pi\}$. Then regardless of the initial distribution $\mu_i$, we have $\forall i \in S, \lim_{n\to\infty} P(X_n = i) = \pi_i$.
+
+If we have a Markov chain or stochastic process that stays the same on average, we call it **Martingale**. 
+- Let $X_0, X_1, \cdots$ be a Markov chain, the chain is a martingale if $\forall n \ge 0, E(X_{n+1} - X_n| X_n) = 0$. (i.e$\sum_{j\in S} jp_{ij} = i$)
+- Let a stochastic process $\{Z_n: n\ge 1\}$ be a martingale if $\forall n \ge 1, E(|Z_n|) < \infty$ and $\forall n \ge 1, E(Z_{n+1}|Z_1, \cdots, Z_n) = Z_n$.
+- Similarly, any sequence $\{X_n\}_{n=0}^{\infty}$ is a martingale if $\forall n \ge 0, E(X_{n+1}|X_0, \cdots, X_n) = X_n$.
+
+Let $X_n$ be a stochastic process, and let $T$ be a random variable taking values in $\{0,1,2,\ldots,\}$. then $T$ is a **STOPPING TIME** if $\forall m \ge 0$, the event $\{T = m\}$ is independent of the values of $X_n$ for $n > m$. That is when deciding whether or not $T = m$, we are not allowed to look at the features of $X_n$ for $n > m$.
+
+**OPTIONAL STOPPING TIME THEOREM**: Suppose $\{X_n\}$ is a martingale with $X_0 = a$ and $T$ is a stopping time. $E(X_T) = a$ if either:
+- The martingale is bounded up to time $T$, i.e., $\forall M > 0, \forall n \le T, |X_n| \le M$.
+- The stopping time is bounded, i.e. $\forall M > 0, T \le M$.
 
