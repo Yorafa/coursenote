@@ -15,6 +15,7 @@ title: "Distributions"
 **(The NEGATIVE BINOMIAL DISTRIBUTION)**:  $P(Y = k) = {r - 1+ k\choose r-1} \  \theta^r(1-\theta)^k; k = 0, 1,\ldots$
 
 **(The POISSON DISTRIBUTION)**:  $P(X = x) = {n\choose x}  (\frac{\lambda}{n})^x(1-\frac{\lambda}{n})^{n-x} = \frac{\lambda^x}{x!}\exp(-\lambda), x = 0, 1,2,\ldots$
+- Sum of independent Poisson random variable is a random variable
 
 **(The HYPERGEOMETRIC DISTRIBUTION)**:  $P(X=x) = ({M \choose x} \ {N-M \choose n-x})/ {N \choose n}; x \ge \max(0, n - (N-M)) \& \ x \le \min(M,n)$
 
@@ -46,7 +47,7 @@ title: "Distributions"
 
 **(Multinomial Distribution):** $f(x_1,\ldots, x_k; n; p_1,\ldots,p_k) = \begin{cases}\frac{n!}{x_1!\cdots x_k!}p_1^{x_1}\times\cdots p_k^{x_k}, & \text{when} \sum_{i=1}^k x_i = n \\ 0 & \text{ot} \end{cases}$
 
-**(The BETA DISTRIBUTION)**:  $f(x) = \frac{1}{B(\alpha, \beta) }x^{\alpha - 1}(1-x)^{\beta - 1} = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha - 1}(1-x)^{\beta - 1} $
+**(The BETA DISTRIBUTION)**:  $f(x) = \frac{1}{B(\alpha, \beta) }x^{\alpha - 1}(1-x)^{\beta - 1} = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha - 1}(1-x)^{\beta - 1}$
 
 -   Beta function: $B(\alpha, \beta) = \int_0 ^1 t^{\alpha - 1}(1-t)^{\beta -1}dt = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}$ and can be extended to even more
 

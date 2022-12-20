@@ -32,9 +32,7 @@ The best way to get such $p_{ij}^{(n)}$ is to calculate by $P^{(n)}$ where $P$ i
 
 ## Markov Chain Property
 
-A state $i$ is called **recurrent** if $P_i(X_n = i \text{ for infinitely many }n) = 1$ (or equivalently $\sum_{n = 1}^{\infty} p_{ii}^{(n)} = \infty$). 
-
-A state $i$ is called **transient** if $P_i(X_n = i \text{ for infinitely many }n) = 0$ (or equivalently $\sum_{n = 1}^{\infty} p_{ii}^{(n)} < \infty$).
+A state $i$ is called **recurrent** if $P_i(X_n = i \text{ for infinitely many }n) = 1$ (or equivalently $\sum_{n = 1}^{\infty} p_{ii}^{(n)} = \infty$). A state $i$ is called **transient** if $P_i(X_n = i \text{ for infinitely many }n) = 0$ (or equivalently $\sum_{n = 1}^{\infty} p_{ii}^{(n)} < \infty$). More easily, a state $i$ is recurrent if $f_{ii} = 1$ for all $n \ge 1$, otherwise transient.
 
 Let $N(i)$ be a random variable that present the total number of times the chain hits $i$ (not counting time 0).
 - let $f_{ij}$ present return probability from state $i$ to $j$, then $f_{ij} = P_i(N(j) \ge 1)$ and $f_{ij}f_{jj}^{(n - 1)} = P_i(N(j) \ge n)$
@@ -70,15 +68,3 @@ Markov Chain with transitions $p_{ij}$ on a state space $S$, and a state $i\in S
 - A chain is **aperiodic** if the period of every state is 1.
 
 **THEOREM**: Suppose a Markov chain is irreducible and aperiodic and has a stationary distribution $\{\pi\}$. Then regardless of the initial distribution $\mu_i$, we have $\forall i \in S, \lim_{n\to\infty} P(X_n = i) = \pi_i$.
-
-If we have a Markov chain or stochastic process that stays the same on average, we call it **Martingale**. 
-- Let $X_0, X_1, \cdots$ be a Markov chain, the chain is a martingale if $\forall n \ge 0, E(X_{n+1} - X_n| X_n) = 0$. (i.e$\sum_{j\in S} jp_{ij} = i$)
-- Let a stochastic process $\{Z_n: n\ge 1\}$ be a martingale if $\forall n \ge 1, E(|Z_n|) < \infty$ and $\forall n \ge 1, E(Z_{n+1}|Z_1, \cdots, Z_n) = Z_n$.
-- Similarly, any sequence $\{X_n\}_{n=0}^{\infty}$ is a martingale if $\forall n \ge 0, E(X_{n+1}|X_0, \cdots, X_n) = X_n$.
-
-Let $X_n$ be a stochastic process, and let $T$ be a random variable taking values in $\{0,1,2,\ldots,\}$. then $T$ is a **STOPPING TIME** if $\forall m \ge 0$, the event $\{T = m\}$ is independent of the values of $X_n$ for $n > m$. That is when deciding whether or not $T = m$, we are not allowed to look at the features of $X_n$ for $n > m$.
-
-**OPTIONAL STOPPING TIME THEOREM**: Suppose $\{X_n\}$ is a martingale with $X_0 = a$ and $T$ is a stopping time. $E(X_T) = a$ if either:
-- The martingale is bounded up to time $T$, i.e., $\forall M > 0, \forall n \le T, |X_n| \le M$.
-- The stopping time is bounded, i.e. $\forall M > 0, T \le M$.
-

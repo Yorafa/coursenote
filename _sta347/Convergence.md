@@ -43,7 +43,7 @@ Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another rand
 -   $X_n \overset{P}\to X \implies X_n \overset{D}\to X$ (converse is false)
 -   $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{D}\to X$ (converse is false)
 
-**Central Limit Theorem (CLT):**  Let $X_1, X_2,\ldots$ be a sequence of $i.i.d$ random variables with mean $\mu$ and variance $\sigma^2$. Let $S_n = \sum_{i =1} ^n X_n, M_n = \bar X = S_n/n$, then $Z_n = \frac{S_n - n\mu}{\sqrt{n}\sigma} = \frac{M_n - n\mu}{\sigma/\sqrt{n}} = \sqrt{n}\frac{M_n - n\mu}{\sigma}$. $n\to \infty \implies Z_n \overset{D}\to Z$ where $Z$ is the standard normal distribution $Z \sim N(0,1)$
+**Central Limit Theorem (CLT):**  Let $X_1, X_2,\ldots$ be a sequence of $i.i.d$ random variables with mean $\mu$ and variance $\sigma^2$. Let $S_n = \sum_{i =1} ^n X_n, M_n = \bar X = S_n/n$, then $Z_n = \frac{S_n - n\mu}{\sqrt{n}\sigma} = \frac{M_n - n\mu}{\sigma/\sqrt{n}} = \sqrt{n}\frac{M_n - \mu}{\sigma}$. $n\to \infty \implies Z_n \overset{D}\to Z$ where $Z$ is the standard normal distribution $Z \sim N(0,1)$
 
 **SLUTSKY'S Lemma**: Let $X_n$ and $Y_n$ be different sequence of random variables
 

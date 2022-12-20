@@ -16,6 +16,6 @@ title: "Inequality"
 
 -   prove by correlation definition: $|Corr(X, Y)| = |\frac{Cov(X,Y)}{\sqrt{Var[X]Var[Y]}}| \le 1$
 
-**(JENSEN's INEQUALITY)**: $X$ is random variable with a convex function $f$ s.t. $\mathbb{E}[f(x)]$ is finite, then  $f(\mathbb{E}[X]) \le \mathbb{E}[f(X)]$
+**(JENSEN's INEQUALITY)**: $X$ is random variable with a convex function $f$ s.t. $\mathbb{E}[f(x)]$ is finite, then  $f(\mathbb{E}[X]) \le \mathbb{E}[f(X)]$, fliped inequality is true when $f$ is concave.
 
 -   $f$ is linear cause equal.
