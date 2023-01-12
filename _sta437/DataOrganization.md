@@ -2,6 +2,8 @@
 title: "Basic Information to Multivariate Data"
 ---
 
+<!--more-->
+
 For a multivariate data, denote it with $p$ variables where $p \ge 2$, and with $n$ observations(item/experimental unit). We also denote as $x_{jk}$ where the measurement of kth variable on the jth item or experimental unit.
 
 -   $p =1\implies$ univariate data
@@ -89,13 +91,13 @@ We also have deviation vector which the collection of the distance of each eleme
 - $d_i\perp \bar X_i 1_n$
 - $d_i'd_i = \langle d_i, d_i \rangle = \sum_{j=1}^n (x_{ji} - \bar X_i)^2$ where the sample variance can be write as $s_{ii} = \frac{1}{n-1}d_i'd_i$
 - $d_i'd_k = \langle d_i, d_k \rangle = \sum_{j=1}^n (x_{ji} - \bar X_i)(x_{jk} - \bar X_k)$ where the sample covariance can be write as $s_{ik} = \frac{1}{n-1}d_i'd_k$
-  - recall the dot product has the form $A\cdot B = \norm{A}\norm{B}\cos(\theta)$
+  - recall the dot product has the form $A\cdot B = \|A\|\|B\|\cos(\theta)$
   - where $\theta_{ik}$ is the angle between $d_i$ and $d_k$
 - $\rho_{ik} = \frac{s_{ik}}{s_i s_k} = \frac{(n-1) d_i' d_k}{\sqrt{ (n-1) d_i'd_i}\sqrt{(n-1)d_k'd_k}} = \frac{d_i'd_k}{\sqrt{d_i'd_i}\sqrt{d_k'd_k}} = \cos(\theta_{ik})$ 
 
 
 We can have some other projection:
 - the sample mean vector $\bar X_i = 1/n X'1_n$ where $X$ is the data matrix with $n\times p$, and $\bar X_i$ is the sample mean of the $i$th feature with $p\times 1$ vector
-- the $n\times p$ matrix of deviations $D = X - 1/n 1_n1_n' X $
+- the $n\times p$ matrix of deviations $D = X - 1/n 1_n1_n' X$
 - the $p\times p$ sample covariance matrix $S = \frac{1}{n-1}D'D$ where $D'D$ is the $p\times p$ matrix of inner products of the deviations
   - $S = X'(I - 1/n 1_n1_n')X$ where $I$ is the $n\times n$ identity matrix and $I_n - 1/n 1_n1_n'$ is an orthogonal projector.

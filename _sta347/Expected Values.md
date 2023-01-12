@@ -17,13 +17,15 @@ If there exists some other function $g$, then the expectation of $g$ is:
 
 $\mathbb{E}(X) = \int_{0}^{\infty} P(X > t)dt - \int_{-\infty}^{0} P(X < t)dt$ where both probability $< \infty$
 
+Linearity property of expectations only work finite where : $\sum_{i=1}^n E[X_i] = E[\sum_{i=1}^n X_i]$. When it approaches to infinite we have conditions to make it work. 
+
 ## Variance
 
 Variance present the spread deviation of a random variable.
 
-The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1} $
+The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1}$
 
-The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\sum_{x\in \R}(x-\mu_x)^2P(X=x) \\ \int_{x\in \R}(x-\mu_x)^2f(x) \end{cases} $ where $\mu_x = \mathbb{E}[X]$
+The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\sum_{x\in \R}(x-\mu_x)^2P(X=x) \\ \int_{x\in \R}(x-\mu_x)^2f(x) \end{cases}$ where $\mu_x = \mathbb{E}[X]$
 
 -   $Var[X] \ge 0$
 -   $Var[aX  +B] = a^2V[X], a, B\in \R$

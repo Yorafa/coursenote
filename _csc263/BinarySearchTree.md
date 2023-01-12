@@ -83,3 +83,11 @@ pair<Obj, BST*> delete_min(BST* root){
 }
 ```
 
+## Worst-Case Time Complexity
+
+| Operation | Time Complexity |
+|:---------:|:---------------:|
+|   Search  |   O(n)      |
+|   Insert  |   O(n)      |
+|   Delete  |   O(n)      |
+

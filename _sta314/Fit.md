@@ -35,6 +35,10 @@ From the conditional expected $MSE$ we have conclusion where:
 -   and, less complexity lead a small variance of $\hat f$ but larger bias.
 -   When two $\hat f$ based on different perspective have similar expected MSEs, we prefer the less complex one.
 
+Training MSE always decrease as we increase the complexity of $\hat f$.
+
+- The model based on training MSE may lead to overfitting, that is, select model based on test MSE.
+
 
 We also can use another way to get $\hat f$ by **Sum of Absolute Difference (SAM)**: 
 $\E[|Y - \hat f(X)|] =\frac{1}{n}\sum_{i=1}^n |y_i - \hat f(x_i)|$.

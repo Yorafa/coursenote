@@ -3,7 +3,7 @@ layout: home
 author_profile: true
 ---
 
-The main page will post some other rather than course note. Click to see [Notes](/Course-Note/notes/)
+The main page will post some other rather than course note. Click to see [Notes](/Course-Note/notes/). Currently, learnning goal: segement tree, dp, dijkstra
 
 <a href="https://discord.com/users/553775838550818829" target="_blank">
 	<img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/553775838550818829">

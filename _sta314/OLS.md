@@ -2,7 +2,7 @@
 title: "Ordinary Least Square and Model Selection"
 ---
 
-**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2 $
+**Ordinary Least Squares**(OLS) is a approach to find $\hat{f}$ on linear model where $\hat f(X) = \hat\beta X$. That is, the things we actually to do is to find $\hat\beta$ where $\hat \beta = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n (y_i - x_i^T \alpha)^2 = \arg\min\limits_{\alpha\in \R^{p+1}} \frac{1}{n}\sum_{i=1}^n ||y_i - X \alpha||^2_2$
 
 -   The Loss function for OLS is  $L(\beta,D_{train}) = RSS = ||y-X\beta||^2_2$ , Penality is $Pen(\beta) = 0$
 -   $\hat \beta = (X^TX)^{-1}X^Ty$ is the solution of OLS where $X$ is full column rank.
@@ -19,6 +19,8 @@ After we get $\hat\beta$ , we first assume each error terms are linear independe
 To reduce our work to find a better model and avoid $p> n$ situation, we always want to remove all the predictors without significances. That is, we always process model selection to get best training on linear model. Or we can use [Lasso](Lasso),  [Ridge](Ridge) or elastic net regression to shrinks the coefficient towards zero which the similar concept as remove those coefficient.
 
 - elastic net is the combination of lasso and ridge where: $\hat\beta^R_{\lambda} = \argmin\limits_{\beta}  RSS + \lambda[(1-\alpha)||\beta||_1 + \alpha||\beta||^2_2], \alpha\in[0,1]$, but we dont talk more about this.
+
+The estimate of beta is unbiased. $E[\hat\beta] = E[\frac{1}{n}X^Ty]= E[\frac{1}{n}X^T(X\beta + \epsilon)] = \frac{1}{n}X^TX\beta + E[\frac{1}{n}X^T\epsilon] =\beta$
 
 ## Model Selection
 
@@ -63,8 +65,13 @@ Forward Stepwise Selection:
 -   can be used in high-dimensional setting with $n<p$
 -   may not find the best possible since greedy
 
-Forward Stepwise Selection:
+Backward Stepwise Selection:
 
 -   less computation
 -   only used in $n>p$
 -   may not find the best possible since greedy
+
+
+## Gradient Descent
+
+We have gradient descent for $\hat \beta^{(k+1)} = \hat \beta^{(k)} - \alpha \sum_{i=1}^n[ -y_i + x_i^T\hat \beta^{(k)}]x_{i}$
