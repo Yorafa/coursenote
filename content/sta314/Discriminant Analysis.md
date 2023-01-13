@@ -4,10 +4,10 @@
 
 - Logistic regression model may unstable for classes are well separated. Discriminant analysis is more stable.
 
-Suppose we have $K$ classes, $C = \{0, 1, 2, \dots, K - 1\}$. Let $\pi_k = P[Y = k]$ be the **prior probability** <u>a randomly chosen observation comes from the class $k$</u> 
+Suppose we have $K$ classes, $C = \{0, 1, 2, \dots, K - 1\}$. Let $\pi_k = P[Y = k]$ be the **prior probability** a randomly chosen observation comes from the class $k$
 - $f_k(X) = P(X= x | Y = k)$ is the **density function** of $X$ from class $k$.
 
-By Bayes' theorem, we have the **posterior probability:** $p_k(x) := P(Y = k | X = x) = \frac{f_k(x)\pi_k}{\sum_{\ell \in \mathcal{C}}f_{\ell}(x)\pi_{\ell}}$ which is <u> the probaility that an observationn belongs to the kth class given its feature</u>.
+By Bayes' theorem, we have the **posterior probability:** $p_k(x) := P(Y = k | X = x) = \frac{f_k(x)\pi_k}{\sum_{\ell \in \mathcal{C}}f_{\ell}(x)\pi_{\ell}}$ which is  the probaility that an observationn belongs to the kth class given its feature.
 
 For a new point $x$ we classify it by Bayes classifier where $\arg\max_{k \in \mathcal{C}}p_k(x) = \arg\max_{k \in \mathcal{C}}\frac{f_k(x)\pi_k}{\sum_{\ell \in \mathcal{C}}f_{\ell}(x)\pi_{\ell}} = \arg\max_{k \in \mathcal{C}} f_k(x)\pi_k$
 
@@ -62,7 +62,7 @@ For binary case, we can have linear form to present the classifcation where $\lo
 
 ## QDA 
 
-Differ than LDA, **QDA(Qudratic Discriminant Analysis)** assumes that $X|Y = k$ is a multivariate normal distribution with <u>different mean and covariances</u>  matrix for each class.
+Differ than LDA, **QDA(Qudratic Discriminant Analysis)** assumes that $X|Y = k$ is a multivariate normal distribution with different mean and covariances matrix for each class.
 
 The discriminant function for QDA is: $\delta_k(x) = -\frac{1}{2}x^T\Sigma_k^{-1}x + x^T\Sigma_k^{-1}\mu_k - \frac{1}{2}\mu_k^T\Sigma_k^{-1}\mu_k + \log(\pi_k) - \frac{1}{2}\log(|\Sigma_k|)$
 - $-\frac{1}{2}x^T\Sigma_k^{-1}x$ and $- \frac{1}{2}\log(|\Sigma_k|)$ are the two terms that are not in LDA.

@@ -5,13 +5,13 @@ An **equivalence relation** on set on a set X is a relation `~` on the elements 
 
 1.   **reflexive** : $\forall x \in X, x \sim x$
 2.   **symmetric**: $\forall x \in X,\forall y \in Y, x \sim y \implies y \sim x$
-3.   **transitive** $\forall x \in X, \forall y \in Y, \forall z \in Z, x \sim y \and y\sim z \implies x \sim z$ 
+3.   **transitive** $\forall x \in X, \forall y \in Y, \forall z \in Z, x \sim y \land y\sim z \implies x \sim z$ 
 4.   **Equivalence class** of $x$ is $E_x = \{y\in X : y\sim x\} = \bar x$
 
 **Partition**: let subsets of a set $x$ notices by $p$, the powerset of x by $P$
 
 1.   $\cup_{p\in P} \ p = x$
-2.   $\forall p_1, p_2 \in P, p_1 \and p_2 = \empty$
+2.   $\forall p_1, p_2 \in P, p_1 \land p_2 = \empty$
 
 ---
 
@@ -24,7 +24,7 @@ An **equivalence relation** on set on a set X is a relation `~` on the elements 
           1.   $m \mid a - a$
      2.   $\forall a,b \in \mathbb{Z}, a\equiv b (mod \ m) \implies b\equiv a (mod \ m) $
           1.   $m \mid a - b \implies m \mid b - a$
-     3.   $\forall a,b,c \in \mathbb{Z}, a\equiv b (mod \ m) \and b\equiv c (mod \ m) \implies a\equiv c (mod \ m)$
+     3.   $\forall a,b,c \in \mathbb{Z}, a\equiv b (mod \ m) \land b\equiv c (mod \ m) \implies a\equiv c (mod \ m)$
           1.   $m \mid a - b, m \mid b - c$
           2.   $a-b = k_1 m, b - c = k_2 m$
           3.   $a-b+b-c = (k_1+k_2)m$

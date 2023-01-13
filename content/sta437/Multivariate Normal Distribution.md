@@ -30,17 +30,17 @@ Suppose $X$ follows the multivariate normal distribution with mean vector $\math
 
 Let $X \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})$, then the following are true:
 
-<u> For the 1st., </u> denote $a'X = a_1X_1 + \cdots + a_pX_p$, then $a'X \sim \mathcal{N}(a'\mathbf{\mu}, a'\mathbf{\Sigma}a)$
+For the 1st.,  denote $a'X = a_1X_1 + \cdots + a_pX_p$, then $a'X \sim \mathcal{N}(a'\mathbf{\mu}, a'\mathbf{\Sigma}a)$
   e.g. $a = [1, 0, \ldots, 0]$, then $a'X \sim \mathcal{N}(\mu_1, \sigma_1^2)$ also can prove $X_1$ follows $\mathcal{N}(\mu_1, \sigma_1^2)$ where $a'X = X_1$.
 
-<u>For the 2nd.,</u> we partition $X$ into $X_{1; q\times 1}$ and $X_{2; (p-q)\times 1}$, then $X = [X_{1}; X_{2}]$, then $X_{1}$ and $X_{2}$ are independent, so $X_{1}$ and $X_{2}$ are multivariate normal distributed, and $X_{1}$ is distributed as $\mathcal{N}(\mu_{1}, \Sigma_{11})$ and $X_{2}$ is distributed as $\mathcal{N}(\mu_{2}, \Sigma_{22})$ where $\Sigma_{11}$ is the $q\times q$ submatrix of $\Sigma$ and $\Sigma_{22}$ is the $(p-q)\times (p-q)$ submatrix of $\Sigma$. That is, $\Sigma = \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}$, where $\Sigma_{12}$ is the $q\times (p-q)$ submatrix of $\Sigma$ and $\Sigma_{21}$ is the $(p-q)\times q$ submatrix of $\Sigma$. And $\mu_1 = (\mu_{11} + \ldots + \mu_{1q} )/ q$ and $\mu_2 = (\mu_{1(q+1)} + \ldots + \mu_{1p})/(p-q)$.
+For the 2nd., we partition $X$ into $X_{1; q\times 1}$ and $X_{2; (p-q)\times 1}$, then $X = [X_{1}; X_{2}]$, then $X_{1}$ and $X_{2}$ are independent, so $X_{1}$ and $X_{2}$ are multivariate normal distributed, and $X_{1}$ is distributed as $\mathcal{N}(\mu_{1}, \Sigma_{11})$ and $X_{2}$ is distributed as $\mathcal{N}(\mu_{2}, \Sigma_{22})$ where $\Sigma_{11}$ is the $q\times q$ submatrix of $\Sigma$ and $\Sigma_{22}$ is the $(p-q)\times (p-q)$ submatrix of $\Sigma$. That is, $\Sigma = \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\\ \Sigma_{21} & \Sigma_{22} \end{bmatrix}$, where $\Sigma_{12}$ is the $q\times (p-q)$ submatrix of $\Sigma$ and $\Sigma_{21}$ is the $(p-q)\times q$ submatrix of $\Sigma$. And $\mu_1 = (\mu_{11} + \ldots + \mu_{1q} )/ q$ and $\mu_2 = (\mu_{1(q+1)} + \ldots + \mu_{1p})/(p-q)$.
 - we can have a matrix $A_{q\times p} = \begin{bmatrix} I_{q\times q} & 0 \\\ 0 & 0 \end{bmatrix}$ to do the partition where $AX = X_{1}$ where $A \Sigma A^T = \Sigma_{11}$.
 
-<u>For the 3rd.,</u>  $\Sigma_{12} = 0 \iff \Sigma_{11}$ and $\Sigma_{22}$ are independent, so $X_{1}$ and $X_{2}$ are independent, where the joint function $f(x_1, x_2) = f(x_1)f(x_2)$.
+For the 3rd.,  $\Sigma_{12} = 0 \iff \Sigma_{11}$ and $\Sigma_{22}$ are independent, so $X_{1}$ and $X_{2}$ are independent, where the joint function $f(x_1, x_2) = f(x_1)f(x_2)$.
 
 - For binary random variable, uncorrelated can implies independent.
 
-<u>For the 4th.,</u> $X$ partition into $X_1,X_2$, and $\Sigma_{22} > 0$, then $X_1|X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2), \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21})$ where $X_1|X_2 = x_2$ is the conditional distribution of $X_1$ given $X_2 = x_2$.
+For the 4th., $X$ partition into $X_1,X_2$, and $\Sigma_{22} > 0$, then $X_1|X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2), \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21})$ where $X_1|X_2 = x_2$ is the conditional distribution of $X_1$ given $X_2 = x_2$.
 
 - Let $Y_1 = X_1 - \Sigma_{12}\Sigma_{22}^{-1}X_2$ and $Y_2 = x_2$ then we have $\begin{bmatrix} Y_1 \\ Y_2\end{bmatrix} = \begin{bmatrix} I & \Sigma_{12}\Sigma_{22}^{-1} \\ 0 & I  \end{bmatrix} \begin{bmatrix} X_1 \\ X_2\end{bmatrix}$
 - then $\Sigma_y = A \Sigma_x A^T = \begin{bmatrix} I & \Sigma_{12}\Sigma_{22}^{-1} \\ 0 & I  \end{bmatrix} \begin{bmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{bmatrix} \begin{bmatrix} I & 0 \\ -\Sigma_{12}\Sigma_{22}^{-1} & I  \end{bmatrix} = \begin{bmatrix} \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21} & 0 \\ 0 & \Sigma_{22} \end{bmatrix}$

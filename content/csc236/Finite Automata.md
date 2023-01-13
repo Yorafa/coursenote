@@ -63,7 +63,7 @@ Let $A, B$ be any language over $\Sigma^*$.
 
 ---
 
-Let $A, B$ be any language over $\Sigma$. $\forall x,y,w\in \Sigma^*$, $xw\in A \mbox{ XOR } yw\in A\implies w$ is **distinguisher** for $x, y$
+Let $A, B$ be any language over $\Sigma$. $\forall x,y,w\in \Sigma^*$, $xw\in A \text{ XOR } yw\in A\implies w$ is **distinguisher** for $x, y$
 
 Define a binary equivalence relationship $\sim$ relative to language A over $\Sigma^*$ as $\sim_A$, $\forall x,y\in \Sigma^*, x\sim_A y\iff \lnot \exists $ a distinguisher for $x,y \iff \forall w\in \Sigma^*. (xw\in A \iff yw \in A)$. In this situation, we say $x$ is indistinguishable from $y$ relative to $A$. 
 

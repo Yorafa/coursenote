@@ -7,7 +7,7 @@
 **Subgroup Test:** Let $G$ be a group
 
 -    let $H\sube G$ be a subset. If $\forall a,b \in H, a\cdot b^{-1} \in H$, $H$ is a subgroup of $G$. (One-step test)
--    Let $H$ be nonempty subset of $G$. $a,b\in H, ab\in H \and a^{-1}\in H \implies H$ is a subgroup of $G$  (two-step test)
+-    Let $H$ be nonempty subset of $G$. $a,b\in H, ab\in H \land a^{-1}\in H \implies H$ is a subgroup of $G$  (two-step test)
 -    Let $H$ be nonempty finite subset of $G$. If $H$ is closed under the operation of $G$, $H$ is a subgroup of $G$. (finite subgroup test)
 -    The center of  $G$ is a subgroup of $G$
 -    The centralizer of $G$ is a subgroup of $G$
