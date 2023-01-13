@@ -79,7 +79,7 @@ Algebraic Limit Theorem for Functional Limit:
 Continuity: Let function $f:A\to B$, let $c\in A$, if $\forall \epsilon> 0, \exists\delta >0, |x-c|>\delta\implies |f(x)-f(c)|<\epsilon$, then we say function $f$ is continuous at $c$
 
 -   If $f$ is continuous at every point in $A$, then $f$ is continuous on $A$ 
--   $\forall U\subseteq B, f^{-1}(U)$ is open $\iff f$ is continuous (see [open Set](Set))
+-   $\forall U\subseteq B, f^{-1}(U)$ is open $\iff f$ is continuous (see [open Set](./Set))
 
 Characterizations of Continuity: $f$ is continuous at point $c$ should satisfied one of following:
 
