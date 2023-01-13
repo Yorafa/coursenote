@@ -1,6 +1,4 @@
----
-title: "Vector"
----
+# Vector
 
 we first define **vector** which is a collection of data in $n\times1$ as $\begin{bmatrix}x_1\\ x_2\\x_3\\\vdots\\x_n\end{bmatrix}$, and **matrix** is a collection of data in $n\times p$ as $\begin{bmatrix}x_{11} & x_{12} & \cdots & x_{1p} \\ x_{21} & x_{22} & \cdots & x_{2p} \\ \cdots & \cdots & \cdots & \cdots \\x_{n1} & x_{n2} & \cdots & x_{np}\end{bmatrix}$
 

@@ -1,6 +1,4 @@
----
-title: "Pipe"
----
+# Pipe
 
 
 ## Lower IO

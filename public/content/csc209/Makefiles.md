@@ -1,6 +1,4 @@
----
-title: "Makefile"
----
+# Makefiles
 
 Normally, we create a `Makefile` to `make` which aim to make life easier.
 

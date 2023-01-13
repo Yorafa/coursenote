@@ -1,6 +1,5 @@
----
-title: "Subgroup"
----
+# Subgroup
+
 **Subgroup**: $H\sube G$ and $H$ is a group with respect the binary operation on $G$
 
 -   e.g. $(\Z_6, 0, +)$ has subgroups $(\{0\}, 0, +)$, $(\Z_6, 0, +)$, $(\{0,2,4\}, 0, +)$, $

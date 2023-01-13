@@ -1,6 +1,4 @@
----
-title: "Cyclic Group"
----
+# Cyclic Group
 
 
 **Cyclic Group**: $\{a^n:n\in\Z, a\in G\} = \langle a \rangle \subseteq G$ is a cyclic group

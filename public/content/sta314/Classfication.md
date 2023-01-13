@@ -1,7 +1,4 @@
----
-title: "Classification"
-
----
+# Classification
 
 We may have a classification problem for a qualitative result from an unordered set $C$. The main goal of us is to:
 

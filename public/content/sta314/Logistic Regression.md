@@ -1,6 +1,4 @@
----
-title: "Logistic Regression"
----
+# Logistic Regression
 
 Logistic regression is a parametric approach to classification. It gives a structure of probability of $x$ by $p(X) =\frac{e^{\beta_0 + \beta X}}{1+e^{\beta_0 + \beta X}}$ where $\beta_0$ is the intercept and $\beta$ is the coefficient matrix. Where $\frac{p(X)}{1-p(X)} = e^{\beta_0 + \beta X}$ is the odds. 
 - each $\beta_j$ represents the change of log-odds for one unit increase in $X_j$

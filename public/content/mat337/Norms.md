@@ -1,10 +1,6 @@
----
-title: "Norms"
----
+# Norms
 
 In the previous section, we study the Euclidean norm, but how about the general norm?
-
-<!--more-->
 
 Let $V$ be vector space over $\R$ (not exactly $\R$, is fine for $\R^m$ or polynomail space etc), we define the **norm** on $V$ is a function $\|\cdot\|$ on $V$ taking values in $[0, \infty)$ satisfied the following properties:
 - $\forall x \in V, x = 0 \implies \|\cdot\| = 0$ (positive definite)

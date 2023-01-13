@@ -1,6 +1,4 @@
----
-title: "Bit Manipulation"
----
+# Bit Manipulation
 
 Bit manipulation will manipulate numbers in binary by different  operations
 
@@ -8,7 +6,7 @@ Bit manipulation will manipulate numbers in binary by different  operations
 
 
 | Symbol | Description|
-| ------ | -----------------------------------------------------------|
+| ------ | :-----------------------------------------------------------:|
 | \&      | `and` operation(not comparation!!!), for example `1 & 1` will return a 1, but `0 & 1` return 0 |
 | \|     | `or` operation(not comparation!!!), for example `1 | 0` will return a 1, but `0 & 0 return 0 |
 | ^      | `XOR` operation, for example `0 ^ 0` and `1 ^ 1`return 0, but `1 ^ 0` return 1 |

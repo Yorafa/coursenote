@@ -1,6 +1,4 @@
----
-title: "Sequence"
----
+# Sequence
 
 $\forall n\in \mathbb{N}$ we define the list number $\dots,x_n,x_{n+1},\dots$  then $\{x_n\}$ is a sequence, or $(x_n)$; some time we have multiple variable and we may have something like $(x_{a,b})_{a\in N}$ means this sequence focus on the changing of $a$
 

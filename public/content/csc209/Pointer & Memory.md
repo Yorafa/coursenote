@@ -1,6 +1,4 @@
----
-title: "Pointer and Memory"
----
+# Pointer and Memory
 
 ## Pointer
 

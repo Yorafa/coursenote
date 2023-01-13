@@ -1,6 +1,4 @@
----
-title: "Shell Programming"
----
+# Shell Programming
 
 Shell is a program that infinite looped to execute and interpreter command.
 

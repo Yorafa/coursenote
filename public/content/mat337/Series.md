@@ -1,7 +1,4 @@
----
-title: "Series"
----
-
+# Series
 
 Let $(a_n)^{\infty}_{n=1}$ be a sequence of numbers, we define a **infinite series** with terms $a_n$ is the formal expression $\sum_{n= 1}^{\infty} a_n$. Define a sequence of **partial sums** $(s_n)_{n=1}^{\infty}$ by $s_n = \sum_{k=1}^n a_k$
 

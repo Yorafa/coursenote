@@ -1,6 +1,4 @@
----
-title: "Expected Values"
----
+# Expected Values
 
 Expectation is a location measure which give the location of the center of a random variable.
 

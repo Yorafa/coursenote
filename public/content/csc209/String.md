@@ -1,6 +1,4 @@
----
-title: "String"
----
+# String
 
  Particular in `C`, there is no `string` type, we use `char array` following `\0` to represent a `string` or more officially, every `string` (string literal included) has a explicit `\0` at the end. If we use `pointer` to present, then is a `string literal` since it call the global value and we  can not do editing for those globals.
 

@@ -10,6 +10,7 @@ const update = async () => {
     await fs.readdir(directoryPath, async (err, files) => {
         if (err) return console.log('Unable to scan directory: ' + err);
         courses = files.filter((str) => str.indexOf(pattern) === -1);
+        courses = courses.filter((str) => str.indexOf('courses.md') === -1);
         await fs.writeFile(directoryPath + '/courses.json', JSON.stringify(courses), (err) => {
             if (err) throw err;
             console.log('courses updated');
@@ -19,6 +20,7 @@ const update = async () => {
             await fs.readdir(tempPath, async (err, files) => {
                 if (err) return console.log('Unable to scan directory: ' + err);
                 let contents = files.filter((str) => str.indexOf(pattern) === -1);
+                contents = contents.filter((str) => str.indexOf(course+'.md') === -1);
                 await fs.writeFile(tempPath + '/'+ course + '.json', JSON.stringify(contents), (err) => {
                     if (err) throw err;
                     console.log(course + ' : content updated');

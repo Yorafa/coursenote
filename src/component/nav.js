@@ -1,15 +1,13 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography } from '@mui/material';
-import Menu from '@mui/material/Menu';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button } from '@mui/material';
+import { Tooltip, MenuItem, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'Courses', 'Blog', 'CNBlog'];
+const pages = [<Link to="/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Home</Link>, 
+<Link to="/courses" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Courses</Link>, 
+<Link to="/blog" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Blog</Link>, 
+<a href="https://yorafa.com/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>CNBlog</a>];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -23,8 +21,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <Paper sx={{ position: 'fixed', top: 0, left: 0, right: 0 }} elevation={3}>
-    <AppBar position="static" style={{
+    <Paper sx={{ position: 'flex', top: 0, left: 0, right: 0 }} elevation={10}>
+    <AppBar position="fixed" style={{
         backgroundColor: 'black',
     }}>
       <Container maxWidth="xl">
@@ -53,9 +51,6 @@ function ResponsiveAppBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -64,7 +59,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
             {pages.map((page) => (
               <Button
                 key={page}

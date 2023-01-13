@@ -1,6 +1,4 @@
----
-title: "Select system call"
----
+# Select system call
 
 Select is a very useful system call when we use in pipe/socket which help us a lot in simultaneously working.
 

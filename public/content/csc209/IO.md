@@ -1,6 +1,4 @@
----
-title: "IO"
----
+# IO
 
 The "IO" standard input and output, and we can easy input/output our data in format by function followed`f`
 

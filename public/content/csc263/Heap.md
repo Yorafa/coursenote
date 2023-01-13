@@ -1,6 +1,4 @@
----
-title: "Heap"
----
+# Heap
 
 Heap is a binary tree with the max/min among its children value in its root,  and also, for all of its child tree, their root also is the max/min among their child tree.
 

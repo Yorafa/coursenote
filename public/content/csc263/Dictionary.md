@@ -1,6 +1,4 @@
----
-title: "Dictionary"
----
+# Dictionary
 
 Dictionary is famous ADT in python (.net). In other programming language we call it map or something else. They are almost the same things, but called different in the different language. For each item in the collection dictionary, the item.key should be unique, that is, why we call it dictionary where a stuff usually have a unique name. For dictionary, we should have:
 

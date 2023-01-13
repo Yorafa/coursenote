@@ -1,6 +1,4 @@
----
-title: "Some Group Notation"
----
+# Some Group Notation
 
 $ GL_n(\R) = \{$all **invertible** real-valued $n\times n$ matrices$\}=\{$all **invertible** linear operators $\R^n\to \R^n$ matrices$\}$
 

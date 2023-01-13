@@ -1,8 +1,4 @@
----
-title: "Set"
----
-
-
+# Set
 
 Let $C$ be a collection.  $\forall a\in C, \nexists b\in C\backslash \{a\}, a = b \implies C$ is a **set**.
 

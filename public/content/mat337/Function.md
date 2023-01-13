@@ -1,6 +1,4 @@
----
-title: "Functions"
----
+# Functions
 
 In other course, the function we use is usually $f: \R \to \R$, but this course we will consider more about $f: \R^n \to \R^m$ so that all the properties may differ and advance than in $\R$
 

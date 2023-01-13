@@ -7,12 +7,11 @@ export default function Footer() {
     return (
         <Container maxWidth="xl" style={{
             position: 'fixed',
-            left: 'auto',
             bottom: 0,
-            width: '100%',
-            backgroundcolor: 'red',
             color: 'white',
+            width: '100%',
             textalign: 'center',
+            paddingRight: '5%',
         }}>
             <Box
                 sx={{

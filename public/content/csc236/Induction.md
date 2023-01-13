@@ -1,6 +1,4 @@
----
-title: "Induction"
----
+# Induction
 
 <del>Almost every courses teach induction</del>
 

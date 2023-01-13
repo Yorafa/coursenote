@@ -8,6 +8,7 @@ import Error from './page/error';
 import About from './page/about';
 import Course from './page/course';
 import Content from './page/content';
+import CourseIntro from './page/courseIntro';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       { path: '', element: <About /> },
+      { path: 'courses', element: <CourseIntro />, },
       { path: ':courseId/', element: <Course />,},
       { path: ':courseId/:contentId/', element: <Content /> },
 

@@ -1,6 +1,5 @@
----
-title: "Signal"
----
+# Signal
+
 **Segementation Fault Warning!!!!!!** *(not really lol)*
 
 `#include <signal.h>`

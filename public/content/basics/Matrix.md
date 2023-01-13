@@ -1,6 +1,4 @@
----
-title: "Matrix"
----
+# Matrix
 
 Matrix is the extension of vector where from $n\times 1 \to n\times m$, but notice, the addition of matrix only perform when they are all the same $n\times m$ where they have the same number of rows and columns. For multiplication, we can only perform $A_{n\times p} = B_{n\times k} \cdot C_{k\times p}$
 

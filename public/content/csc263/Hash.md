@@ -1,6 +1,4 @@
----
-title: "Hash"
----
+# Hash
 
 Hash rather than a data structure, it's more like a algorithm. It provide $O(1)$ time complexity to quickly access the elements. We want to find a efficient bi-jection function to store data.
 

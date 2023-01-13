@@ -1,6 +1,4 @@
----
-title: "Recurrence"
----
+# Recurrences
 
 Review of time limit:
 

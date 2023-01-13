@@ -1,6 +1,4 @@
----
-title: "Binary Relations"
----
+# Binary Relations
 
 **Binary Relations**: Denote a relation over a set $A$ be $R$, if the relation is binary relation, then $\forall a,b \in A$
 

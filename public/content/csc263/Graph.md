@@ -1,6 +1,4 @@
----
-title: "Graph"
----
+# Graph
 
 The adjacvency-list representation of a graph $G = (V,E)$ consists of an array <i> Adj </i> , one for each vertex in $V$. For each $u\in V$, the adjacency list $Adj[u]$ contains all the vertices $\nu$ such that $(u,\nu)\in E$.
 - Use space complexity $O(|V|+|E|)$

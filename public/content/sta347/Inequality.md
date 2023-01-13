@@ -1,6 +1,4 @@
----
-title: "Inequality"
----
+# Inequality
 
 **(BOOLE'S INEQUALITY)**: $P(\cup_{k=1}^{\infty} A_k)\le \sum_{k=1} ^{\infty} P(A_k)$
 

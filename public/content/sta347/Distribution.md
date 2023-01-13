@@ -1,6 +1,4 @@
----
-title: "Distributions"
----
+# Distributions
 
 ## Discrete Distributions
 

@@ -1,6 +1,4 @@
----
-title: "Permutation Group"
----
+# Permutation Group
 
 
 **Permutation** of a set is a bijection function $A\to A$.

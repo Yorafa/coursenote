@@ -1,6 +1,4 @@
----
-title: "Socket"
----
+# Socket
 
 Before we talk about socket, we should probably know how the internet's workflow.
 

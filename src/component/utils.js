@@ -9,6 +9,10 @@ export const getCourses = async () => {
     return await fileClient.get("/courses.json");
 };
 
+export const getCoursesIntro = async () => {
+    return await fileClient.get("/courses.md");
+};
+
 export const getCourseDetail = async (id) => {
     return await fileClient.get(`/${id}/${id}.json`);
 };
