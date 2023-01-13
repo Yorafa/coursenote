@@ -4,9 +4,8 @@ import { Tooltip, MenuItem, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
-const pages = [<Link to="/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Home</Link>, 
+const pages = [
 <Link to="/courses" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Courses</Link>, 
-<Link to="/blog" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Blog</Link>, 
 <a href="https://yorafa.com/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>CNBlog</a>];
 
 function ResponsiveAppBar() {
@@ -74,7 +73,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Click to Home Page">
               <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://yorafa.com/wp-content/uploads/2022/01/cropped-僕～-150x150-1.png" />
+                <Link to="" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}><Avatar alt="Remy Sharp" src="https://yorafa.com/wp-content/uploads/2022/01/cropped-僕～-150x150-1.png" /></Link>
               </IconButton>
             </Tooltip>
           </Box>

@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Error from './page/error';
-import About from './page/about';
 import Course from './page/course';
 import Content from './page/content';
 import CourseIntro from './page/courseIntro';
@@ -16,7 +15,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-      { path: '', element: <About /> },
+      { path: '', element: <CourseIntro />, },
       { path: 'courses', element: <CourseIntro />, },
       { path: ':courseId/', element: <Course />,},
       { path: ':courseId/:contentId/', element: <Content /> },
