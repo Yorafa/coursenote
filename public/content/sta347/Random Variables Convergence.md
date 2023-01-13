@@ -4,7 +4,7 @@ From the analysis courses, we somehow learn the convergence of sequence, the con
 
 
 ## Convergence in Probability
-Let $X_1, X_2,\ldots$ be an infinite sequence of random variables and let $Y$ be another random variable. Then the sequence $\{X_n\}$ <u>**converges in probability**</u> to $Y$ if $\forall \epsilon > 0, \lim\limits_{n\to\infty} P(|X_n - Y| > \epsilon) = 0$. We denote it as $X_n \overset{P}\to Y$
+Let $X_1, X_2,\ldots$ be an infinite sequence of random variables and let $Y$ be another random variable. Then the sequence $\{X_n\}$ **converges in probability** to $Y$ if $\forall \epsilon > 0, \lim\limits_{n\to\infty} P(|X_n - Y| > \epsilon) = 0$. We denote it as $X_n \overset{P}\to Y$
 
 **Weak Law of Large Number:** Let $X_1, X_2,\ldots$ be a sequence of independent random variables, each having same mean $\mu$. And thei variance $\sigma^2 \le v$ where $v < \infty$. Then $\forall \epsilon >0, \lim_{n\to \infty}P(|M_n - \mu|> \epsilon) = 0$ or we say $M_n \overset{p}\to \mu$ where $M_n = \frac{\sum_i^n X_i}{n}$
 
@@ -14,7 +14,7 @@ Let $X_1, X_2,\ldots$ be an infinite sequence of random variables and let $Y$ be
 
 ## Almost Sure Convergence
 
-Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable.  the sequence $\{X_n\}$ is <u> **almost surely** </u> to $X$ if $P(\{s: X_n(s) \overset{P}\to X(s) \}) = 1$. We denote it as $X_n \overset{\text{a.s.}}\to X$. Sometimes we also call it Convergence with probability 1.
+Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable.  the sequence $\{X_n\}$ is  **almost surely**  to $X$ if $P(\{s: X_n(s) \overset{P}\to X(s) \}) = 1$. We denote it as $X_n \overset{\text{a.s.}}\to X$. Sometimes we also call it Convergence with probability 1.
 
 - $P(\lim\limits_{n\to \infty} X_n = X) = 1 \implies P(\lim\limits_{n\to \infty} |X_n - X| > \epsilon \text{ i.o}) = 0$
 - $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{P}\to X$ no converse
@@ -36,7 +36,7 @@ E.g. $S=[0,1], U \sim \text{Uniform}(0,1)$, let $X_n(s) =  I(U > \frac{1}{n^2})$
 
 ## Convergence in Distribution
 
-Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable. Then the sequence $\{X_n\}$ <u>**converges in distribution**</u> to $X$ if $\forall x\in \R, P(X=x) = 0 \implies \lim_{n\to \infty} P(X_n \le x) = P(X\le x)$. We denote it as $X_n \overset{D}\to X$ (continuous measure = 0)
+Let $X_1, X_2,\ldots$ be a sequence of random variables. Let $X$ be another random variable. Then the sequence $\{X_n\}$ **converges in distribution** to $X$ if $\forall x\in \R, P(X=x) = 0 \implies \lim_{n\to \infty} P(X_n \le x) = P(X\le x)$. We denote it as $X_n \overset{D}\to X$ (continuous measure = 0)
 
 -   $X_n \overset{P}\to X \implies X_n \overset{D}\to X$ (converse is false)
 -   $X_n \overset{\text{a.s.}}\to X \implies X_n \overset{D}\to X$ (converse is false)

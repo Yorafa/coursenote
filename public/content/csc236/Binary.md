@@ -11,13 +11,13 @@ Some Property of Binary Relations $R$ over a set $A$ may have:
 -   reflexive: $\forall a \in A, aRa$ 
 -   asymmetric: $\forall a,b \in A,  aRb\implies b\cancel{R} a$
 -   symmetric: $\forall a,b \in A,  aRb\implies bRa$
--   antisymmetric: $\forall a,b\in A (aRb\and bRa \implies a=b)$
--   transitive: $\forall a,b,c \in A, aRb \and bRc \implies aRc$
--   connected: $\forall a,b \in A, a\ne b \implies aRb \or bRa$
--   cyclic: $\forall a,b,c\in A, aRb\and bRc \implies cRa$
--   irreflexive $\and$ transitive $\implies$ asymmetric
+-   antisymmetric: $\forall a,b\in A (aRb\land bRa \implies a=b)$
+-   transitive: $\forall a,b,c \in A, aRb \land bRc \implies aRc$
+-   connected: $\forall a,b \in A, a\ne b \implies aRb \lor bRa$
+-   cyclic: $\forall a,b,c\in A, aRb\land bRc \implies cRa$
+-   irreflexive $\land$ transitive $\implies$ asymmetric
 
-**Strict (partial) Order**: a binary relation $R$ over a set $A$ is <u>irreflexive, asymmetric(not necessary) and transitive</u>
+**Strict (partial) Order**: a binary relation $R$ over a set $A$ is _irreflexive, asymmetric(not necessary) and transitive_
 
 -   e.g.: Dependencies, Little-o, $\sub$, etc.
 
@@ -25,15 +25,15 @@ Some Property of Binary Relations $R$ over a set $A$ may have:
 
 -   e.g.: Dictionary Order,  etc.
 
-**Hasse Diagram**: $\forall R, R$ is strict order over a set $A$,  $\forall a,b \in A$, Hasse diagram has a edge $a\to b \iff a Rb \and \cancel{\exist} c, aRc \and cRb$
+**Hasse Diagram**: $\forall R, R$ is strict order over a set $A$,  $\forall a,b \in A$, Hasse diagram has a edge $a\to b \iff a Rb \land \cancel{\exist} c, aRc \land cRb$
 
 Notice: it (binary relation) is very different with the binary operation of group theory.
 
-**Partial Order**: a binary relation $R$ over a set $A$ is <u>reflexive, antisymmetric and transitive</u>
+**Partial Order**: a binary relation $R$ over a set $A$ is _reflexive, antisymmetric and transitive_
 
 **Total Order**: a binary relation $R$ over a set $A$ is partial order and connected.
 
-**Equivalence Relation**: a binary relation $R$ over a set $A$ is <u>reflexive, symmetric and transitive</u>
+**Equivalence Relation**: a binary relation $R$ over a set $A$ is _reflexive, symmetric and transitive_
 
 -   e.g. $=$, modular $(\equiv_n): a =b(mod \ n), a,b,n\in \N$
 -   cyclic and reflexive $R \implies$ $R$ is equivalence relation 

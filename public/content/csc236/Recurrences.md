@@ -68,7 +68,7 @@ We always use **Master Theorem** to solve such standard form; Let $T(n) = aT(n/b
 
 3.   Root heavy: $f(n) = \Omega(n^{log_b(a) + \epsilon})$ for some constant $\epsilon > 0$, and $af(n/b) \le cf(n)$ for some constant $c < 1$ for all sufficiently large  $n$ (Regularity Condition)
 
-Combine those cases, we have: $T(n) = \begin{cases} \Theta(n^{log_b(a)})  & \mbox{Leaf heavy Case} \\ \Theta(n^{log_b(a)}log(n))  & \mbox{Balanced Case}  \\\Theta({f(n)})  & \mbox{Root heavy Case}  \end{cases}$
+Combine those cases, we have: $T(n) = \begin{cases} \Theta(n^{log_b(a)})  & \text{Leaf heavy Case} \\ \Theta(n^{log_b(a)}log(n))  & \text{Balanced Case}  \\\Theta({f(n)})  & \text{Root heavy Case}  \end{cases}$
 
 Base on this, we:
 
@@ -76,4 +76,4 @@ Base on this, we:
 2.   Compare $n^{log_b(a)}$ to $f$ to determine the case split
 3.   Read off the asymptotics from the relevant case
 
-Simplified Master Theorem: let $f = n^c$ $T(n) = \begin{cases}\Theta(n^{\log_b(a)} & a> b^c \\ \Theta(n^c \log(n) & a = b^c) \\ \Theta(n^c) & a <b^c \end{cases}$
+Simplified Master Theorem: let $f = n^c$ $T(n) = \begin{cases}\Theta(n^{\log_b(a)}) & a> b^c \\ \Theta(n^c \log(n) & a = b^c) \\ \Theta(n^c) & a <b^c \end{cases}$

@@ -15,7 +15,7 @@ We use Least Square to estimate the parameters of a linear model where $\hat \be
 
 We always use principal component to serve regression analysis or cluster analysis. 
 
-Given random vector $X' = [X_1, X_2, \ldots, X_p]$ have covariance matrix $\Sigma$ with eigenvalues $\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_p \ge 0$. Let says $Y_1 = a_1'X, \ldots, Y_p = a_p'X$ where $a_1, \ldots, a_p$. Then we have $Var[Y_i] = a_i'\Sigma a_i$ and $Cov[Y_i, Y_j] = a_i'\Sigma a_j$. The Principal Components (PCs) are those uncorrelated linear combinations $Y_1, Y_2, \ldots$ whose variance $Var[Y_i] = a_i'\Sigma a_i$ as <u>large</u> as possible subject to $a_i'a_i = 1$. That is:
+Given random vector $X' = [X_1, X_2, \ldots, X_p]$ have covariance matrix $\Sigma$ with eigenvalues $\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_p \ge 0$. Let says $Y_1 = a_1'X, \ldots, Y_p = a_p'X$ where $a_1, \ldots, a_p$. Then we have $Var[Y_i] = a_i'\Sigma a_i$ and $Cov[Y_i, Y_j] = a_i'\Sigma a_j$. The Principal Components (PCs) are those uncorrelated linear combinations $Y_1, Y_2, \ldots$ whose variance $Var[Y_i] = a_i'\Sigma a_i$ as large as possible subject to $a_i'a_i = 1$. That is:
 - first PC = Linear combination $a_1'X$ that maximizes $Var[a_1'X]$ subject to $a_1'a_1 = 1$.
 - second PC = Linear combination $a_2'X$ that maximizes $Var[a_2'X]$ subject to $a_2'a_2 = 1$ and $Cov(a_1'X, a_2'X) = 0$.
 - ...

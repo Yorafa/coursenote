@@ -1,6 +1,6 @@
 # Induction
 
-<del>Almost every courses teach induction</del>
+Almost every courses teach induction
 
 **Basic Induction**: To prove $\forall n\in \N, (P(n))$ use some base case and induction to prove for all.
 
