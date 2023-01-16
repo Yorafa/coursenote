@@ -25,3 +25,7 @@
 -   $\forall k, k|n \implies$ the set $\lang n/k\rang$ is unique subgroup of $\Z_n$ of order $k$
 -   let $k\in \Z^+, k|n \implies \phi(d) =$ number of elements (with order $d$) in a cyclic group of order $n$
     -   $|\lang a\rang| \ne \infty,$ the number of elements of order $d$ is a multiple of $\phi(d)$
+- order:
+  - The smallest positive integer $n, g^n = e \implies |g| = n$ or infinite order (order of element of group)
+    -   $|g| = n \implies g^k\cdot g^l = g^{k+l(mod \ n)}$
+  -  $a^k = e = a^n\implies a^{gcd(k,n)}= e$ or $|a| = gcd\{n\in\N : a^n = e\}$

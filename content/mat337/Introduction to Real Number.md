@@ -4,7 +4,7 @@ Beyond real number, let's review some about rational number first. Rational numb
 
 ## Rational number
 
-That's we define ration number as $\forall q\in \Q, q = a/b, a,b \in \N, b\ne 0$
+That's we define ration number as $\forall q\in \mathbb{Q}, q = a/b, a,b \in \N, b\ne 0$
 
 We would like to use decimal expansion to present rational number. But the interesting thing found here, we have many decimal expansions, how can we found the related one. For the finite decimal expansion, we just simply use $10^n$ where $n$ is the number of digits after dot to times such expansion then we have a integer, and now we can present it as $a/b$ so that all finite decimal expansions are rational. How about infinite decimal expansion? Some of them are eventually periodic, some of them are not. Among those expansion, how can we judge if it's a rational number?
 
@@ -69,7 +69,7 @@ A **subsequences** of a sequence $(a\_n)^{\infty}\_{n=1}$ can be denote as $(a\_
 
 **(2.8.1. Proposition)**: Let $(a_n)^{\infty}_{n=1}$ be a sequence converging to $L$. $\forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N, \|a_n - a_m\| < \epsilon$
 
-A sequence $(a_n)^{\infty}_{n=1}$ of real numbers is called a **Cauchy Sequence** $\iff \forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N,$$ \|a_n - a_m\| < \epsilon $
+A sequence $(a_n)^{\infty}_{n=1}$ of real numbers is called a **Cauchy Sequence** $\iff \forall \epsilon >0, \exists N\in \Z, s.t.\forall m,n \ge N,$ $ \|a_n - a_m\| < \epsilon $
 
 -   Obviously, Cauchy sequence of real numbers converges.
 
