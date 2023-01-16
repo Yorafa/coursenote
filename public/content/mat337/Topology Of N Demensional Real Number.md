@@ -36,7 +36,7 @@ Similarly, the **Cauchy sequence** in $\R^n$ is defined as $\forall \epsilon > 0
 
 - The **complete** in $\R^n$ defined: a set $S\subset \R^n$ is complete if every Cauchy sequence of points in $S$ converges to a point in $S$
   - $\R^n$ is complete.
-- A convergent sequence is also Cauchy, but a Cauchy sequence is not necessarily convergent. e.g $\lfloor n\sqrt{2} \rfloor / n$ is Cauchy but not convergent in $\Q$.
+- A convergent sequence is also Cauchy, but a Cauchy sequence is not necessarily convergent. e.g $\lfloor n\sqrt{2} \rfloor / n$ is Cauchy but not convergent in $\mathbb{Q}$.
 
 ## Close and Open
 

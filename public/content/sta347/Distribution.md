@@ -4,7 +4,7 @@
 
 **(The BERNOULLIE DISTRIBUTION)**:  $P(X = x) = \theta^x(1-\theta)^{1-x}; x = 0, 1$
 
-**(The BINOMIAL DISTRIBUTION)**:  $$P(X = x) = {n\choose x} \  \theta^x(1-\theta)^{n-x}; x = 0, 1,\ldots, n$$
+**(The BINOMIAL DISTRIBUTION)**:  $P(X = x) = {n\choose x} \  \theta^x(1-\theta)^{n-x}; x = 0, 1,\ldots, n$
 
 **(The GEOMETRIC DISTRIBUTION)**:  $P(X = x) = \theta(1-\theta)^{x - 1}; x = 1, 2, 3,\ldots$
 
