@@ -7,7 +7,6 @@
 Some e.g.
 1.   in $\mathbb{Z}, +:\mathbb{Z}\times \mathbb{Z}\to \mathbb{Z}$
 2.   in $\mathbb{R}, \cdot: \mathbb{R}\times \mathbb{R} \to \mathbb{R}$
-3.   Let $x = \{f:\mathbb{R}\to \mathbb{R}| f$ is bijective $\}$
 
 **Group** is triple $(G, e, \cdot)$, $\cdot: G\times G \to G$ is binary operation, $e\in G$, satisfied:
 
@@ -16,7 +15,10 @@ Some e.g.
 3.   $\forall  a\in G, \exist b\in G, a\cdot b = b\cdot a = e$, b is the inverse of $a$
 4.   $\forall x,y, x \in G \land y \in G \implies x\cdot y \in G \land y \cdot x \in G$ (closure)
 
-e.g. $(\{0\}, 0, \cdot)$ , $(\mathbb{R}, 0, +)$, $(\mathbb{R}\backslash\{0\}, 0, \cdot)$, $(\{e\}, e, \cdot), e\cdot e = e$,  $(X, I, \circ), X = \{f:\mathbb{R}\to \mathbb{R}| f$ is bijective $\}, f(x) = x$ is group, 
+e.g. $(\{0\}, 0, \cdot)$ , $(\mathbb{R}, 0, +)$, $(\mathbb{R}\backslash\{0\}, 0, \cdot)$, $(\{e\}, e, \cdot), e\cdot e = e$
+
+We may find some element are special where we can use them to generate the group by use group operation start from identity, such element is called **generators** of the group.
+- e.g. for group $(\Z_4, 0, +)$, $1,3$ are generators, but $0, 2$ are not (0+2 = 2, 2 + 2 = 0, no such way to generate 1 and 3 in $\Z_4$).
 
 **Group Theorem**:
 
@@ -42,3 +44,18 @@ e.g. $(\{0\}, 0, \cdot)$ , $(\mathbb{R}, 0, +)$, $(\mathbb{R}\backslash\{0\}, 0,
 
 Diff: one for elements satisfied all element of $G$, one for elements satisfied $a\in G$; $Z(G) \sube C(a)$
 
+## Subgroup
+
+**Subgroup**: $H\sube G$ and $H$ is a group with respect the binary operation on $G$
+
+-   e.g. $(\Z_6, 0, +)$ has subgroups $(\{0\}, 0, +)$, $(\Z_6, 0, +)$, $(\{0,2,4\}, 0, +)$, $
+
+**Subgroup Test:** Let $G$ be a group
+
+-    let $H\sube G$ be a subset. If $\forall a,b \in H, a\cdot b^{-1} \in H$, $H$ is a subgroup of $G$. (One-step test)
+-    Let $H$ be nonempty subset of $G$. $a,b\in H, ab\in H \land a^{-1}\in H \implies H$ is a subgroup of $G$  (two-step test)
+-    Let $H$ be nonempty finite subset of $G$. If $H$ is closed under the operation of $G$, $H$ is a subgroup of $G$. (finite subgroup test)
+-    The center of  $G$ is a subgroup of $G$
+-    The centralizer of $G$ is a subgroup of $G$
+
+$H$ is a normal subgroup of $G \iff \forall g\in G, gHg^{-1} = H$. Denote $H  \vartriangleleft G$

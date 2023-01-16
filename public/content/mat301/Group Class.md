@@ -1,6 +1,6 @@
 # Some Group Notation
 
-$D_n$ : Let $n \ge 3$, $D_n$ denote a rectangular n-gon which called **Dihedral group**
+$D_n$ : Let $n \ge 3$, **Dihedral group** is a symmetrical regular n-gon denote by $D_n$
 - The order of $D_n$ is $2n$
 - Let $D_4$ be the group of all symmetries of the square with the operation being function composition. Denote $p_{n}$ by rotate n degree. Denote $r$ be reflection. Denote the square with side $a,b,c,d$. D means Dihedral
 
