@@ -4,9 +4,7 @@
 **Cyclic Group**: $\{a^n:n\in\Z, a\in G\} = \langle a \rangle \subseteq G$ is a cyclic group
 
 -   $\langle g \rangle, g\in G$ is a subgroup of $G$ (cyclic subgroup)
-    -   If $g$ is co-prime of $n$ for group $\Z_n$, then $\langle g \rangle = \Z_n$
-    -   $\lang g\rang$ is a **cyclic subgroup generated** by $g$
-    -   $\forall x\in G, \lang x\rang = \lang g\rang$, $x$ is **generator**
+    -   $\lang g\rang$ is a **cyclic subgroup generated** by $g$ and we also can say $\forall x\in G, \lang x\rang = \lang g\rang$, $x$ is generator of $\lang g\rang$
 -   cyclic group is abelian 
 -   $H\le G$ is a subgroup of $G$, $g\in G$, $g\in H \iff \lang g\rang \subseteq H$
 -   $|a| = |\lang a\rang|$
