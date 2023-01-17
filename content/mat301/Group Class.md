@@ -5,6 +5,7 @@ $D_n$ : Let $n \ge 3$, **Dihedral group** is a symmetrical regular n-gon denote 
 - Let $D_4$ be the group of all symmetries of the square with the operation being function composition. Denote $p_{n}$ by rotate n degree. Denote $r$ be reflection. Denote the square with side $a,b,c,d$. D means Dihedral
 
 $Z_n$: the binary operations addition modulo $n$ and multiplication modulo $n$ on the set $\{0,1,\ldots,n-1\}$
+- If $g$ is co-prime of $n$ for group $\Z_n$, then $\langle g \rangle = \Z_n$ is a cyclic group
 
 $S_n$: (Symmetric group) stand the group of injective functions from $\{1,\ldots,n\}$ to  $\{1,\ldots,n\}$
 
