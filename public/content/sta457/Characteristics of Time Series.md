@@ -30,6 +30,8 @@ To get a time series model, we may need to do pre-processing and filtering to th
 - removing outliers: remove the extreme values in the data.
 - Smoothing: using exponential or moving average method to get the rid of the noise in the series. Or using the centered moving average method.
 
+To analyzing trends,
+
 Back to topics, from the above financial usage of time series we probably get some sense of time series. Now we will discuss the characteristics of time series. Firstly, lets learn some new terms:
 
 We define a collection of uncorrelated random variables $w_t$ with mean 0 and finite variance $\sigma^2$ as a **white noise**, in short $w_t \sim wn(0, \sigma^2)$.
