@@ -31,7 +31,7 @@ export default function Footer() {
                 }}
             >
                 <Typography variant="caption" color="initial">
-                    coursenote ©2023. Created by <a href="https://github.yorafa.com">Yorafa</a>
+                    coursenote ©2023. Created by <a href="https://github.com/Yorafa">Yorafa</a>
                 </Typography>
             </Box>
         </Container>

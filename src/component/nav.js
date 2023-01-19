@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 
 const pages = [
 <Link to="/courses" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Courses</Link>, 
-<a href="https://yorafa.com/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>CNBlog</a>];
+<a href="https://yorafa.com/" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>CNBlog</a>,
+<a href="https://github.com/Yorafa" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Github</a>,
+<a href="https://github.com/Yorafa/coursenote/issues" style={{textDecoration: 'none', color: 'white', backgroundColor: 'black'}}>Issues</a>
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
