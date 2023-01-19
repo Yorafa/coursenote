@@ -16,7 +16,7 @@ We can write markov chain a sequence of random variables $X_0, X_1, X_2, \dots$ 
 - $P(X_n = i_n, X_{n-1} = i_{n-1}, \dots, X_1 = i_1, X_0 = i_0) = \nu_{i_0} p_{i_0i_1} p_{i_1i_2} \dots p_{i_{n-1}i_n}$
 - Denote $\mu^{(n)}_i = P(X_n = i)$, then $\mu^{(n)}_i = \sum_{j} \mu^{(n-1)}_j p_{ji}$ for all $n \ge 1$ and $i \in S$. $\mu^{(n)}_i$ present the end of nth steps with state i.  (e.g. $P(X_1 = 1) = \mu^{(1)}_1 = \sum_{j} \nu_j p_{j1}$)
   - $\mu^{(n)} = \nu P^n = \mu^{(0)} P^n$
-- $p_{ij}^{(n)} = P(X_n = j|X_0 = i) = P(X_{m+n}=j|X_n = i) = P_i(X_n = j)$
+- $p_{ij}^{(n)} = P(X_n = j|X_0 = i) = P(X_{m+n}=j|X_m = i) = P_i(X_n = j)$
   - e.g. $p_{ii}^{(2)} = \sum_k p_{ik}p_{ki}$ then we have $p_{ii}^{(n)} = \sum_k p_{ik}^{(n-1)}p_{ki}$ similarly $p_{ij}^{(n)} = \sum_k p_{ik}^{(n-1)}p_{kj}$
   - $P_i(\cdots) = P(\cdots|X_0 = i)$
   - $E_i(\cdots) = E(\cdots|X_0 = i)$

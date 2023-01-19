@@ -18,7 +18,7 @@ After we get such $\hat f$, we can use $D_{test}$ to look at test MSE, where $ME
 
 Notice, there exists some **Bias-Variantrade-off** among the MSE. For the given $x$, we have the conditional expected $MSE$ :
 
-$$\mathbb{E}[(Y - \hat f(X))^2 | X = x] \\ = Var(\hat f(x)) + (\mathbb{E}[\hat f(x)] - f(x))^2 + Var(\mathbb{E}psilon) \\ \ge Var(\mathbb{E}psilon)$$
+$$\mathbb{E}[(Y - \hat f(X))^2 | X = x] \\ = Var(\hat f(x)) + (\mathbb{E}[\hat f(x)] - f(x))^2 + Var(epsilon) \\ \ge Var(epsilon)$$
 
 -   where $ Var(\hat f(x)) $  is the variance, which describe how much $\hat f$ would change if we estimated it using a different training data set.
 -   $(\mathbb{E}[\hat f(x)] - f(x))^2$ is the bias which refer to the error that is introduced by parametrizing $f$
