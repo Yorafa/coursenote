@@ -28,7 +28,7 @@ Furthermore, to apply the time series property we learn after, we always seek th
 ## Into Time Series
 
 To get a time series model, we may need to do pre-processing and filtering to the data. Some operations examples:
-- detrending: remove all elements of noise (trends, periodicity, autocorrelation, seasonality, etc.) in the data and transform non-stationary data into stationary data.
+- detrending: remove all elements of noise (trends, periodicity, autocorrelation, seasonality, etc.) in the data and transform non-stationary data into stationary data (we will introduce later)
 - removing outliers: remove the extreme values in the data.
 - Smoothing: using exponential or moving average method to get the rid of the noise in the series. Or using the centered moving average method.
 
@@ -53,14 +53,15 @@ Now, we can have a formal definition of **time series** which observed as a coll
 - the mdf is $f_{t_{t_i}}(c_i) = \frac{\partial}{\partial t_{t_i}} F_{t_{t_i}}(c_i)$
 - (I would like use $s,t$ to present $t_{t_i}$ in short, make our life easier.)
 - the expected value of $t$ is $\mu_{x_t} = E[x_{t}] = \int_{-\infty}^{\infty} x f_{t}(x) dx$
-- the autocovariance function is defined as $\gamma_{x}(s, t) = Cov[x_{s}, x_{t}] = E[(x_{s} - E[x_{s}])(x_{t} - E[x_{t}])] = E[x_{s}x_{t}] - E[x_{s}]E[x_{t}]$
+- the autocovariance function is defined as $\gamma_{x}(s, t) = Cov[x_{s}, x_{t}] = E[(x_{s} - E[x_{s}])(x_{t} - E[x_{t}])]$
   - Some may notice different notations here (autoconvariance vs covariance), but they are similar, "Autocovariance" is usually used for a random variable series which is more suitable here, "Covariance" is usually used between two different random variables. (but they actually calculate in the same way)
 - the autocorrelation function (ACF) is defined as $\rho(s,t) = \frac{\gamma_{x}(s, t)}{\sqrt{\gamma_{x}(s, s)\gamma_{x}(t, t)}} = \frac{Cov_{s,t}[x_s, x_t]}{\sqrt{Var_{s}[x_s]Var_{t}[x_t]}}$
-- when we calculate different series, we use the same calculation formula but different random variable and name. We called corss-covariance and cross-correlation function.
-  - corss-covariance: 
+- when we calculate different series, we use the same calculation formula but different random variable and name. We called cross-covariance and cross-correlation function.
+  - cross-covariance: $\gamma_{xy}(x_s, y_t) = Cov_{s,t}[x_s, y_t] = E[(x_{s} - E[x_{s}])(y_{t} - E[y_{t}])]$
+  - cross-correlation (CCF): $\rho_{xy}(s,t) = \frac{\gamma_{xy}(s, t)}{\sqrt{\gamma_{x}(s, s)\gamma_{y}(t, t)}} = \frac{Cov_{x,y}[x_s, y_t]}{\sqrt{Var_{x}[x_s]Var_{y}[y_t]}}$
 
 Notice: 
-- although autocorrelation function and autocovariance function both can called ACF, we always use ACF to present autocorrelation function.
+- although autocorrelation function and autocovariance function both can called ACF, we always use ACF to present autocorrelation function. Same for CCF.
 - If I write $Cov$ without subscript, it means the covariance between two random variables in the same series, if I write $Cov_{s,t}$, it means the covariance between two series.
 
 ## Stationary Time Series
@@ -69,16 +70,25 @@ Stationary is the most important stuff we wanna focus on a time series. It maint
 - only one way for time series to be stationary so that unique dependence structure.
 - keep mean and variance constant over time.
 - useful for ARMA model learn later.
-- avoid spurious regression.
+- avoid spurious regression (a statistical model that shows misleading statistical evidence of a linear relationship).
 
 Formally, we define stationary process as the process remains in statistical equilibrium with probabilistic properties that do not change over time. (in usage more about const mean and variance)
 
 We define a time series with **strong stationary** if for any time points $t_1, t_2, \dots, t_n$ and any scaler shift $h \in \Z$, the joint distribution of $x_{t_1}, x_{t_2}, \dots, x_{t_n}$ is the same as the joint distribution of $x_{t_1 + h}, x_{t_2 + h}, \dots, x_{t_n + h}$, i.e. $P(x_{t_1}, x_{t_2}, \dots, x_{t_n}) = P(x_{t_1 + h}, x_{t_2 + h}, \dots, x_{t_n + h})$.
 - $\forall s,t, P(x_s \le c) = P(x_t \le c)$ and also they have the same mean.
+- Strong stationary can imply weak stationary, but not vice versa.
 
 We also define a time series to be **Week Stationary** (Convariance Stationary/Second-order Stationary) if:
 - Constant mean and independent of time.
-- autocovariance function is only depends on the time difference $|s - t|$.
+- autocovariance function is only depends on the time difference $|s - t|$, i.e, $\gamma_{x}(s, t) = \gamma_{x}(t + h, t) = E[(x_{t + h} - \mu)(x_{t} - \mu)] = Cov(x_{h}, x_{0}) = \gamma_{x}(h, 0)$
+- Mostly, we say a time series is stationary if it is week stationary.
 
-Mostly, we state a time series is stationary if it is week stationary. Strong stationary is a special case of week stationary.
+If a time series is stationary(week stationary), we have
+- autocovariance function: $\gamma(h, 0) = \gamma(h) = Cov(x_{h}, x_{0}) = Cov(x_{t + h}, x_{t}) = E[(x_{t + h} - \mu)(x_{t} - \mu)] = E[(x_{t} - \mu)(x_{t - h} - \mu)] = \gamma(-h)$
+- ACF: $\rho(h) = \frac{\gamma(t+h, t)}{\sqrt{\gamma(t+h, t+h)\gamma(t, t)}} = \frac{\gamma(h)}{\gamma(0)}$ (covariance same when stationary for a time series)
+
+Random walk with drift is not stationary, because the mean is not constant over time and also not constant ACF.
+
+We may have disjoint stationary when each time series is stationary with cross-covariance function $\gamma_{xy} (h) = Cov(x_{t+h}, y_t) = E[(x_{t+h} - \mu_x)(y_{t} - \mu_y)]$
+- CCF: $\rho_{xy}(h) = \frac{\gamma_{xy}(h)}{\sqrt{\gamma_{x}(0)\gamma_{y}(0)}} = \rho_{yx}(-h) $
 
