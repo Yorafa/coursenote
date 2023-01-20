@@ -89,6 +89,31 @@ If a time series is stationary(week stationary), we have
 
 Random walk with drift is not stationary, because the mean is not constant over time and also not constant ACF.
 
-We may have disjoint stationary when each time series is stationary with cross-covariance function $\gamma_{xy} (h) = Cov(x_{t+h}, y_t) = E[(x_{t+h} - \mu_x)(y_{t} - \mu_y)]$
-- CCF: $\rho_{xy}(h) = \frac{\gamma_{xy}(h)}{\sqrt{\gamma_{x}(0)\gamma_{y}(0)}} = \rho_{yx}(-h) $
+We may have disjoint stationary when each time series is stationary with 
+- cross-covariance function $\gamma_{xy} (h) = Cov(x_{t+h}, y_t) = E[(x_{t+h} - \mu_x)(y_{t} - \mu_y)]$
+- CCF: $\rho_{xy}(h) = \frac{\gamma_{xy}(h)}{\sqrt{\gamma_{x}(0)\gamma_{y}(0)}} = \rho_{yx}(-h)$
 
+We define the linear process $x_t$ is defined to be a linear combination of white noise variates $w_t$ and is given by $x_t = \mu + \sum_{j = -\infty}^{\infty} \phi_j w_{t - j}$, where $\phi_j$ are constants and $\sum_{j = -\infty}^{\infty} |\phi_j| < \infty$ and $\mu$ is a constant. Series in this form also call **autoregressive process**.
+- Moving average is one of linear process
+
+## Sample
+
+Given a stationary time series $x_t$, we can generate a sample mean $\bar x = \frac{1}{n} \sum_{t=1}^n x_t$ with $E[\bar x] = \mu$ and $Var[\bar x] = \frac{1}{n} \sum_{h = -n}^{n} (1-|h|/n) \gamma_x(h)$, we also have:
+- sample autocovariance function: $\hat \gamma_x(h) = \frac{1}{n} \sum_{t=1}^{n-h} (x_t - \bar x)(x_{t+h} - \bar x)$ with $\hat \gamma(h) = \hat \gamma(-h)$
+  - This estimator of autocovariance function is preferred to be dividing by $n - h$ then it's non-negative definite function.
+  - When dividing by $n$ or $n - h$, it's an unbiased estimator of autocovariance function ($\gamma(h)$).
+- sample autocorrelation function: $\hat \rho_x(h) = \frac{\hat \gamma_x(h)}{\sqrt{\hat \gamma_x(0)\hat \gamma_x(h)}} = \frac{\hat \gamma_x(h)}{\hat \gamma_x(0)}$
+
+Since we have sample ACF, we can use hypothesis test to test whether a time series with lag.
+- 95% of ACFs should be within $\pm 2/\sqrt{n}$, if not, we indicates a peak/lag in the ACF.
+- t-test statistic $t_{\rho(h)} = \frac{\hat \rho(h)}{\sigma_{\hat \rho(h)}}$ and we reject when $t_{\rho(h)} > 2$
+
+According to different lag, we define:
+- *ACF cuts off after lag $h$* if there are no spikes at lags larger than $h$ in the ACF.
+- *ACF dies down* if this function does not cut off but rather decreases in a steady fashion.
+- If the ACF either cuts off *fairly quickly* or dies down *fairly quickly*, then the time series data is stationary
+
+For joint time series, we also can have sample estimators:
+- sample cross-covariance function: $\hat \gamma_{xy}(h) = \frac{1}{n} \sum_{t=1}^{n-h} (x_{t+h} - \bar x)(y_t - \bar y)$ where $\hat \gamma_{xy}(h) = \hat \gamma_{yx}(-h)$ determines the function for negative lags.
+- sample cross-correlation function: $\hat \rho_{xy}(h) = \frac{\hat \gamma_{xy}(h)}{\sqrt{\hat \gamma_{x}(0)\hat \gamma_{y}(0)}}$
+- $\hat \rho_{xy}(h)$ with mean zero and variance $\frac{1}{n}$ if at least one of processes is independent white noise
