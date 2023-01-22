@@ -78,12 +78,12 @@ We define a time series with **strong stationary** if for any time points $t_1, 
 - $\forall s,t, P(x_s \le c) = P(x_t \le c)$ and also they have the same mean.
 - Strong stationary can imply weak stationary, but not vice versa.
 
-We also define a time series to be **Week Stationary** (Convariance Stationary/Second-order Stationary) if:
+We also define a time series to be **Weak Stationary** (Convariance Stationary/Second-order Stationary) if:
 - Constant mean and independent of time.
 - autocovariance function is only depends on the time difference $|s - t|$, i.e, $\gamma_{x}(s, t) = \gamma_{x}(t + h, t) = E[(x_{t + h} - \mu)(x_{t} - \mu)] = Cov(x_{h}, x_{0}) = \gamma_{x}(h, 0)$
-- Mostly, we say a time series is stationary if it is week stationary.
+- Mostly, we say a time series is stationary if it is Weak stationary.
 
-If a time series is stationary(week stationary), we have
+If a time series is stationary(Weak stationary), we have
 - autocovariance function: $\gamma(h, 0) = \gamma(h) = Cov(x_{h}, x_{0}) = Cov(x_{t + h}, x_{t}) = E[(x_{t + h} - \mu)(x_{t} - \mu)] = E[(x_{t} - \mu)(x_{t - h} - \mu)] = \gamma(-h)$
 - ACF: $\rho(h) = \frac{\gamma(t+h, t)}{\sqrt{\gamma(t+h, t+h)\gamma(t, t)}} = \frac{\gamma(h)}{\gamma(0)}$ (covariance same when stationary for a time series)
 
