@@ -106,7 +106,7 @@ Given a stationary time series $x_t$, we can generate a sample mean $\bar x = \f
 
 Since we have sample ACF, we can use hypothesis test to test whether a time series with lag.
 - 95% of ACFs should be within $\pm 2/\sqrt{n}$, if not, we indicates a peak/lag in the ACF.
-- t-test statistic $t_{\rho(h)} = \frac{\hat \rho(h)}{\sigma_{\hat \rho(h)}}$ and we reject when $t_{\rho(h)} > 2$
+- t-test statistic $t_{\rho(h)} = \frac{\hat \rho(h)}{\sigma_{\hat \rho(h)}}$ and we reject when $t_{\rho(h)} > 2$ where $\sigma_{\hat \rho(h)} = 1/\sqrt{n}$.
 
 According to different lag, we define:
 - *ACF cuts off after lag $h$* if there are no spikes at lags larger than $h$ in the ACF.
