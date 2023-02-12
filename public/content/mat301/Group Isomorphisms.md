@@ -53,4 +53,4 @@ let $\varphi: G\to \overline{G}$ be a homomorphism
 (**Third Isomorphism Theorem**): Let $G$ be a group, and consider two normal subgroups $H, K$ of $G$ such that $H$ is a subgroup of $K$:
 
 - $K/H$ is a normal subgroup of $G/H$
-- $(G/H)/(K/H)\cong G/K$  
+- $(G/H)/(K/H)\cong G/K$

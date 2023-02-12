@@ -64,7 +64,7 @@ Let $z$ be a fixed state, and let $\alpha(x) = P(X_n = z| X_0 = x)$ for some $n 
 - $\alpha(z) = 1\land \inf\{\alpha(x): x \in S\} = 0$.
 - $\alpha(x) =  \sum_{y \in S} p_{xy} \alpha(y)$ for all $x \in S, x\ne z$.
 
-## Positive and Null Recurrence
+### Positive and Null Recurrence
 
 For infinite MC, we have two different types of recurrence:
 
