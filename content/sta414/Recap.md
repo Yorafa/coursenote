@@ -23,3 +23,13 @@ We define a decision problem has a **discriminant rules** where is to find regio
 For regression problems, we want to find $E[L] = \int\int L(y(x), t) p(x, t) dx dt$ where $L(y(x), t)$ is the loss function. The least squares loss $L(y(x), t) = (y(x) - t)^2$ leads to the equation $E[L] =\int\int (y(x) - E[t|x])^2 p(x,t)dxdt + \int\int (E[t|x] - t)^2 p(x,t)dxdt$. That is, only the first term based on $y(x)$ so that we have $y(x) = E[t|x]$.
 
 - The second term is the variance of $t|x$
+
+## Multivariate Gaussian
+
+Let $\mu \in \R^m$ and $\Sigma$ symmetric positive definite matrix $m \times m$ matrix. We write $X \sim N_m(\mu, \Sigma)$ if pdf of $X$ is given by $f(x) = \frac{1}{(2\pi)^{m/2}|\Sigma|^{1/2}}\exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$. By multivariate Gaussian properties, we have some useful properties:
+
+-  each marginal $X_i$ is Gaussian with mean $\mu_i$ and variance $\sigma_i^2 = \Sigma_{ii}$.
+-  the conditional distribution of $X_j$ given $X_i$ is Gaussian with mean $\mu_j + \Sigma_{ji}\Sigma_{ii}^{-1}(x_i - \mu_i)$ and variance $\Sigma_{jj} - \Sigma_{ji}\Sigma_{ii}^{-1}\Sigma_{ij}$.
+-  $X_i$ and $X_j$ are independent if and only if $\Sigma_{ij} = 0$ for all $i \ne j$.
+-  $X_i \perp X_j | X_k\iff \Sigma_{ij} = \Sigma_{ik}\Sigma_{kk}^{-1}\Sigma_{kj} \iff \Sigma^{-1}_{ij} = 0$.
+- we have $Y = AX + b$ where $A \in \R^{m \times n}$ and $b \in \R^m$ is a vector. Then $Y \sim N_n(A\mu + b, A\Sigma A^T)$.

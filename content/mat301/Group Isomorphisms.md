@@ -4,7 +4,7 @@
 
 - $\forall a,b \in G, \exist \varphi: G\to G'$ is bijective s.t $\varphi(ab) = \varphi(a)\varphi(b) \implies G$ is isomorphic to $G'$ note as $G\cong G'$
 - Every infinite cyclic group is isomorphic to $\Z$
-- Every finite cyclic group is isomorphic to some $\Z/n\Z$
+- Every finite cyclic group is isomorphic to some $\Z_n$
 - Any group is isomorphic to itself (reflexive)
 - $G\cong G' \implies G' \cong G$ (symmetric)
 - $G\cong H, H\cong F \implies G \cong F$ (transitive)
