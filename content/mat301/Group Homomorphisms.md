@@ -9,7 +9,9 @@
 -   the **image** of a homomorphism $\varphi: G\to H$ is $: Im(\varphi) = \{h\in H: \exists h\in G, \varphi(g) = h\}$
     -   the image of a homomorphism $\varphi: G\to H$ is a subgroup of $H$
 
-Homomorphisms Property, let $\varphi: G\to H$ is a homomorphism :
+## Homomorphisms Property
+
+let $\varphi: G\to H$ is a homomorphism :
 
 -   $\varphi(eG) = eH$
 -   $\forall g\in G, n\in \Z, \varphi(g)^n = \varphi(g^n)$
