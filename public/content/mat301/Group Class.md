@@ -9,6 +9,8 @@ $Z_n$: the binary operations addition modulo $n$ on the set $\{0,1,\ldots,n-1\}$
 
 - If $g$ is co-prime of $n$ for group $\Z_n$, then $\langle g \rangle = \Z_n$ is a cyclic group
 - $\forall k, k|n \implies \langle n/k\rangle$ is unique subgroup of $\Z_n$ of order $k$
+- Every infinite cyclic group is isomorphic to $\Z$
+- Every finite cyclic group is isomorphic to some $\Z_n$
  
 $U_n$: the binary operations multiplication modulo $n$ on the set $\{0,1,\ldots,n-1\}$
 

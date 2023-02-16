@@ -6,6 +6,12 @@
 
 **Permutation Group** of a set $A$: a set of permutations of $A$ forms a group with respect to the composition.
 
+- Every permutation of a finite set is a product of disjoint cycles or a cycle.
+- The **order** of a permutation of a finite set written in disjoint cycle form is the **lcm** of the lengths of the cycles.
+- Every permutation in $S_n, n > 1$ is a product of 2-cycles
+
+## Cycle
+
 A **cycle** $\alpha = (a_1a_2\cdots a_k)$ is a permutation satisfied:
 
 - $\{a_1,\cdots, a_k\}$ is the **support** of cycle
@@ -14,17 +20,16 @@ A **cycle** $\alpha = (a_1a_2\cdots a_k)$ is a permutation satisfied:
 - $\alpha(b) = b, b\notin \{a_1,\cdots, a_k\}$ 
 - 2-cycles $(i,j)$ called transposition
 
-Cycle property: $\alpha = (a_1a_2\ldots a_k)$
+### Cycle property
+
+let $\alpha = (a_1a_2\ldots a_k), \beta = (b_1b_2\ldots b_k)$
 
 - two cycles $\alpha,\beta$ are disjoint (non-intersect supports) $\implies \alpha\beta = \beta\alpha$
 - $\sigma\alpha\sigma^{-1} = (\sigma(a_1)\sigma(a_2)\ldots\sigma(a_k))$
   - e.g $(412)(123)(45)(412)^{-1} = (243)(15)$ where $(412): 4\to1\to2\to4$
-- Every permutation of a finite set can be written as a product of disjoint cycles or a cycle.
 - A permutation is unique up to a permutation of cycles themselves or cyclic shifts of terms inside the cycles
-- The order of a permutation of a finite set written in disjoint cycle form is the lcm of the lengths of the cycles.
-- Every permutation in $S_n, n > 1$ is a product of 2-cycles
 
----
+
 
 ## Parity of permutations
 
