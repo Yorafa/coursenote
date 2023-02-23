@@ -19,6 +19,7 @@ A **cycle** $\alpha = (a_1a_2\cdots a_k)$ is a permutation satisfied:
 - $\alpha(a_i) = a_{i+1}, 1 \le i < k$
 - $\alpha(b) = b, b\notin \{a_1,\cdots, a_k\}$ 
 - 2-cycles $(i,j)$ called transposition
+- We say $\alpha$ is **even** if $k$ is odd, **odd** if $k$ is even
 
 ### Cycle property
 
@@ -28,7 +29,7 @@ let $\alpha = (a_1a_2\ldots a_k), \beta = (b_1b_2\ldots b_k)$
 - $\sigma\alpha\sigma^{-1} = (\sigma(a_1)\sigma(a_2)\ldots\sigma(a_k))$
   - e.g $(412)(123)(45)(412)^{-1} = (243)(15)$ where $(412): 4\to1\to2\to4$
 - A permutation is unique up to a permutation of cycles themselves or cyclic shifts of terms inside the cycles
-
+- 
 
 
 ## Parity of permutations
