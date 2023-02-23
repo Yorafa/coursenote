@@ -9,8 +9,11 @@ When we say MC is infinite, we mean the state space is infinite.
 Let state $i,j$, we define $i \to j$ iff $j$ is accessible from state $i$. Addtionally, we define $i \leftrightarrow j$ iff $i \to j$ and $j \to i$, and we say $i$ and $j$ can communicate to each other.
 
 - such $\leftrightarrow$ is called equivalence equation which a equation is symmetric, relective and transitive.
+- $\exists k, l\in S,\lim_{n \to \infty} p_{kl}^{(n)} = 0 \implies \forall i,j \in S, s.t. k\to i, j\to l, \lim_{n \to \infty} p_{ij}^{(n)} = 0$.
 
 We define a **communication class** as a set of states that can communicate to each other. if there exist only one communication class, then the markov chain is called **irreducible**. Otherwise, it is called **reducible**.
+
+- irreducible MC either has $\lim_{n \to \infty} p_{ji}^{(n)} = 0, \forall i,j \in S$ or $\lim_{n \to \infty} p_{ij}^{(n)} \ne 0, \forall i,j \in S$.
 
 In [sta347](../sta347), we use $N(i)$ to prsent the number steps first time visit state $i$. In sta447, we use $\tau_i$ it. Mathmatically, $\tau_i  = \min\{n \geq 1: X_n = i\}$.
 
