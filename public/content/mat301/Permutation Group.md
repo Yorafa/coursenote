@@ -19,7 +19,7 @@ A **cycle** $\alpha = (a_1a_2\cdots a_k)$ is a permutation satisfied:
 - $\alpha(a_i) = a_{i+1}, 1 \le i < k$
 - $\alpha(b) = b, b\notin \{a_1,\cdots, a_k\}$ 
 - 2-cycles $(i,j)$ called transposition
-- We say $\alpha$ is **even** if $k$ is odd, **odd** if $k$ is even
+- We say $\alpha$ is **even** if $\alpha$ is a product of even number of 2-cycles, **odd** otherwise
 
 ### Cycle property
 
@@ -29,8 +29,20 @@ let $\alpha = (a_1a_2\ldots a_k), \beta = (b_1b_2\ldots b_k)$
 - $\sigma\alpha\sigma^{-1} = (\sigma(a_1)\sigma(a_2)\ldots\sigma(a_k))$
   - e.g $(412)(123)(45)(412)^{-1} = (243)(15)$ where $(412): 4\to1\to2\to4$
 - A permutation is unique up to a permutation of cycles themselves or cyclic shifts of terms inside the cycles
-- 
 
+## Theorem
+
+Every permutation in $S_n, n > 1$ is a product of 2-cycles.
+
+- $\epsilon = \beta_1\beta_2\ldots\beta_k$ is a product of 2-cycles $\implies k$ is even
+
+## Theorem
+
+If a permutation $\alpha$ can be expressed as a product of an even(odd) number of 2-cycles, then every decomposition of $\alpha$ into a product of 2-cycles must have an even(odd) number of 2-cycles. i.e. $\alpha = \beta_1\beta_2\ldots\beta_k = \gamma_1\gamma_2\ldots\gamma_l$, $l$ and $k$ are both even or both odd.
+
+## Theorem
+
+The set of even permutations in $S_n$ forms a subgroup of $S_n$.
 
 ## Parity of permutations
 
@@ -53,3 +65,5 @@ Sign Proposition: Let $\sigma,\tau$ be permutations:
 - $t=(i\ j)\implies sgn(t) = -1 $
 - $\alpha = (a_1a_2\ldots a_k)\implies sgn(\sigma) = (-1)^{k-1}$
 - $\gamma = \alpha_1\ldots a_k$ where $\alpha_i$ are disjoint cycles then $sgn(\gamma)= = \prod_{1 \le i \le k} sgn(a_i) = (-1)^{ord(\alpha_1) + \ldots + ord(a_k) - k}$
+
+**Cayley's Theorem**: Every (finite) group is isomorphism to a group of permutation

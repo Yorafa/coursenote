@@ -38,6 +38,8 @@ let $\varphi: G\to \overline{G}$ be isomorphism :
 
 If such $\varphi_M(A) = MAM^{-1}$, we call $\varphi_M$ **conjugation** by $M$.
 
+**Cayley's Theorem**: Every (finite) group is isomorphism to a group of permutation
+
 ## Isomorphism Theorems
 
 let $\varphi: G\to \overline{G}$ be a homomorphism

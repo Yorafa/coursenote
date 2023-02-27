@@ -30,5 +30,3 @@ Let $G$ be a group,  $\forall a \in G, \exists \varphi_a, \varphi_a(1) = a, \var
 
 -   $\varphi_a : \Z/n\Z\to G$ or,
 -   $\varphi_a : \Z\to G$
-
-**Cayley's Theorem**: Every (finite) graph is isomorphism to a group of permutation
