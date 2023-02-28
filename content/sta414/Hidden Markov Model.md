@@ -23,7 +23,7 @@ This taks of hidden state inference breaks down into serveral subtasks:
 - **Prediction**: compute the posterior over future hidden state, $p(z_{t+k}|x_{1:t})$.
 - **Smoothing**: compute the posterior over past hidden state, $p(z_{k}|x_{1:t}), 1 < k < t$.
 
-We can use **Forward Recursion** $p(z_t|x_{1:t})$ and **Backward Recursion** $p(x_{1+t:T}|z_t)$. That is, $\gamma_t = p(z_t|x_{1:T}) \propto p(z_t, x_1:T) = p(z_t, x_{1:t}) p(x_{t+1:T}|z_t,x_{1:t}) = p(z_t, x_{1:t}) p(x_{t+1:T}|z_t)$ ($x_{t+1:T} \perp x_{1:t}|z_t$).
+We can use **Forward Recursion** $p(z_t|x_{1:t})$ and **Backward Recursion** $p(x_{1+t:T}|z_t)$. That is, $\gamma_t = p(z_t|x_{1:T}) \propto p(z_t, x_1:T) = p(z_t, x_{1:t}) p(x_{t+1:T}|z_t,x_{1:t}) = p(z_t, x_{1:t}) p(x_{t+1:T}|z_t) \propto \alpha_t(i) \beta_t(i)$ since ($x_{t+1:T} \perp x_{1:t}|z_t$).
 
 ### Forward Recursion
 
@@ -58,3 +58,16 @@ In matrix notation, $\beta_t = \Psi(\psi_{t+1} \odot \beta_{t+1})$ where $\beta_
 ## Viterbi Algorithm
 
 In order to infer the most likely sequence of hidden states. (i.e. $\argmax_{z_{1:T}} p(z_{1:T}|x_{1:T})$). We can use the **Viterbi Algorithm**.
+
+In Viterbi algorithm, the forward pass does use max-product, but the backwards pass uses a traceback procedure to recover the most probable path.
+
+Firstly, we define $\delta_t(i) = \max_{z_{1:t-1}} p(z_{1:t-1}, z_t = i, x_{1:t})$ which is the probability of ending up in state $j$ at time $t$, by taking the most probable path. 
+
+That is, $\delta_t(j) = \max_{z_{1:t-1}} p(z_{1:t-1}, z_t = j| x_{1:t}) \propto \max_{z_{1:t-1}} p(z_{1:t-2}, z_{t-1} = i| x_{1:t-1}) p(z_{t}=j|z_{t-1}=i) p(x_t|z_t=j) = \max_i \delta_{t-1}(i) \Psi(i,j) \psi_t(j)$.
+
+The most likely previous state is $\theta_t(j) = \argmax_i \delta_{t-1}(i) \Psi(i,j)$.
+
+Then we have the following recursion algorithm:
+
+- We initial with $\delta_1(i) = \pi(i) \psi_1(i)$ where $\pi_j = p(z_1 = j)$ and terminate with $z_T^* = \argmax_i \delta_T(i)$.
+- Then we can compute the most probable sequence of states using traceback $z_t^* = \theta_{t+1}(z_{t+1}^*)$ 
