@@ -33,3 +33,13 @@ Let $\mu \in \R^m$ and $\Sigma$ symmetric positive definite matrix $m \times m$ 
 -  $X_i$ and $X_j$ are independent if and only if $\Sigma_{ij} = 0$ for all $i \ne j$.
 -  $X_i \perp X_j | X_k\iff \Sigma_{ij} = \Sigma_{ik}\Sigma_{kk}^{-1}\Sigma_{kj} \iff \Sigma^{-1}_{ij} = 0$.
 - we have $Y = AX + b$ where $A \in \R^{m \times n}$ and $b \in \R^m$ is a vector. Then $Y \sim N_n(A\mu + b, A\Sigma A^T)$.
+
+## Bayesian Inference
+
+We always use bayesian inference for the latent variable model $p(x, z) = p(z)p(x|z)$, where:
+
+- $x$ are the observations or data
+- $z$ are the unobserved or latent variables
+- $p(z)$ is the **prior** distribution of $z$
+- $p(x|z)$ is the **likelihood** function of $x$ given $z$
+- $p(z|x)$ is the **posterior** distribution of $z$ given $x$ or the conditional distribution of unobserved variables given the observed data. More generally, we have $p(z|x) = \frac{p(x|z)p(z)}{p(x)}$ where $p(x) = \int p(x|z)p(z)dz$ is the **marginal likelihood**.

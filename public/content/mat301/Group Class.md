@@ -14,7 +14,7 @@ $Z_n$: the binary operations addition modulo $n$ on the set $\{0,1,\ldots,n-1\}$
  
 $U(n) = U_n$: the binary operations multiplication modulo $n$ on the set $\{0,1,\ldots,n-1\}$
 
-$U_k(n)$: $\forall k|n, U_k(n) = \{x\in U(n) : x\mod k = 1\}$
+$U_k(n)$: $\forall k|n, U_k(n) = \{x\in U(n) : x\mod k = 1\}$s
 
 $S_n$: (Symmetric group) stand the group of injective functions from $\{1,\ldots,n\}$ to  $\{1,\ldots,n\}$
 
