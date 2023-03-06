@@ -6,7 +6,7 @@ Undirected graphical models are called **Markov Random Fields** (MRFs) which are
 
 - the edges of undirected model represent probabilistic interactions between neighbors
 - a **clique** is a a subset of nodes such that every two vertices in the subset are connected by an edge.
-- a **maximum clique** is a clique that cannot be extended by adding a new vertex.
+- a **maximal clique** is a clique that cannot be extended by adding a new vertex.
 
 Let's make generalization. Let $X = (X_1, X_2, \dots, X_m)$ be a random vector in our graph $G$ and let $\mathcal{C}$ be the set of all maximal cliques of $G$. Then we have the distribution $p$ of $X$ factorizes with respect to $G$ if $p(x) \propto \prod_{C \in \mathcal{C}} \psi_C(x_C)$ where $\psi_C$ is a nonnegative potential function where $x_C = (x_i)_{i\in C}$.
 

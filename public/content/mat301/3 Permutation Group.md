@@ -43,27 +43,3 @@ If a permutation $\alpha$ can be expressed as a product of an even(odd) number o
 ## Theorem
 
 The set of even permutations in $S_n$ forms a subgroup of $S_n$.
-
-## Parity of permutations
-
-**Inversion** of a permutation $\sigma\in S_n$: an ordered pair $(i,j)$, such that $i<j$ and $\sigma(j) < \sigma(i)$.
-
-- Denote $inv(\sigma) = \{(i,j): 1\le i<j\le n,\sigma(j) < \sigma(i)\}$
-- $1\le i\ < j \le n \land \sigma = (i \ j) \implies  |inv(\sigma)| = 2(j-i-1)+1$ and $|inv(i \ i+1)| = 1$
-
-let $n\ge 2$, define the **Vandermonde Polynomial**:$P(x_1,\ldots,x_n) = \prod_{1\le i<j\le n} (x_i - x_j) \in \C[x_i,\ldots,x_n]$
-
-- For every permutation $\sigma\in S_n, P(x_{\sigma(1),\ldots,x_{\sigma(n)}}) = (-1)^{|inv(\sigma)|}P(x_1,\ldots,x_n)$
-  - $(-1)^{|inv(\sigma)|} = \frac{P(x_{\sigma(1),\ldots,x_{\sigma(n)}})}{P(x_1,\ldots,x_n)} = sgn(\sigma) = \prod_{1\le i < j\le n} \frac{\sigma(i)-\sigma(j)}{i - j}$ or **sign** of $\sigma$
-
-Sign Proposition: Let $\sigma,\tau$ be permutations:
-
-- $sgn(\sigma\tau)= sgn(\sigma)sgn(\tau)$
-- $sgn(Id)= 1$
-- $sgn(\sigma^{-1}) = sgn(\sigma)$
-- $sgn(\sigma\tau\sigma^{-1})=sgn(\tau)$
-- $t=(i\ j)\implies sgn(t) = -1 $
-- $\alpha = (a_1a_2\ldots a_k)\implies sgn(\sigma) = (-1)^{k-1}$
-- $\gamma = \alpha_1\ldots a_k$ where $\alpha_i$ are disjoint cycles then $sgn(\gamma)= = \prod_{1 \le i \le k} sgn(a_i) = (-1)^{ord(\alpha_1) + \ldots + ord(a_k) - k}$
-
-**Cayley's Theorem**: Every (finite) group is isomorphism to a group of permutation
