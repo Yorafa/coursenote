@@ -44,6 +44,10 @@ Let $G_1,G_2$ be finite groups
 
 Every group of order $p^2$ where $p$ is a prime number is isomorphic to $\Z_p \oplus \Z_p$ or $\Z_{p^2}$
 
+It leads the Corollary:
+
+- If $G$ is a group of order $p^2$, where $p$ is a prime number, then $G$ is Abelian.
+
 ## Internal direct products
 
 Let $G$ be a group with expression $G = H \times K$. If $H$ and $K$ are normal subgroups of $G$, then $G$ is called **internal direct product** of $H$ and $K$. We write $G = HK$ with $H \cap K = \{e\}$.
