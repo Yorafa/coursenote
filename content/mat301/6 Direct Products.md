@@ -37,27 +37,19 @@ Let $G_1,G_2$ be finite groups
 
 - $|G_1\times G_2| = |G_1||G_2|$
 - $G_1$ and $G_2$ are abelian $\implies G_1\times G_2$ is abelian
-- $\forall g_1\in G_1,g_2\in G_2, o_{G_1\times G_2}((g_1,g_2))=\text{lcm}(o(g_1), o(g_2))$
-- recall $exp(G) = \text{lcm}\{o(g) : g\in G\}$ so that $exp(G_1\times G_2) = \text{lcm}(exp(G_1),exp(G_2))$
+- $\forall g_1\in G_1,g_2\in G_2, o_{G_1\times G_2}((g_1,g_2))=\text{lcm}(|g_1|, |g_2|)$
 - $Z(G_1\times G_2)\cong  Z(G_1)\times Z(G_2)$
 
-Let $m = n_1,\ldots,n_k$, $\Z/m\Z\cong\Z/n_1\Z\times\cdots\times\Z/n_k\Z \iff n_i$ are pairwise coprime.
+### Theorem
 
-The projection maps $\pi_G:G\times H\to G, \pi_H:G\times H\to H$ are group homomorphisms
+Every group of order $p^2$ where $p$ is a prime number is isomorphic to $\Z_p \oplus \Z_p$ or $\Z_{p^2}$
 
-$K\subset G\times H$ is a normal subgroup $\implies \pi_G(K),\pi_H(K)$ are also normal subgroups of $G$ and $H$.
+## Internal direct products
 
-Let $G_i$ be groups and consider $H_i \lhd G_i$, $\frac{G_1\times \cdots\times G_n}{H_1\times \cdots\times H_n}\cong G_1/H_1\times\cdots\times G_n/H_n$, $H_1\times \cdots\times H_n$ is a normal subgroup
+Let $G$ be a group with expression $G = H \times K$. If $H$ and $K$ are normal subgroups of $G$, then $G$ is called **internal direct product** of $H$ and $K$. We write $G = HK$ with $H \cap K = \{e\}$.
 
-# Internal direct products
+We can extend this, where, let $H_1, \ldots, H_n$ be normal subgroups of $G$, $G$ is the internal direct product of $H_1, \ldots, H_n$ if $G = H_1 \times \cdots \times H_n$ with $H_i \cap H_j = \{e\}$ for all $i \neq j$ (also $(H_1H_2\cdots H_i)\cap H_{i+1} = \{e\}$)
 
-Let $G$ be a group. $\exists H,K \le G$ are subgroups, $(HK =G) \land (H\cap K =\{e\}) \implies G$ is **internal direct product** of $H$ and $K$ or $G = H\times K$. More specifically, there is a finite normal subgroups sequence $(H_i)_{i = 1,\ldots,n}$, $G = H_1\ldots H_n = \{h_1h_2\ldots h_n : h_i\in H_i\} \land (H_1\ldots H_i)\cap H_{i+1} = \{e\} \implies G$ is **internal direct product** of $H_i$
+### Theorem
 
-For $G = H\times K, i: H\times K \to G, i(h,k) = hk$ is  a group isomorphism. Moreover, $G$ is the internal direct product of normal subgroups $H_i, s.t,G = H_1\times \ldots\times H_n \implies i:H_1\times \ldots\times H_n\to G, i(h_1,\ldots,h_n)=h_1\ldots h_n$ is a group isomorphism
-
-$G$ is an internal direct product of two normal subgroups $H,K\implies G/H\cong K, G/K \cong H$
-
-Every group of order $p^2$ is isomorphic to $\Z/p^2\Z$ or $\Z/p\Z\times \Z/p\Z$, and is abelian
-
-
-
+If $G$ is the internal direct product of $H_1, \ldots, H_n$, then $G \cong H_1 \oplus \cdots \oplus H_n$ (i.e. the external direct product of $H_1, \ldots, H_n$)

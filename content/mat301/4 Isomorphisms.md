@@ -30,15 +30,30 @@ Example:
 let $\varphi: G\to \overline{G}$ be isomorphism :
 
 - $\forall g\in G, ord(g) = ord(\varphi(g))$
-- $Ker(\varphi) = \{e\}$
-- $Im(\varphi) = \overline{G}$
-- $G$ is cyclic $\iff$ $\overline{G}$ is cyclic
-- $G$ is abelian $\iff$ $\overline{G}$ is abelian
+- $\phi$ carries the identity of $G$ to the identity of $\overline{G}$
+- $G$ is cyclic $\iff$ $\overline{G}$ is cyclic (i.e. $G = \langle g\rangle \iff \overline{G} = \langle \varphi(g)\rangle$)
+- $G$ is abelian $\iff$ $\overline{G}$ is abelian (i.e For any elements $a$ and $b$ in $G$, $a$ and $b$ commute if and only if $\phi(a)$ and $\phi(b)$ commute)
 - $\forall g\in G, C_G(g) \cong C_{\overline{G}}(\varphi(g))$
+- If $G$ is finite, then $G$ and $\overline{G}$ have exactly the same number of elements of every order
+- if $K \leq G$, then $\phi(K) \leq \overline{G}$
 
 If such $\varphi_M(A) = MAM^{-1}$, we call $\varphi_M$ **conjugation** by $M$.
 
 **Cayley's Theorem**: Every (finite) group is isomorphism to a group of permutation
+
+## Cayley's Theorem
+
+Every (finite) group is isomorphism to a group of permutation
+
+## Automorphism
+
+An isomorphism $\varphi: G\to G$ is called an **automorphism** of $G$.
+
+Let $G$ be a group, $a \in G$. The function $\phi_a, s.t., \forall x\in G, \phi_a(x) = axa^{-1}$ is called the **inner automorphism** of $G$ induced by $a$.
+
+The set of automorphisms of $G$ is denoted by $Aut(G)$ and the set of inner automorphisms of $G$ is denoted by $Inn(G)$. They are both groups under operation of composition.
+
+For every positive integer $n$, $Aut(G) \cong U(n)$
 
 ## Isomorphism Theorems
 

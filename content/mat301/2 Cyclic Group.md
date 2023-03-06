@@ -47,3 +47,11 @@ From above, we have corollary that:
 ### Theorem 3 Fundamental Theorem of Cyclic Group
 
 $\forall \langle b\rangle \le \langle a\rangle, |a| = n \implies |b| | n$, that is, $\forall k\in \Z^+, k|n \implies \langle a^{n/k}\rangle \le \langle a\rangle$ and $|a^{n/k}| = k$
+
+### Theorem 4 Number of Elements of Each Order in a Cyclic Group
+
+$\forall d\in \Z^+, d|n \implies \phi(d) =$ number of elements (with order $d$) in a cyclic group of order $n$
+
+From above, we have corollary that:
+
+- In a finite group, the number of elements of order $d$ is a multiple of $\phi(d)$
