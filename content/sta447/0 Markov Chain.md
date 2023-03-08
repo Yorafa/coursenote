@@ -1,6 +1,6 @@
 # Markov Chain
 
-Most of the markov chain property and defintion is the same as [Markov Chain](../sta347/Markov%20Chain). And those difference list in this page. 
+Most of the markov chain property and defintion is the same as [Markov Chain](../sta347/6%20Markov%20Chain). And those difference list in this page. 
 
 When we say MC is infinite, we mean the state space is infinite.
 

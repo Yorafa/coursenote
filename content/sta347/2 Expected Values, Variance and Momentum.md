@@ -21,8 +21,6 @@ Linearity property of expectations only work finite where : $\sum_{i=1}^n E[X_i]
 
 Variance present the spread deviation of a random variable.
 
-The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1}$
-
 The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\sum_{x\in \R}(x-\mu_x)^2P(X=x) \\ \int_{x\in \R}(x-\mu_x)^2f(x) \end{cases}$ where $\mu_x = \mathbb{E}[X]$
 
 -   $Var[X] \ge 0$
@@ -30,6 +28,8 @@ The population Variance is $Var(X) = \mathbb{E}[(x_i-\mu_x)^2] = \begin{cases}\s
 -   $Var[X] = E[X^2] - (E[X])^2$
 -   $Var[X] \le E[X^2]$
 -   Define standard deviation $SD(X) = \sqrt{Var[X]}$
+
+The sample Variance is $s^2 = \frac{\sum_{i=1}^2(x-\mu)^2}{n-1}$
 
 ## Covariance
 

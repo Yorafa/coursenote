@@ -10,6 +10,16 @@ WLOG: without loss of generality
 
 WOP: well ordering principle
 
+w.p.: with probability
+
+a.s.: almost surely
+
+r.v.: random variables
+
+i.o.: infinitely often
+
+a.e.: almost everywhere
+
 ## Informal
 
 lol: Laugh Out Loud
