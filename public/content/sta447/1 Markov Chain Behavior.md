@@ -62,6 +62,8 @@ If MC is countable, irreducible and aperiodic, the positive recurrent states is 
 
 Furthermore, If a stationary distribution exists, then the chain is positive recurrent.
 
+### Success-run chain
+
 For a MC with transition probability $p_{x,x+1} = p_x, p_{x,0} = q_{x}$ where $p_{x} + q_{x} = 1$, we call it a **success-run** chain. It can be shown that $X_n$ is:
 
 - Transient if $\lim_{n \to \infty} \prod_{j = 0}^{n-1} p_{j} > 0$.
