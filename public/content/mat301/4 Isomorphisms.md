@@ -53,22 +53,4 @@ Let $G$ be a group, $a \in G$. The function $\phi_a, s.t., \forall x\in G, \phi_
 
 The set of automorphisms of $G$ is denoted by $Aut(G)$ and the set of inner automorphisms of $G$ is denoted by $Inn(G)$. They are both groups under operation of composition.
 
-For every positive integer $n$, $Aut(G) \cong U(n)$
-
-## Isomorphism Theorems
-
-let $\varphi: G\to \overline{G}$ be a homomorphism
-
-- $Ker(\varphi)\subset G$ is a normal subgroup
-- $\overline{\varphi}: G/Ker(\varphi) \to Im(\varphi), \overline{\varphi}(gKer(\varphi)) = \varphi(g) \in Im(\varphi)$ is a well-defined isomorphism or the **natural homomorphism** or the **quotient map** (**First Isomorphism Theorem**)
-
-(**Second Isomorphism Theorem**): Let $A, B$ be subgroups of $G$, and assume that $A$ is a subgroup of $N(B)$:
-
-- $AB$ is a subgroup of $G$
-- $B$ is normal in $AB$, $A\cap B$ is normal in $A$
-- $AB/B\cong A/A\cap B$
-
-(**Third Isomorphism Theorem**): Let $G$ be a group, and consider two normal subgroups $H, K$ of $G$ such that $H$ is a subgroup of $K$:
-
-- $K/H$ is a normal subgroup of $G/H$
-- $(G/H)/(K/H)\cong G/K$
+For every positive integer $n$, $Aut(Z_n) \cong U(n)$
