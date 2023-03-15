@@ -18,7 +18,7 @@ AR($p$) process is **causal** if the roots of $1 - \phi_1 z - \phi_2 z^2 - \cdot
 
 That is, for AR(1) is a causal process if it is stationary with values that are not depending on the future. In this case, the absolute value of the root of $(1 -\phi z ) = 0$ must lie outside the unit circle. Or we say if $|z|= |1/\phi|> 1$ or equivalently if $|\phi|< 1$
 
-### Causality and Stationarity
+## Causality and Stationarity
 
 $(\Phi_p(B))x_t = w_t$ is **stationary** if it can be represented as a convergent infinite MA from MA($\infty$).
 
@@ -28,7 +28,7 @@ Moreover, $\Psi_{\infty}(B)\Phi_p(B)=1 \implies \psi_j = \phi_1 \psi_{j-1} + \ph
 
 In conclusion, the MA($\infty$) process of the AR($p$) process is $x_t = \sum_{i=0}^{\infty}\psi_i w_{t-i}$.
 
-### Statistics of AR Model
+## Statistics of AR Model
 
 - The mean of AR($p$) process is $E(x_t) = \sum_{i=0}^{\infty}\psi_i E(w_{t-i}) = 0$ (i.e. plugin the MA($\infty$) process of AR($p$) process. why? since $w_t$ is a white noise process with zero mean and constant variance $\sigma^2$)
 - The variance of AR($p$) process is $\gamma(0) = E((\sum_{i=0}^{\infty}\psi_i w_{t-i})^2)$

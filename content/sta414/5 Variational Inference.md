@@ -27,7 +27,7 @@ Some properties of KL divergence:
 - $KL(q||p)\neq KL(p||q)$
 - KL divergence is not symmetric so that it is not a metric
 
-## Information Projection
+### Information Projection
 
 I-projection: $q^* = \arg \min_{q\in Q} KL(q||p) = \mathbb{E}_{x\sim q} \log \frac{q(x)}{p(x)}$. It follows:
 
@@ -35,13 +35,25 @@ I-projection: $q^* = \arg \min_{q\in Q} KL(q||p) = \mathbb{E}_{x\sim q} \log \fr
 - I-projection underestimates support, and does not yield the correct moments.
 - $KL(q||p)$ penalizes $q$ having mass where $p$ has none.
 
-## Moment Projection
+### Moment Projection
 
 M-projection: $q^* = \arg \min_{q\in Q} KL(q||p) = \mathbb{E}_{x\sim q} \log \frac{p(x)}{q(x)}$. It follows:
 
 - $p\approx q \implies KL(p||q) \approx 0$
 - $KL(p||q)$ penalizes $q$ having mass where $p$ has none.
 - M-projection yields a distribution $q(x)$ with the correct mean and covariance.
+
+## ELBO: Evidence Lower Bound
+
+Sometimes evaluating the KL divergence is intractable due to the integral over $z$ and the term $p(z|x)$ is intractable to normalize. That is, we would like maximize the ELBO (which is the same as minimizing the KL divergence).
+
+$KL(q(z)||p(z|x)) = \mathbb{E}_{z\sim q} \log \frac{q(z)}{p(z|x)} = \mathbb{E}_{z\sim q} [\log (\frac{q(z) p(x)}{p(z|x)})] = \mathbb{E}_{z\sim q} \log [\frac{q(z)}{p(z|x)}] + \mathbb{E}_{z\sim q} \log p(x)$
+
+We denote **ELBO**  $\mathcal{L}(\phi) = \mathbb{E}_{z\sim q} \log [\frac{p(z|x)}{q(z)}]$, that is, $KL(q(z)||p(z|x)) = -\mathcal{L}(\phi) + \log p(x)$.
+
+Since $KL(q(z)||p(z|x)) \geq 0$, then $\mathcal{L}(\phi) \leq \log p(x)$. 
+
+Since it's a min/max problem, we would like to use SGD/GD to solve it. If $z$ satisfies some distribution, then we can use sampling method to solve the optimization problem.
 
 ## Interpretaion
 
@@ -67,7 +79,7 @@ $q^* = \arg \min_{q\in Q} KL(q||p) = \mathbb{E}_{x\sim q} \log \frac{q(x)}{p(x|\
 
 Ideally, if $p\in Q$, then $q^* = p$. But not always happens so we use **mean-field** approach.
 
-## Mean-Field
+### Mean-Field Approach
 
 We firstly assume $q(x) = \prod_{i\in V} q_i(x_i)$, the set $Q$ is composed of those distributions that factor out.
 
@@ -88,4 +100,5 @@ But it's still not easy to solve. We can use **coordinate ascent** to solve it.
    1. Greedy maximize the objective over $q_i(x_i)$ (i.e.) $q_i(x_i)\propto \exp \{\sum_{j\in N(i)}\sum_{x_j}q_j(x_j)\phi_{ij}(x_i,x_j)\}$ where we can use Lagrangian by setting derivative to zero to solve
    2. Repeat until convergence
 
-This is guaranteed to converge but can converge to local optima.
+This is guaranteed to converge but can only converge to local optima.
+
