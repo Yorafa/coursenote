@@ -1,5 +1,7 @@
 # Mixture of Gaussians (or Gaussian Mixture Model (GMM))
 
+We use GMM when the situation that Gaussian latent variable model $p(x) = \sum_z p(x, z)$ used for clustering.
+
 A K multivariate Gaussian mixture densities has the form: $p(x) = \sum_{k = 1}^K \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)$ where $\sum_{k = 1}^K\pi_k = 1, \forall k, \pi_k \ge 0$ is called mixing coefficients.
 
 Consider a latent variable $z \in \{1, \dots, K\}$, then $p(z = k) = \pi_k$ and $p(x|z = k) = \mathcal{N}(x|\mu_k, \Sigma_k)$ with joint density $p(x, z = k) = p(z = k)p(x|z = k) = \pi_k \mathcal{N}(x|\mu_k, \Sigma_k)$.
