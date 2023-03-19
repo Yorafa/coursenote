@@ -1,10 +1,11 @@
 # Sylow Theorems
 
+Def: Let $a,b\in G$, we say $a$ and $b$ are **conjugate** in $G$ if $xax^{-1}=b$ for some $x\in G$.
 
-Let $G$ be a finite group. By $\text{Conj}(x)$ let us denote the **conjugacy class** of $x$. Equivalently, it is the orbit of $x$  w.r.t the conjugation. Let us denote the **centralizer** of $x\in G$ by $Z(x)$: $Z(x) = \{g\in G: gx=xg\}$
+Let us denote the **conjugacy class** of $a$ as $\text{cl}(a) = \{xax^{-1} | x\in G\}$ and $|G| < \infty$
 
-1.   $\forall g\in G, |\text{Conj}(g)| = \frac{|G|}{|Z(g)|}|$
-2.   Let us denote $\text{Conj}(g)$ the set of conjugacy classes of $G$, then $|G| = Z(G) + |\text{Conj}(g_1)| + \cdots + \text{Conj}(g_k)$ where $\text{Conj}(g_i), 1 \le i\le k$ are non-intersecting conjugacy classes with $\text{span} (G\backslash Z(G))$
+1.   $\forall g\in G, |\text{cl}(g)| = |G:C(g)| = \frac{|G|}{|C(g)|}|$ (that is, $|cl(g)|||G|$)
+2.   $|G| = \sum_{g\in G} |cl(g)| = \sum_{g\in G} |G:C(g)|$ (that is, $|G|$ is the sum of the sizes of all conjugacy classes)
 
 Let $G$ be a finite group, then $|G| = p^n q$ for some $n>0$, prime $p$ with $\text{gcd}(p^n,q)=1$, then a subgroup of order $p^k$ for $k\le n$ is called a $p-$subgroup. A **maximal** $p-$subgroup is a $p-$subgroup of order $p^n$ (also be called Sylow p-subgroups)
 
