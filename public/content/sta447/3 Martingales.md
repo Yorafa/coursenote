@@ -14,7 +14,7 @@ Let $X_n$ be a martingale,
 
 Double-Expectation Formula: $E[X_n] = E[X_n|X_0, \ldots,X_{n-1}] = E[X_{n-1}]$. By Double-Expectation Formula, we have $E[X_n] = E[X_0] \forall n$. But $E[X_n] = E[X_0] \forall n$ is not a sufficient condition for $X_n$ to be a martingale. For example:
 
-Given a simple symmetric random walk with $X_0 = 0$, then we have $E[X_{n+1}|X_0, \ldots, X_n] = X_n$, but let some time $T = \inf\{n: X_n \ne 0\above}$, then $E[X_T] = X_T \times P(X_T \ne 0) \ne 0 = E[X_0]$.
+Given a simple symmetric random walk with $X_0 = 0$, then we have $E[X_{n+1}|X_0, \ldots, X_n] = X_n$, but let some time $T = \inf\{n: X_n \ne 0\}$, then $E[X_T] = X_T \times P(X_T \ne 0) \ne 0 = E[X_0]$.
 
 ## Stopping Time
 
@@ -51,7 +51,7 @@ From above, we can see that $X_n$ depend on the $\mu$. $\mu = 1 \implies E[X_n] 
 
 Let $a_n(k) = P(X_n = 0 | X_0 = k)$ be the probability that the population eventually dies out at time $n$ given that it started with $k$ individuals. We denote $a(k) = \lim_{n\to\infty} a_n(k)$. Since the population dies out if for all k branches die out, we have $a(k) = [a(1)]^k$. We denote $a(1) = a$ called the **extinction probability**.
 
-Since $a = P(population dies out|X_0 = 1) = \sum_{k=0}^{\infty} P(X_1 = k|X_0 = 1) P(population dies out|X_1 = k)$, continued that, then we eventually have $\sum_{k=0}^{\infty} p_k a(k) = \sum_{k=0}^{\infty} p_k a^k$. To solve this $a$, we would like to use pgf where $a = \phi(a)$. 
+Since $a = P(\text{population dies out}|X_0 = 1) = \sum_{k=0}^{\infty} P(X_1 = k|X_0 = 1) P(\text{population dies out}|X_1 = k)$, continued that, then we eventually have $\sum_{k=0}^{\infty} p_k a(k) = \sum_{k=0}^{\infty} p_k a^k$. To solve this $a$, we would like to use pgf where $a = \phi(a)$. 
 
 Further detailed, we denote $\phi_n(a)$ be the pgf of $X_n$, we can show that $\phi_n(a) = \phi(\phi_{n - 1}(a))$. That is, $a_n(1) = \phi_n(0)$, $a$ is the smallest positive root of the equation of $a = \phi(a)$ ($a=1$ must satisfy this equation). The pgf here is increasing. Thus, we can conclude the following theorem:
 

@@ -2,12 +2,6 @@
 
 Let $(G, *), (H, \circ)$ be two groups. Let $(g_1,h_1)\star (g_2,h_2) = (g_1*g_2, h_1\circ h_2)$, then $(G\times H, \star)$ is a group. $G\times H$ called **direct product of $G$ and $H$**. 
 
-- The order of this direct product is $|G_1 \oplus \cdots \oplus G_n| = |G_1|\cdots |G_n|$
-- $|G_1 \times G_2 \times \cdots \times G_n|$ is infinite $\iff$ $|G_i| = \infty$ for some $i$
-- $|G_1 \times G_2 \times \cdots \times G_n|$ is abelian $\iff$ $|G_i| = \infty$ for all $i$
-- $H_1 \le G_1, H_2 \le G_2 \implies H_1 \times H_2 \le G_1 \times G_2$
-- $G\times H \cong H\times G$
-
 ## Theorem
 
 The direct product of any cyclic groups is cyclic $\iff$ the order of their groups are coprime, in other words, $G,H$ are cyclic groups $\implies G\oplus H$ is cyclic if and only if $1 = \gcd(|G|,|H|)$
@@ -18,12 +12,6 @@ Followed **Corollary**:
 - $m = n_1\cdots n_k$, $\Z_m \cong \Z_{n_1} \oplus \cdots \oplus \Z_{n_k}$ $\iff$ $n_i$ are pairwise coprime
 - $m = n_1\cdots n_k$, $U(m) \cong U(n_1) \oplus \cdots \oplus U(n_k)$ $\iff$ $n_i$ are pairwise coprime
   - $U_k(m) \cong U_k(n_1) \oplus \cdots \oplus U_k(n_k)$ $\iff$ $n_i$ are pairwise coprime
-
-## Fundamental Theorem of Finite Abelian Groups
-
-Every finite generated abelian group $G$ is isomorphic to a direct product of cyclic groups. i.e. $G\cong \Z_{p_1^{n_1}} \times \cdots \times \Z_{p_k^{n_k}}\times \Z^b$ where $p_i$ are prime numbers and $n_i$ are positive integers.
-
-- We call $b$ the **Betti number** of $G$. A finite generated abelian group is finite if and only if its Betti number is zero.
 
 ## External direct products
 
@@ -47,6 +35,10 @@ Every group of order $p^2$ where $p$ is a prime number is isomorphic to $\Z_p \o
 It leads the Corollary:
 
 - If $G$ is a group of order $p^2$, where $p$ is a prime number, then $G$ is Abelian.
+
+## Theorem:
+
+$A \oplus B \approx A \oplus C \iff B \approx C$
 
 ## Internal direct products
 
