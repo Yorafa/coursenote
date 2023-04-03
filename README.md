@@ -30,7 +30,7 @@ All note files are summarized by the author or other collaborators based on the 
 
 There is some alternatives ways to take notes in markdown and deploy them to GitHub page.
 
-- [jekyll](https://jekyllrb.com/), it is the way I used before. (basically is to find one theme, fork it and modify it.) May need to learn some ruby.
-- [docusaurus](https://docusaurus.io/), some school mates recommend it to me and I will try it later. Use react to build the page.
-- [MkDocs](https://www.mkdocs.org/), Use python and seems good, I may try it later. Even [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) is a good theme.
+- [jekyll](https://jekyllrb.com/). May need to learn some ruby (generally no).
+- [docusaurus](https://docusaurus.io/). Use react to build the page.
+- [MkDocs](https://www.mkdocs.org/), Use python. [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) is a good theme.
 - [gitbook](https://www.gitbook.com/), no need to learn any new language, but it is not free for some features.
