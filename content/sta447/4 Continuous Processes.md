@@ -124,3 +124,37 @@ Consider an irreducible continuous-time Markov chain with a recurrent jump chain
 
 Consider an irreducible continuous-time Markov chain with a recurrent jump chain, a stationary distribution $\pi$ and transition probabilities $p_{xy}^{(t)}$ (i.e. **ergodic**). Then $\lim_{t\to \infty} p_{xy}^{(t)} = \pi(y), \forall x,y \in S$
 
+## Queuing Theory
+
+Def: A **M/M/1 queue** is a queue $\{Q_t: t\ge 0\}$ with interarrival times i.i.d from Exp$(\lambda)$ and service times i.i.d  from Exp$(\mu)$ with generator matrix $G = \begin{bmatrix} -\lambda & \lambda & 0 & 0 & 0 & \cdots \\ \mu & -(\lambda + \mu) & \lambda & 0 & 0 & \cdots \\ 0 & \mu & -(\lambda + \mu) & \lambda & 0 & \cdots \\ \vdots & \vdots & \vdots & \vdots & \vdots & \ddots \end{bmatrix}$. ($Q_t$ be the number in the queue at time $t$)
+- G/G/1 will assume both interarrival and service times are i.i.d. but not necessarily from Exp$(\lambda)$ and Exp$(\mu)$.
+- M/M/1 is a homogeneous Markov Process.
+
+### Theorem
+
+$\lambda < \mu \implies \pi \sim$ Geometric$(1-\frac{\lambda}{\mu})$ (i.e. $\lim_{k\to \infty} P(Q_t = k) = (\frac{\lambda}{\mu})^k(1 - \frac{\lambda}{\mu})$)
+
+$\lambda > \mu \implies$ no stationary distribution exists. (since the jump chain is the simple random walk)
+
+## Renewal Theory
+
+Def: The process $\{N_t: t \in T\}$ where $N_t = \#\{n:T_n \le t\}$ is the number of renewals up to time $t$ is called a **renewal process**.
+- The maintenance time is $T_n = \sum_{k = 0}^{n} Y_k$ and $T_0 = 0$ ($Y_k$ is i.i.d.)
+- $Y_k$ follows exponential distribution, then this renewal process also is a Poisson process.
+- Only when it's a Poisson process, it's a Markov process.
+
+### Elementary Renewal Theorem
+
+For a renewal process $\{N_t: t \in T\}$ with $E[Y_n] = \mu < \infty, \forall n\ge 2$, then:
+- $\lim_{t\to \infty}\frac{N_t}{t} = \frac{1}{\mu}$
+- $\lim_{t\to \infty}E[\frac{N_t}{t}] = \frac{1}{\mu}$
+
+### Blackwell Renewal Theorem
+
+For a renewal process $\{N_t: t \in T\}$ with $E[Y_2] = \mu < \infty$, $\nexists \lambda > 0$ such that $P(Y_2 = k\lambda \text{ for some }k\in\Z) = 1$, then $\forall h > 0, \lim_{t\to \infty}E[N_{t+h} - N_t] = \frac{h}{\mu}$
+
+In particular, if $h$ is small enough that $P(Y_n < h) = 0$, then $\lim_{t\to \infty}P(\exists n: t < T_n < t + h) = \lim_{t\to \infty}P[N_{t+h} - N_t \ge 1] = \frac{h}{\mu}$
+
+### Theorem
+
+For a renewal process $\{N_t: t \in T\}$ with $E[Y_2] = \mu < \infty$ with rewards(or costs) $R_i$ at renewal $i$ are i.i.d and $R_t =  \sum_{i = 1}^{N_t} R_i$, then $R_t/t \to E[R_1]/\mu$ with probability 1.
