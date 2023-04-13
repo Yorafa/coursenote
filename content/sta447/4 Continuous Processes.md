@@ -27,7 +27,7 @@ Def: $X_t = x_0 + \mu t + \sigma B_t$ where $x_0, \mu, \sigma \ge 0$ are constan
 
 A (homogeneous) Poisson process with intensity $\lambda > 0$ is a collection of $\{N_t: t \ge 0\}$ of non-decreasing integer-valued random variables that satisfies the following properties:
 - $N_0 = 0$
-- $0\le t_1 \le \ldots \le t_n \implies N_{t_1}, N_{t_2} - N_{t_1}, \ldots, N_{t_n} - N_{t_{n-1}}$ are independent and $N_{t_i} - N_{t_{i-1}} \sim Pois(\lambda (t_i - t_{i-1}))$
+- $0\le t_1 \le \ldots \le t_n \implies N_{t_1}, N_{t_2} - N_{t_1}, \ldots, N_{t_n} - N_{t_{n-1}}$ are independent and $N_{t_i} - N_{t_{i-1}} \sim Poisson(\lambda (t_i - t_{i-1}))$
 
 That is, $N_t = N_t - N_0 \sim Poi(\lambda t)$, then $P(N_t = j) = \frac{(\lambda t)^j}{j!} e^{-\lambda t}$, and further we have:
 
@@ -78,7 +78,7 @@ $p_x(t) = \sum_{y\in S} P(X_t = x, X_{t-\Delta t} = y)
 
 to see the rate of change of $p_x(t)$, we have: $\frac{d p_x(t)}{d \Delta t} = -\alpha(x) p_x(t) + \sum_{y\ne x} \alpha(y,x) p_y(t)$.
 
-Since discrete-Space state, then for each transition probability $x\ne y \alpha(x,y)$ and $x = y, -\alpha(x)$ we can use a matrix $G$ to present. That is, $p'(t) = p(t)G$ or $G = \lim_{h\to 0+}\frac{P^{(h) - I}}{h}$. Such $G$ is called **infinitesimal generator** of the Markov chain. And plug in the given $p_x(0)$ or $p(0)$ the vector form, we can obtain the solution $p(t) = p(0) e^{tG}$.
+Since discrete-Space state, then for each transition probability $x\ne y, \alpha(x,y)$ and $x = y, -\alpha(x)$ we can use a matrix $G$ to present. That is, _$p'(t) = p(t)G$ or $G = P'(0) = \lim_{t\to 0}\frac{P^{(t) - I}}{t}$_. Such $G$ is called **infinitesimal generator** of the Markov chain. And plug in the given $p_x(0)$ or $p(0)$ the vector form, we can obtain the solution $p(t) = p(0) e^{tG}$.
 
 Let $X_0 = x$, $T = \inf\{t: X_t \ne x\}$, then $P(T \le \Delta t) = a(x) \Delta t + o(\Delta t)$. Recall interarrival time follows exponential distribution, here, with parameter $a(x)$.
 
@@ -87,7 +87,7 @@ Let $p_{xy}^{(r)} = P(X_t = y| X_0 = x)$, then we have $P^{(t)}$ is the transiti
 Therefore, the transition probability $p_{xy} = \alpha(x,y)/\alpha(x)$, holding-time parameter $\lambda_x = \alpha(x)$, and expected holding time $E[T_x] = 1/\lambda_x$.
 
 ## Convergence
-
+    
 Def: A probability distribution $\pi$ is called a stationary distribution of a continuous-time Markov chian iff the transition probabilities matrix $\pi P^{(t)} = \pi, \forall t \ge 0$.
 - $\pi G = 0$
 
@@ -106,7 +106,7 @@ Notice: continuous-time lead no period property exists.
 
 ### Continuous-time Success-run chain application
 
-Let $\{X_n\}$ be the jump chain, then this chain is positive reucrrent where $S_0 = \sum_{n = 0}^{\tau_0 - 1} T_n$, $n < \tau_0 \implies X_n = n$ (i.e. finite visit time) with stationary distribution(since irreducible).
+Let $\{X_n\}$ be the jump chain, then this chain is positive reucrrent where $S_0 = \sum_{k=1}^{\tau_0 - 1} T_k$, $n < \tau_0 \implies X_n = n$ (i.e. finite visit time) with stationary distribution(since irreducible).
 
 Since $\{X_n\}$ is recurrent, then $\{X_n\}$ is also recurrent but without guarantee of positive recurrence since $t$ is continuous.
 

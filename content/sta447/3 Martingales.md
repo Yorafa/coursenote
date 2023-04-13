@@ -14,7 +14,7 @@ Let $X_n$ be a martingale,
 
 Double-Expectation Formula: $E[X_n] = E[X_n|X_0, \ldots,X_{n-1}] = E[X_{n-1}]$. By Double-Expectation Formula, we have $E[X_n] = E[X_0] \forall n$. But $E[X_n] = E[X_0] \forall n$ is not a sufficient condition for $X_n$ to be a martingale. For example:
 
-Given a simple symmetric random walk with $X_0 = 0$, then we have $E[X_{n+1}|X_0, \ldots, X_n] = X_n$, but let some time $T = \inf\{n: X_n \ne 0\}$, then $E[X_T] = X_T \times P(X_T \ne 0) \ne 0 = E[X_0]$.
+Given a simple symmetric random walk with $X_0 = 0$, then we have $E[X_{n+1}|X_0, \ldots, X_n] = X_n$, but let some time $T = \inf\{n: X_n \ne 0\}$, then $E[X_T] = \sum_{s\in S} I[X_T = s] X_T \times P(X_T = s) \ne 0 = E[X_0]$.
 
 ## Stopping Time
 
