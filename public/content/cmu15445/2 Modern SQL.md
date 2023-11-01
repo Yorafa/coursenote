@@ -15,7 +15,7 @@ Some aggregate functions:
 - `MAX(...)`
 - `GROUP BY`: Project tuples into subsets and calculate aggregates against each subset.
   - Non-aggregated values in `SELECT` output clause must appear in `GROUP BY` clause.
-- `HAVING`: Filters results based on aggregation computation. Like a WHERE clause for a GROUP BY. And can't used as named.
+- `HAVING`: Filters results based on aggregation computation. Like a WHERE clause but used for a GROUP BY.
 
 ## String / Date / Time Operations
 
@@ -52,18 +52,23 @@ Output control:
 
 ## Nested Queries
 
-
 - `IN`: Checks if a value is in a set of values
 - `ALL`: Checks if a value is greater than all values in a set of values
 - `ANY`: Checks if a value is greater than any value in a set of values
 - `EXISTS`: Checks if a subquery returns any rows
 
-## Lateral Joins
+## Joins
 
-- `LATERAL`: Allows a nested query to reference attributes in other nested queries that precede it.
+- `LATERAL JOIN`: Allows a nested query to reference attributes in other nested queries that precede it.
+- `LEFT JOIN`: Returns all rows from the left table, and the matched rows from the right table; NULL values are used for unmatched rows on the right. (similarly for `RIGHT JOIN`)
+- `INNER JOIN`: Returns all rows when there is at least one match in BOTH tables. (the same as `JOIN`)
 
 ## Common Table ExpressionsSELECT name FROM student
 
 - `WITH`: Defines a temporary named result set that can be referenced by a subsequent query
   - `WITH RECURSIVE`: Defines a temporary named result set that can be referenced by a subsequent query, and allows the query to reference itself
 - `AS`: You can bind/alias output columns to names before the AS keyword.
+
+## Other
+
+- `ifnull(expr1, expr2)`: Returns expr1 if it is not NULL, or expr2 otherwise.
