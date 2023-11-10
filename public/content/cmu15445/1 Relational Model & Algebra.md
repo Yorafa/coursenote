@@ -40,6 +40,11 @@ We need **DML**(data manipulation language) to manipulate data in a db. There ar
 - Procedural DML(i.e. the **relational algebra**): query that specifies high-level strategy to find the desired result based on sets/bags
 - Non-procedural DML(i.e. **relational calculus**): query that specifies only what data is wanted and not how to find it.
 
+The language is comprised of different classes of commands:
+1. Data Manipulation Language (DML): SELECT, INSERT, UPDATE, and DELETE statements.
+2. Data Definition Language (DDL): Schema definitions for tables, indexes, views, and other objects.
+3. Data Control Language (DCL): Security, access controls.
+
 ### Relational Algebra Operators
 
 The operators of relational algebra are based on set algebra and each operator takes one or more relations as its input and outputs a new relation. The operators are:

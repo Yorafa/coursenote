@@ -15,7 +15,7 @@ Some aggregate functions:
 - `MAX(...)`
 - `GROUP BY`: Project tuples into subsets and calculate aggregates against each subset.
   - Non-aggregated values in `SELECT` output clause must appear in `GROUP BY` clause.
-- `HAVING`: Filters results based on aggregation computation. Like a WHERE clause but used for a GROUP BY.
+- `HAVING`: Filters results based on aggregation computation. Like a WHERE clause but used for a GROUP BY. (i.e. `HAVING AGGREGATION(...)`)
 
 ## String / Date / Time Operations
 
@@ -39,6 +39,7 @@ Redirection:
   
 Output control:
 - `ORDER BY <> ASC/DESC`: Sorts output by specified column(s)
+- `LIMIT <n>`: Limits output to first n rows
 - `PARTITION BY <>`: Partitions output by specified column(s)
 - `FETCH {FIRST|NEXT} <n> ROWS ONLY`: Limits output to first n rows
 - `OFFSET <n> ROWS`: Skips first n rows of output
