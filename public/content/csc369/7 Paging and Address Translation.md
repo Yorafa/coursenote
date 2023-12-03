@@ -27,7 +27,7 @@ Paging is the solution.
   - no external fragmentation
   - Internal fragmentation is at most a fraction of one page per region
 - Possible page frame sizes are restricted to powers of 2 to simplify address translation
-- Pages can be moved between memory and disk (**demand paging**, method od memory management)
+- Pages can be moved between memory and disk (**demand paging**, method of memory management)
 
 Paging simplies virtualization of memory where:
 - process doesn't need to use a contiguous region of physical memory
@@ -61,8 +61,18 @@ As mentioned, page can be evicted from memory. What happens when a processes a p
 5. reads page into a physical frame, updates PTE to point to it
 6. resume process
 
-
 It's expensive to handling page faults which may require 2 disk accesses so that OS keeps some free pages so that allocations do not always cause evictions.
+
+There are two option of managing swap space:
+1. use raw disk partition:
+   - faster (skip file system) but requires disk reformat to resize
+2. use ordinary large file in file system:
+   - more flexible (can grow if more swap space is needed) but swap file can become fragmented
+
+In conclusion, when should the swap space be allocated/freed?
+- it can be done on process startup/shutdown: ensure every process has enough swap space but may waste space
+- it can be done on pageout/pagein: only allocate swap space when needed but may cause page fault during process startup
+
 
 #### example of address translation
 
@@ -92,6 +102,12 @@ Generally for a 32 bits page table entry, we have: MRVRWX + Page Frame Number (2
 - M(modified): if page has been written, set to 1
 - R(referenced): if page has been read or write, set to 1
 - V(valid): if page is in memory(in use), set to 1
+
+We know page tables are maintained by OS and stored in memory. But where exactly (which address space)? 
+- When store in the physical memory we use direct mapping method (does not use TLB) which means the same address in virtual memory and physical memory.
+  - not exactly the same, still need simple translation (e.g. on 32-bit machine, use virtual address to subtract `0xC0000000` to get physical address)
+  - it simplifies hardware support but consume memory for lifetime of virtual address space
+- when store in the virtual memory: unused (cold) page table pages can be paged out to disk so that addressing page table may requires translation. (We don't page the outer page table to aviod recursive page table)
 
 #### Examples: 
 
@@ -182,3 +198,29 @@ There are two situation uses TLB (i.e. places needed address translation into th
   - CPU ISA(Instruction Set Architecture) has instructions for manipulating TLB (i.e. add, read, invalidate, flush (invalidate all), etc.)
   - OS ensure that TLB and Page Table are consistent (i.e. invalidate the TLB entry when page table entry's protection bits is changed)
   - Reload TLB on a process context switch (i.e. flush TLB), which is expensive
+
+## more about memory allocation
+
+We allocate memory for a process in two ways:
+1. fixed space algorithm: 
+   - each process is given a limit of pages it can use
+   - when it reaches the limit, it replaces from its own pages (local replacement)
+   - processes may do well while others may suffer (unfair)
+2. variable space algorithms:
+   - process' set of pages grows and shrinks dynamically
+   - can use global replacement: one process can ruin it for the rest
+   - or local replacement: replacement and set size are separate
+
+### Sharing
+
+When we introduce about process, we know that private virtual address spaces protect applcation from each other. We also know we can use some system call to share memory between processes. How can we implement it using paging?
+- have PTEs in both tables map to the same physical frame, but its virtual address can differ or not
+  - if different: flexible but pointer inside the shared memory segement are invalid (i.e. pointer uses virtual address)
+  - if same: less flexible but shared pointers are valid.
+- each PTE can have different protection values
+- must update both PTEs when page become invalid
+
+We also use copy-on-write to save memory. The idea is to share pages between parent and child processes until one of them writes to the page. Then the page is copied and the processes are no longer sharing the page.
+- shared pages are marked read-only
+  - Writes generate a protection fault, trap to OS, then copy page, change page mapping in page table, enable write permission, restart write instruction
+- `fork()` system call makes copy of process including virtual address space (no copy-on-write)

@@ -1,4 +1,4 @@
-OS - three piece
+# OS - three piece
 - virtualization - virtual machine
 - concurrency - resource allocator
 - persistence - control program

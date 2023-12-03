@@ -86,3 +86,14 @@ Here multiple blocks of free memory of sufficient size, how do we choose? There 
 - Worst-fit: choose the largest hole (search entire list)
 - Quick-fit: keep multiple free lists for common block sizes
   - great for fast allocation, generally harder to coalesce free blocks
+
+##  Virtual Memory
+
+Each process has its own virtual address space. Virtual address space contains regions with different modes.
+- virtual address space as a view to memory, areas of it might not be mapped to physical memory (not allocated).
+  - Linux doesn't allocate physical memory until the first time it is used, that is no memory allocated when `malloc()`, `mmap()` or `sbrk()` is called.
+- to manage virtual memory better, virtual address space is divided into **virtual memory areas** (VMAs) which are contiguous regions of virtual address space with same properties (e.g. read-only, read-write, shared, etc.)
+  - VMAs give a way to track space that the process expects to use and some policy associated with it.
+  - Initial VMAs are created by the OS when process is created (i.e. `exec()` system call)
+  - Additional VMAs can be created by the process itself (i.e. `mmap()` system call)
+  - page fault handler checks VMAs first to see if the faulting address is valid (we will talk about page fault later)
