@@ -112,10 +112,10 @@ The remain block are used to store files and directories (and other file system 
 - There is also a inode table is an array of inodes which stored in consecutive blocks on disk. such table allocated when file system is created so that maximum files is pre-determined.
 - inode bitmap also used to track which inodes are free
 
-## Step to access a file
+#### Step to access a file
 
 for a file, "/a", we need to:
-1. find root directory inode "/" (known location)
+1. find root directory inode "/" (known location from system headfile or superblock and get from inode table)
 2. read the root directory inode to find the data blocks that hold the directory entries of the root directory
 3. read the first data block for the directory entries
 4. search data blocks until find the directory entry for "a"
@@ -123,3 +123,23 @@ for a file, "/a", we need to:
 6. read the inode for "a"
 7. find the data blocks 
 8. read the data blocks into memory to access the file
+
+### Problems and Solutions
+
+The most common problems for a very simple file system are:
+- long seek time
+- fragmentation
+
+Some solutions are:
+- allocation groups(also known as Cylinder groups) used by FFS
+  - to fix fragmentation (enhance placement), we divide the disk into groups of consecutive blocks called allocation groups
+  - inode for file and file's data blocks in the same allocation group
+  - also the files in the same directory are in the same allocation group
+  - reduce seek time but need additional free space to allocate according to allocation groups (normally 10%)
+  - a large file may break it into large chunks and allocate from different allocation groups
+- master file table (MFT) used by NTFS:
+  - similar feature as the inode table, divide disk into blocks and each block contains a list of entries
+  - each entry is a sequence of variable length pairs (attribute type, attribute value)
+  - long attributes may stored externally, but a pointer used to point it in the entry
+  - large directory use B+ tree to store entries in this kind of file system
+  - reduce seek time but more space

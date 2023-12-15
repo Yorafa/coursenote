@@ -108,6 +108,7 @@ We know page tables are maintained by OS and stored in memory. But where exactly
   - not exactly the same, still need simple translation (e.g. on 32-bit machine, use virtual address to subtract `0xC0000000` to get physical address)
   - it simplifies hardware support but consume memory for lifetime of virtual address space
 - when store in the virtual memory: unused (cold) page table pages can be paged out to disk so that addressing page table may requires translation. (We don't page the outer page table to aviod recursive page table)
+- that's combine both, we have a wire page table in memory, the rest can be physical or virtual memory
 
 #### Examples: 
 
@@ -144,24 +145,36 @@ Segmented paging is a combination of segmentation and paging. It is a way to red
 - still waste on external fragmentation
   - page tables can be arbitrary size and requires contiguity but find free space get complicated
 
-### Two-Level Page Tables
+### Two-Level Page Tables (Multi-Level Page Tables)
 
 By using two-level page tables, the virtual address is changed to: Page Directory Number + Page Table Number + Page Offset (again concat):
 - page directory maps virtural page number to second-level page table and second-level page table maps virtual page number to page frame number
 - Page Directory Base Pointer (PDBR) is a register that points to the page directory
 
+For multi-level page tables, please read clearly the instruction.
+- we can have table -> table -> ... -> table -> pte, but table size and pte size are different
+  - e.g. For a 4-level table, using 9 bits to index each level, 8-byte pointers for the entry at each level, and 12 bytes for the PTE at the bottom, you need 4096 bytes for a table at each level, and 6144 bytes for each table at the bottom level. 
+  - but sometimes, we also may have using 9 bits to index each level, 8-byte pointers for the entry and additional 4-byte for additional info at each level, and 12 bytes for the PTE at the bottom, you need 6144 bytes for a table at each level, and 6144 bytes for each table at the bottom level.
+  - the best case is that, all 8-byte pointers use.
+- normally, 32 bit virtual memory system use 4-byte pte and 4kb page size
+  - 4-byte pte means 32 bits number
+
 #### Example
 
 32 bits virtual address space with 4kb page size, 4 bytes per page table entry, then we have:
 - page offset = 12 bits (same as before, the rest 12 bits of logical address from 4kb = 2^12)
-- page number = Page Directory Number + Page Table Number = 32 - 12 = 20 bits
 - Page Directory Number = 4kb / 4 bytes = 2^10 = 10 bits (why? since 4 bytes per page table entry and we have 4 kb page size, which means 2^10 entries in page table)
-- Page Table Number = 20 - 10 = 10 bits
+- Page Table Number = 20(the remain 20 bits) - 10 = 10 bits
 
-even further, we can Hierarchical page tables, for example for a 48 bits virtual address space with 4kb page size, 8 bytes per page table entry, then we have:
+even further, we can Multi-Level page tables, for example for a 48 bits virtual address space with 4kb page size, 8 bytes per page table entry, then we have:
 - page offset = 12 bits (same as before, the rest 12 bits of logical address from 4kb = 2^12)
 - bits per levels = 4kb / 8 bytes = 2^9 = 9 bits
 - 36/9 = 4 levels
+
+what if we dont have a specific pte size(normally no such situation exist, here for more understanding)? e.g. 32 bits virtual address space with 4kb page size, 5 level, then we have:
+- page offset = 12 bits (same as before, the rest 12 bits of logical address from 4kb = 2^12)
+- table size per level = 20 / 5 = 4 bits
+- pte size = 2^12 / 2^4 = 2^8 = 256 bytes (why? since we want use all page? too big what we use for lolllll)
 
 ### More types of Page Table
 
