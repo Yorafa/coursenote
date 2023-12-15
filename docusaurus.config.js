@@ -94,6 +94,7 @@ const config = {
                     },
                     //   {to: '/blog', label: 'Blog', position: 'left'},
                     { to: 'https://home.yorafa.com', label: 'Nav', position: 'left' },
+                    { to: 'https://yorafa.com', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/Yorafa/coursenote',
                         label: 'GitHub',
