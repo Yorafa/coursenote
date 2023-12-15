@@ -1,6 +1,6 @@
 # Probabilistic Graphical Models
 
-We introduce the concept of **probabilistic graphical models** (PGMs) as a probabilistic model for representing the dconditional dependence structure between random variables. Some of the most common PGMs are [Markov Random Fields](Markov%20Random%20Fields) and [Bayesian Networks](Bayes%20Nets).
+We introduce the concept of **probabilistic graphical models** (PGMs) as a probabilistic model for representing the dconditional dependence structure between random variables. Some of the most common PGMs are [Markov Random Fields](./1%20Markov%20Random%20Fields) and [Bayesian Networks](./0%20Bayes%20Nets.md)
 
 We would like to explore inference of PGMs, let says:
 
