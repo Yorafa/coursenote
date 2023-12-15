@@ -19,8 +19,10 @@ const update = async () => {
             let tempPath = directoryPath + '/' + course;
             await fs.readdir(tempPath, async (err, files) => {
                 if (err) return console.log('Unable to scan directory: ' + err);
-                let contents = files.filter((str) => str.indexOf(pattern) === -1);
+                // select only md files
+                let contents = files.filter((str) => /\.md$/.test(str));
                 contents = contents.filter((str) => str.indexOf(course+'.md') === -1);
+
                 await fs.writeFile(tempPath + '/'+ course + '.json', JSON.stringify(contents), (err) => {
                     if (err) throw err;
                     console.log(course + ' : content updated');
