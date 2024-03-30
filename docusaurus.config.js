@@ -14,7 +14,8 @@ const config = {
     title: 'Yorafa\'s Note',
     tagline: '> - <',
     favicon: 'img/favicon.ico',
-
+    trailingSlash: false,
+    
     // Set the production url of your site here
     url: 'https://note.yorafa.com',
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -93,6 +94,7 @@ const config = {
                     },
                     //   {to: '/blog', label: 'Blog', position: 'left'},
                     { to: 'https://home.yorafa.com', label: 'Nav', position: 'left' },
+                    { to: 'https://yorafa.com', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/Yorafa/coursenote',
                         label: 'GitHub',
