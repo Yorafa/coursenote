@@ -8,11 +8,11 @@ The DBMS assume that the primary storage location of the database is on non-vola
 
 The hierarchy of storage based on following order:
 
-CPU Registers <-> CPU Caches <-> DRAM <-> Persistent Memory <-> SSD <-> HDD <-> Network Storage
+CPU Registers `<->` CPU Caches `<->` DRAM `<->` Persistent Memory `<->` SSD `<->` HDD `<->` Network Storage
 
 The closer to the CPU, the faster, smaller, and more expensive the storage is. The latency of each storage is almost like following scale:
 
-L1 Cache Ref: 1ns <-> L2 Caches Ref: 4ns <-> DRAM: 100ns <-> SSD: 1,6000ns <-> HDD: 200,0000ns <-> Network Storage: ~50,0000,0000ns
+L1 Cache Ref: 1ns `<->` L2 Caches Ref: 4ns `<->` DRAM: 100ns `<->` SSD: 1,6000ns `<->` HDD: 200,0000ns `<->` Network Storage: ~50,0000,0000ns
 
 If we scale them to 1 second, then L1 Cache Ref is 1 second, L2 Cache Ref is 4 seconds, DRAM is 100 seconds, SSD is 4.4 hours, HDD is 3.3weeks, and Network Storage is around 1.5 year.
 
@@ -97,7 +97,7 @@ Every page contains a header of meta-data about the page's contents:
 - Schema Information
 - Data Summary / Sketches
 
-For any page storage architecture, we need to decide how to organize the data inside of the page. There are two main approaches to laying out data in a page:
+For any page storage architecture, we need to decide how to organize the data inside of the page. There are main approaches to laying out data in a page (we assume we are storing tuples in a row-oriented storage model):
 - **Slotted Pages**(Tuple-Oriented Storage): Page maps slots to the tuples' starting position offsets
 - **Log-Structured** Storage: Page is a log of tuples
 - **Index-Organized** Storage: Page looks like slotted page

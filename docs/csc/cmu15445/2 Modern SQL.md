@@ -24,6 +24,8 @@ String operations:
   - `%`: Matches any substring (including empty string)
   - `_`: Matches any single character
 - `SUBSTRING(string, start, length)`: Extracts a substring from a string
+- `EXTRACT(field FROM source)`: Extracts a field from a date/time value
+  - some possible fields: `YEAR`, `MONTH`, `DAY`, `HOUR`, `MINUTE`, `SECOND`, etc.
 - `UPPER(string)`: Converts a string to uppercase
 - `LOWER(string)`: Converts a string to lowercase
 - `||`: Concatenates two strings (SQL standard)

@@ -8,6 +8,9 @@
 - a general-purpose DBMS supports the definition, creation, querying, update, and administration of databases in accordance with the data model.
 - **data model**: a collection of concepts for describing the data in a database.
   - some common data models are relational, key-value, graph, document, etc. This course will focus on relational model.
+  - **NoSQL** data model: Key-Value, Graph, Document/XML/Object, Wide-Column/Column-Family, etc. (named not only SQL, but generally do not use SQL)
+  - Array/Matrix/Vector also can be considered as a data model and widely used for machine learning.
+  - some other data models: hierarchical, network, Multi-value, Object-relational, etc. They are kind of obsolete/legacy/rarely used.
 - **schema**: a description of a particular collection of data, using a given data model.
 
 Why we should have a dbms? Imagine you store your data in flat files (e.g. csv):
