@@ -1,4 +1,4 @@
-# CMU15-445/645 - Fall 2023 Database Systems
+# Database
 
 https://15445.courses.cs.cmu.edu/fall2023/
 

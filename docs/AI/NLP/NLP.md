@@ -1,4 +1,4 @@
-# CSC401 NLP
+# NLP
 
 why you would like to learn this course?
 - NLP involves resolving ambiguity at all levels, and

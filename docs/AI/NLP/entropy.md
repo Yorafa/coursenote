@@ -47,10 +47,10 @@ Some notices:
 
 prove:
 1. Let $s1, s2, ..., sm$ be c's sentences where $\sum_m |sm| = N$
-2. $H_{rate}(X) \approx 1/N H(X1, ..., XN)$  <- (by large N$
-3. $\approx 1/N H(X1m ,,,m XN;Q)$ <- $(Q\approx P)$
-4. $1/N -\log_2 Q(c)$
-5. $1/N \sum_m^M -\log_2 Q(m)$ <- negative log likelihood (NLL)
+2. $H_{rate}(X) \approx 1/N H(X1, ..., XN) \leftarrow$  by large $N$
+3. $\approx 1/N H(X1m ,,,m XN;Q)\leftarrow (Q\approx P)$
+4. $1/N - \log_2 Q(c)$
+5. $1/N \sum_m^M -\log_2 Q(m) \leftarrow$ negative log likelihood (NLL)
 6. with time invariance, ergodicity and $Q=P$, NLL approaches $H_{rate}$ as $N\to \infty$ 
 7. 6 can be proved by markov chain, mento carlo...
 

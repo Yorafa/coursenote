@@ -1,4 +1,4 @@
-# CSC369: Operating Systems
+# Operating Systems
 
 Course Overview:
 
