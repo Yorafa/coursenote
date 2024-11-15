@@ -125,6 +125,10 @@ const config = {
                                 label: 'UTodo',
                                 href: 'https://utodo.yorafa.com/',
                             },
+                            {
+                                label: 'LC-Rating',
+                                href: 'https://huxulm.github.io/lc-rating/',
+                            }
                         ],
                     },
                     {
