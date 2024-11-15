@@ -9,7 +9,7 @@
     - Use `material-ui` to design the page.
 </del>
 
-I like the quote "Building a custom tech stack is expensive" from [docusaurus](docusaurus) so i use it for now.
+Built by [docusaurus](https://docusaurus.io/docs/category/guides). This doc is now used to back up, and might exist lots of chinese content. The exist course content might be rewrite.
 
 ## Contributions Instruction
 
