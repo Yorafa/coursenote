@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[3567],{4121:t=>{t.exports=JSON.parse('{"title":"MAT","slug":"/category/mat","permalink":"/docs/category/mat","navigation":{"previous":{"title":"Optimization","permalink":"/docs/csc/csc413/Optimization"},"next":{"title":"MAT301 Groups and Symmetries","permalink":"/docs/mat/mat301/"}}}')}}]);

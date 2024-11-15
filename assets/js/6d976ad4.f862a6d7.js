@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[6827],{8421:e=>{e.exports=JSON.parse('{"title":"CSC","slug":"/category/csc","permalink":"/docs/category/csc","navigation":{"previous":{"title":"Some Basic Knowledge","permalink":"/docs/basics/"},"next":{"title":"CSC209 Software Tools and Systems Programming","permalink":"/docs/csc/csc209/"}}}')}}]);
