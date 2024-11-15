@@ -1,6 +1,6 @@
 # Martingales
 
-Recall the Martingales we learn in [STA 347](../sta347/5%20Stochastic%20Process). In this section, we will review the definition of a martingale and some of its properties.
+Recall the Martingales we learn in [STA 347](./5%20Stochastic%20Process). In this section, we will review the definition of a martingale and some of its properties.
 
 ## Introduction and Definition
 

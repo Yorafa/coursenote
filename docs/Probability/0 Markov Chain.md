@@ -1,6 +1,6 @@
 # Markov Chain
 
-Most of the markov chain property and defintion is the same as [Markov Chain](../sta347/6%20Markov%20Chain). And those difference list in this page. 
+Most of the markov chain property and defintion is the same as [Markov Chain](./6%20Markov%20Chain). And those difference list in this page. 
 
 When we say MC is infinite, we mean the state space is infinite.
 
@@ -15,7 +15,7 @@ We define a **communication class** as a set of states that can communicate to e
 
 - irreducible MC either has $\lim_{n \to \infty} p_{ji}^{(n)} = 0, \forall i,j \in S$ or $\lim_{n \to \infty} p_{ij}^{(n)} \ne 0, \forall i,j \in S$.
 
-In [sta347](../sta347), we use $N(i)$ to prsent the number steps first time visit state $i$. In sta447, we use $\tau_i$ it. Mathmatically, $\tau_i  = \min\{n \geq 1: X_n = i\}$.
+In sta347, we use $N(i)$ to prsent the number steps first time visit state $i$. In sta447, we use $\tau_i$ it. Mathmatically, $\tau_i  = \min\{n \geq 1: X_n = i\}$.
 
 - $P(\tau_i < \infty) = 1$ then $X$ is **recurrent**.
   - if such $i$ never leave, then $i$ is called **absorbing**.
