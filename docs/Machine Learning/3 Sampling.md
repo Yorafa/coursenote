@@ -58,7 +58,7 @@ Beyond we first talk about MCMC, we should know what is Markov Chain(MC).
 
 ### Markov Chain
 
-See [sta 447 Markov Chain](../sta447/0%20Markov%20Chain) or [sta 347 Markov Chain](../sta347/6%20Markov%20Chain) for more details.
+See [sta 447 Markov Chain](../Probability/0%20Markov%20Chain) or [sta 347 Markov Chain](../Probability/6%20Markov%20Chain) for more details.
 
 Recall the the definition of a MC is reversible if $\pi_i\pi_j = \pi_j\pi_i$ for all $i,j$. We define $\pi_i\pi_j = \pi_j\pi_i$ for all $i,j$ as **Detailed Balance Equation** (DB) in this course.
 
