@@ -22,7 +22,7 @@ Why we should have a dbms? Imagine you store your data in flat files (e.g. csv):
 ## Relational Model
 
 **relational model***: a database abstraction based on relations to avoid maintenance overhead. Key tenets(principles) of the relational model:
-- Stor db in simple data structures(relations)
+- Store db in simple data structures(relations)
 - Physical storage left up to the DBMS implementation
 - Access data through high-lvl languages, let DBMS figures best strategy to execute
 

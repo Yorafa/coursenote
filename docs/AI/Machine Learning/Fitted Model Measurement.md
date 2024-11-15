@@ -10,7 +10,7 @@ Mean squared error(MSE) with equation $\mathbb{E}[(Y - \hat f(X))^2]$  is the wa
 -   the one $\hat f$ we want is the suitable $\argmin\limits_{g}MSE(g)$ through $D_{train}$ where too small sample size will cause overfitting.
 
 
-After we get such $\hat f$, we can use $D_{test}$ to look at test MSE, where $MES_T(\hat f) = \frac{1}{m}\sum_{i = 1}^m(y_{Ti} - \hat f(x_{Ti}))^2$
+After we get such $\hat f$, we can use $D_{test}$ to look at test MSE, where $MSE_T(\hat f) = \frac{1}{m}\sum_{i = 1}^m(y_{Ti} - \hat f(x_{Ti}))^2$
 
 -   If we don't have  such $D_{test}$ we  can use resampling technique which called [cross-validation](./Situation%20without%20the%20Test%20Data%20to%20do%20Model%20Validation)
 -   And the final model is the $\hat f$ which make the smallest test $MSE$, that is, the $\hat f$ make smallest test $MSE$ and $MSE(\hat f) $  is what we want.

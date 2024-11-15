@@ -10,7 +10,6 @@ A **graph** $G= (V, E)$ is a pair of sets $(V, E)$ where  $V$ is a set of vertic
 -   two vertices $u,v$ are **adjacent** if $\{u,v\}\in E$
     -   one is called neighbor of the other
     -   an edge (*u*,*v*) is **incident on** vertices *u* and *v*. In a directed graph, the terminology differentiates between the beginning and ending vertex of an edge. So edge (*u*,*v*) which **leaves** vertex *u* is said to be **incident from** vertex *u* and is **incident to** (or **enters**) vertex *v*
-
 -   A sequence of distinct vertices $(v_1,\ldots, v_n)$ is a **path** from $v_1$ to $v_n$ if for every $i\in \{1,\ldots, n-1\}, v_i$ and $v_{i+1}$ are adjacent. 
     -   The **length** of the path is the number of edges in the path.
     -   A **simple** path contains no repeated edge
@@ -22,6 +21,7 @@ A **graph** $G= (V, E)$ is a pair of sets $(V, E)$ where  $V$ is a set of vertic
 -   **acyclic**: no cycle in graph
 -   **independent set**: $I \subseteq V$ , $\forall v,u\in I, \nexists e\in E, e = \{v,u\}\lor e=\{u,v\} \implies I$ is an independent set 
 -   In an undirected graph, the **degree** of a vertex $\nu$ is the number of edges incident on $\nu$ . In a directed graph, the **in-degree** of vertex $\nu$  is the number of edges incident to $\nu$  (the size of set $\{(x,\nu):x\in E\}$) and the **out-degree** is the number of edges incident from *v* (the size of set $\{(\nu,x):x\in E\}$).
+- A **connected component** is a group of nodes that are connected by edges
 
 **Tree**: a graph are connected and acyclic
 
@@ -66,6 +66,6 @@ Coloring Problem:
 Independent Set Problem:
 
 -   input: a graph, a number $k\in \N$ with $k>1$
--   output: An independent set $I \sube V\in G$ of size $k$
+-   output: An independent set $I \subseteq V\in G$ of size $k$
 
-We also talked more about graph on [csc263](../csc263/Graph)
+We also talked more about graph on [csc263](Algorithm%20&%20Data%20Structure/csc263/Graph.md)

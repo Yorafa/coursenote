@@ -66,7 +66,7 @@ Output control:
 - `LEFT JOIN`: Returns all rows from the left table, and the matched rows from the right table; NULL values are used for unmatched rows on the right. (similarly for `RIGHT JOIN`)
 - `INNER JOIN`: Returns all rows when there is at least one match in BOTH tables. (the same as `JOIN`)
 
-## Common Table ExpressionsSELECT name FROM student
+## Common Table Expressions SELECT name FROM student
 
 - `WITH`: Defines a temporary named result set that can be referenced by a subsequent query
   - `WITH RECURSIVE`: Defines a temporary named result set that can be referenced by a subsequent query, and allows the query to reference itself

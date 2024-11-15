@@ -6,7 +6,7 @@ The adjacvency-list representation of a graph $G = (V,E)$ consists of an array <
 The adjacency-matrix representation of a graph $G = (V,E)$ consists of a matrix $Adj$ such that $Adj[u][v]$ is 1 if $(u,v)\in E$ and 0 otherwise where this such matrix is $|V|\times|V|$.
 - Use space complexity $O(|V|^2)$
 
-We always prefer the adjacency-list representation of a graph because it is more space-efficient than the adjacency-matrix representation and get more rubustness in which we can augment on the node of the linked list so that we can present weight graph.
+We always prefer the adjacency-list representation of a graph because it is more space-efficient than the adjacency-matrix representation and get more robustness in which we can augment on the node of the linked list so that we can present weight graph.
 
 ## Breadth-First Search
 

@@ -1,8 +1,8 @@
 # AVL Tree
 
-A tree is an **AVL Tree** if it is [binary search tree](./Binary%20Search%20Tree) and AVL balanced.
+A tree is an **AVL Tree** if it is [binary search tree](Binary%20Search%20Tree.md) and AVL balanced.
 
--   We first define the balance factor \= #nodes of right subtree -  #nodes of left subtree
+-   We first define the balance factor \= \#height of right subtree -  \#height of left subtree
 -   **AVL balanced** means that each node of this tree satisfied balance factor in range $[-1, 1]$
 -   we also call balance factor in range $[-1, 1]$ as **AVL invariant**
 
@@ -31,7 +31,7 @@ To have AVL Tree, we should modify the implement of BST.
 Code in python given in lec:
 
 ```python
-AVL-INSERT(root, x):
+def AVL-INSERT(root, x):
     if root is NIL:  # found insertion point
         root = TreeNode(x)  # initial height = 0
     elif x.key < root.item.key:
@@ -45,7 +45,7 @@ AVL-INSERT(root, x):
         root.item = x
         return root
 
-AVL-REBALANCE-LEFT(root):  # Precondition: root is not NIL
+def AVL-REBALANCE-LEFT(root):  # Precondition: root is not NIL
     # Recalculate height.
     root.height = 1 + max(root.left.height, root.right.height)
     # Rebalance if necessary.
@@ -56,7 +56,7 @@ AVL-REBALANCE-LEFT(root):  # Precondition: root is not NIL
             root = AVL-ROTATE-LEFT(root)
             return root
 
-AVL-REBALANCE-RIGHT(root):  # Precondition: root is not NIL
+def AVL-REBALANCE-RIGHT(root):  # Precondition: root is not NIL
     # Recalculate height
     root.height = 1 + max(root.left.height, root.right.height)
     # Rebalance if necessary.
@@ -67,7 +67,7 @@ AVL-REBALANCE-RIGHT(root):  # Precondition: root is not NIL
             root = AVL-ROTATE-RIGHT(root)
             return root
         
-AVL-ROTATE-LEFT(parent): # Precond: parent != NIL, parent.right != NIL
+def AVL-ROTATE-LEFT(parent): # Precond: parent != NIL, parent.right != NIL
     # Rearrange references.
     child = parent.right
     parent.right = child.left
@@ -78,7 +78,7 @@ AVL-ROTATE-LEFT(parent): # Precond: parent != NIL, parent.right != NIL
     # Return new parent.
     return child
 
-AVL-ROTATE-RIGHT(parent): # Precond: parent != NIL, parent.left != NIL
+def AVL-ROTATE-RIGHT(parent): # Precond: parent != NIL, parent.left != NIL
     # Rearrange references.
     child = parent.left
     parent.left = child.right
@@ -89,7 +89,7 @@ AVL-ROTATE-RIGHT(parent): # Precond: parent != NIL, parent.left != NIL
     # Return new parent.
     return child
 
-AVL-DELETE(root, x):
+def AVL-DELETE(root, x):
     if root is NIL:
         pass  # nothing to remove
     elif x.key < root.item.key:
@@ -114,7 +114,7 @@ AVL-DELETE(root, x):
                 root.height = 1 + max(root.left.height, root.right.height)
                 return root
 
-AVL-DELETE-MIN(root):
+def AVL-DELETE-MIN(root):
     if root.left is NIL:
         return root.item, root.right
     else:
@@ -122,7 +122,7 @@ AVL-DELETE-MIN(root):
         root = AVL-REBALANCE-LEFT(root)
         return item, root
 
-AVL-DELETE-MAX(root):
+def AVL-DELETE-MAX(root):
     if root.right is NIL:
         return root.item, root.left
     else:
@@ -131,7 +131,7 @@ AVL-DELETE-MAX(root):
         return item, root
 
 
-AVL-SEARCH(root, k):
+def AVL-SEARCH(root, k):
     if root is NIL:  # k not in root's subtree
         pass  # NIL will be returned below
     elif k < root.item.key:

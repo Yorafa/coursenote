@@ -4,7 +4,7 @@ The "IO" standard input and output, and we can easy input/output our data in for
 
 ## Format 
 
-For convenience reason, we want to quick read/write value from `stdout`/``stdin` with variable. We have idea of format. 
+For convenience reason, we want to quick read/write value from `stdout` / `stdin` with variable. We have idea of format. 
 
 For example `printf("%d\n", var);` print `int` type `var`
 -   `"%d"`: define the variable type, if the type of var is different will raise error, but `char` can present `int` by ASCII, vice versa
