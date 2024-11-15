@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Database/3 Database Storage" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.1">
+<title data-rh="true">Database Storage | Yorafa&#x27;s Note</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://note.yorafa.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://note.yorafa.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://note.yorafa.com/docs/Database/3 Database Storage"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Database Storage | Yorafa&#x27;s Note"><meta data-rh="true" name="description" content="The DBMS assume that the primary storage location of the database is on non-volatile disk. And the DBMS&#x27;s components manage the movement of data betweeen non-volatile disk and volatile storage since the system cannot operate on the data directly on disk."><meta data-rh="true" property="og:description" content="The DBMS assume that the primary storage location of the database is on non-volatile disk. And the DBMS&#x27;s components manage the movement of data betweeen non-volatile disk and volatile storage since the system cannot operate on the data directly on disk."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://note.yorafa.com/docs/Database/3 Database Storage"><link data-rh="true" rel="alternate" href="https://note.yorafa.com/docs/Database/3 Database Storage" hreflang="en"><link data-rh="true" rel="alternate" href="https://note.yorafa.com/docs/Database/3 Database Storage" hreflang="x-default"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.9bb80656.css">
+<script src="/assets/js/runtime~main.116c58f9.js" defer="defer"></script>
+<script src="/assets/js/main.5562a3c0.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/favicon.ico" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/favicon.ico" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Yorafa&#x27;s Note</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Notes</a><a href="https://home.yorafa.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Nav</a><a href="https://yorafa.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/Yorafa/coursenote" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/basic">Basic</a><button aria-label="Expand sidebar category &#x27;Basic&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/algorithm">Algorithm</a><button aria-label="Expand sidebar category &#x27;Algorithm&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/deep-learning">Deep Learning</a><button aria-label="Expand sidebar category &#x27;Deep Learning&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/machine-learning">Machine Learning</a><button aria-label="Expand sidebar category &#x27;Machine Learning&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/nlp">NLP</a><button aria-label="Expand sidebar category &#x27;NLP&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/mat">MAT</a><button aria-label="Expand sidebar category &#x27;MAT&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/sta">STA</a><button aria-label="Expand sidebar category &#x27;STA&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/About">About</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Blog Backup/UTLeetcoder">Blog Backup</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/Database">Database</a><button aria-label="Collapse sidebar category &#x27;Database&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Database/1 Relational Model &amp; Algebra">Intro to DBMS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Database/2 Modern SQL">Modern SQL</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/Database/3 Database Storage">Database Storage</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Database/4 Storage Models &amp; Compression">Storage Models &amp; DataS Compression</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Database/SQL RECURSIVE">SQL RECURSIVE</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/DevOps/AWS/Outline">DevOps</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/Leetcode/1063">Leetcode</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/Operating Systems">Operating Systems</a><button aria-label="Expand sidebar category &#x27;Operating Systems&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/Database"><span itemprop="name">Database</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Database Storage</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Database Storage</h1></header>
+<p>The DBMS assume that the primary storage location of the database is on non-volatile disk. And the DBMS&#x27;s components manage the movement of data betweeen non-volatile disk and volatile storage since the system cannot operate on the data directly on disk.</p>
+<ul>
+<li><strong>non-volatile storage</strong>: Sequential Access Block-addressable such as SSD, HDD, Network Storage<!-- -->
+<ul>
+<li>Non-volatile means that the storage does not require continuous power in order to retain the data stored on it</li>
+</ul>
+</li>
+<li><strong>volatile storage</strong>: Random Access Byte-Addressaable such as CPU Registers, CPU Caches, DRAM<!-- -->
+<ul>
+<li>volatile means that if you pull the power from the machine, then the data is lost</li>
+</ul>
+</li>
+</ul>
+<p>The hierarchy of storage based on following order:</p>
+<p>CPU Registers <code>&lt;-&gt;</code> CPU Caches <code>&lt;-&gt;</code> DRAM <code>&lt;-&gt;</code> Persistent Memory <code>&lt;-&gt;</code> SSD <code>&lt;-&gt;</code> HDD <code>&lt;-&gt;</code> Network Storage</p>
+<p>The closer to the CPU, the faster, smaller, and more expensive the storage is. The latency of each storage is almost like following scale:</p>
+<p>L1 Cache Ref: 1ns <code>&lt;-&gt;</code> L2 Caches Ref: 4ns <code>&lt;-&gt;</code> DRAM: 100ns <code>&lt;-&gt;</code> SSD: 1,6000ns <code>&lt;-&gt;</code> HDD: 200,0000ns <code>&lt;-&gt;</code> Network Storage: ~50,0000,0000ns</p>
+<p>If we scale them to 1 second, then L1 Cache Ref is 1 second, L2 Cache Ref is 4 seconds, DRAM is 100 seconds, SSD is 4.4 hours, HDD is 3.3weeks, and Network Storage is around 1.5 year.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="disk-oriented-dbms-overview">Disk-Oriented DBMS Overview<a href="#disk-oriented-dbms-overview" class="hash-link" aria-label="Direct link to Disk-Oriented DBMS Overview" title="Direct link to Disk-Oriented DBMS Overview">​</a></h2>
+<p>DBMS desgin goals:</p>
+<ul>
+<li>random access on non-volatile storage is almost always slower than sequential access.</li>
+<li>DBMS will want to maximize sequential access<!-- -->
+<ul>
+<li>Algorithms try to reduce number of writes to random pages so that data is stored in contiguous blocks.</li>
+<li>allocating multiple pages at same time (called <strong>extent</strong>)</li>
+</ul>
+</li>
+<li>allow the DBMS to manage databases that exceed the amount of memory available</li>
+<li>r/w to disk is expensive, so it must be managed carefully to avoid large stalls and performance degradation</li>
+</ul>
+<p>The database is all on disk, and the data in database files is organized into pages, with the first page being the directory page. To operate on the data, the DBMS needs to bring the data into memory. It does this by having a <strong>buffer pool</strong> that manages the data movement back and forth between disk and memory.</p>
+<p>The DBMS also has an execution engine that will execute queries. The execution engine will ask the buffer pool for a specific page, and the buffer pool will take care of bringing that page into memory and giving the execution engine a pointer to that page in memory. The buffer pool manager will ensure that the page is there while the execution engine operates on that part of memory.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbms-vs-os">DBMS V.S. OS<a href="#dbms-vs-os" class="hash-link" aria-label="Direct link to DBMS V.S. OS" title="Direct link to DBMS V.S. OS">​</a></h2>
+<p>One way to design DBMS is: The DBMS use memory mapping(<code>mmap</code>) to store the contents of a file into the address space of a program. OS is responsible for moving file pages in and out of memory, so the DBMS doesn&#x27;t need to worry about it. It work well for read-only access but not for multiple threads to write whereas the process will be blocked while <code>mmap</code> hits a page fault.</p>
+<p>It does not mean we dont use OS anyway. We may use OS by using:</p>
+<ul>
+<li><code>madvise</code>: tell the OS how you expect to read certain pages</li>
+<li><code>mlock</code>: tell the OS that memory ranges cannot be paged out</li>
+<li><code>msync</code>: tell the OS to flush memory ranges out to disk</li>
+<li>Some full usage DB: monetdb, QuestDB, leveldb; some partial usage DB: SQLite</li>
+</ul>
+<p>to solve following problems:</p>
+<ul>
+<li>Transaction safety: OS can flush dirty pages to disk at any time.</li>
+<li>I/O Stalls: DBMS doesn&#x27;t know which pages are in memory.</li>
+<li>Error Handling: Diffcult to validate pages. Any access can cause a <code>SIGBUS</code> that the DBMS must handle.</li>
+<li>Performance Issues: OS data structure contention. TLB shootdowns</li>
+</ul>
+<p>Using syscalls to get the OS to behave correctly is just as onerous as managing memory yourself.DBMS always wants to control things itself and can do a better job at it since it knows more about the data being accessed and the queries being processed.</p>
+<ul>
+<li>Flushing dirty pages to disk in the correct order</li>
+<li>Specialized prefetching</li>
+<li>Buffer replacement policies</li>
+<li>Thread/process scheduling</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="file-storage">File Storage<a href="#file-storage" class="hash-link" aria-label="Direct link to File Storage" title="Direct link to File Storage">​</a></h2>
+<p>The DBMS stores a database as one or more files on disk typically in a proprietary format.</p>
+<ul>
+<li>OS doesn&#x27;t know anything about the contents of these files</li>
+<li>A DBMS typically does not maintain multiple copies of a page on disk since assume this happens above/below storage manager.</li>
+</ul>
+<p>The <strong>storage manager</strong> is responsible for maintaining a database&#x27;s files. Some do their own scheduling for reads and writes to improve sptial and temporal locality of pages. It organizes the files as a collection of pages:</p>
+<ul>
+<li>tracks data read/written to pages</li>
+<li>tracks the available space</li>
+</ul>
+<p>The page from dabase is similar to the page from OS where they both refer a fixed-size block of data.</p>
+<ul>
+<li>it can contain tuples, meta-data, indexes, log records</li>
+<li>most systems do not mix page types</li>
+<li>some systems require a page to be self-contained</li>
+<li>each page is given a unique identifier</li>
+<li>Hardware Page (usually 4KB)</li>
+<li>OS Page (usually 4KB)</li>
+<li>DBMS Page (usually 512B - 32KB)</li>
+</ul>
+<p>The DBMS maintains special pages that tracks the location of data pages in the database files(i.e. the directory). Must make sure that the directory pages are in sync with the data pages. The directory also records meta-data about available space:</p>
+<ul>
+<li>the number of free slots per page</li>
+<li>list of free/empty pages<!-- -->
+<ul>
+<li>Header page holds pointers to a list of free pages and a list of data pages. However, if the DBMS is looking for a specific page, it has to do a sequential scan on the data page list until it finds the page it is looking for.</li>
+</ul>
+</li>
+</ul>
+<p>Different DBMS manage pages in files on disk in diferent ways.</p>
+<ul>
+<li>Heap File Organization:<!-- -->
+<ul>
+<li>heap file: an uordered collection of pages with tuples that are stored in random order</li>
+<li>Create/Get/Write/Delete Page</li>
+<li>Must also support iterating over all pages</li>
+</ul>
+</li>
+<li>Tree-Structured File Organization</li>
+<li>Sequential/Sorted File Organization</li>
+<li>Hashing File Organization</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="page-layout">Page Layout<a href="#page-layout" class="hash-link" aria-label="Direct link to Page Layout" title="Direct link to Page Layout">​</a></h2>
+<p>Every page contains a header of meta-data about the page&#x27;s contents:</p>
+<ul>
+<li>Page Size</li>
+<li>Checksum</li>
+<li>DBMS Version</li>
+<li>Transaction Visibility</li>
+<li>Compression/Encoding Meta-data</li>
+<li>Schema Information</li>
+<li>Data Summary / Sketches</li>
+</ul>
+<p>For any page storage architecture, we need to decide how to organize the data inside of the page. There are main approaches to laying out data in a page (we assume we are storing tuples in a row-oriented storage model):</p>
+<ul>
+<li><strong>Slotted Pages</strong>(Tuple-Oriented Storage): Page maps slots to the tuples&#x27; starting position offsets</li>
+<li><strong>Log-Structured</strong> Storage: Page is a log of tuples</li>
+<li><strong>Index-Organized</strong> Storage: Page looks like slotted page</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tuple-oriented-storage">Tuple-Oriented Storage<a href="#tuple-oriented-storage" class="hash-link" aria-label="Direct link to Tuple-Oriented Storage" title="Direct link to Tuple-Oriented Storage">​</a></h3>
+<p>Page header keeps track of the number of used slots, the offset of the starting location of the last used slot, and a slot array, which keeps track of the location of the start of each tuple.</p>
+<p>To add a tuple, the slot array will grow from the beginning to the end, and the data of the tuples will grow from end to the beginning. The page is considered full when the slot array and the tuple data meet.</p>
+<p>Each tuple is prefixed with a header that contains meta-data about the tuple:</p>
+<ul>
+<li>Visibility Information (concurrency control)</li>
+<li>Bitmap of Null Values</li>
+</ul>
+<p>Attributes are typically stored in the order that you specify them when you create the table. Most DBMSs do not allow a tuple to exceed the size of a page. And DBMS can physically denormalize related tuples and store them together in the same page (e.g. foreign key).</p>
+<ul>
+<li>potentially reduce the amount of I/O for common workload patterns</li>
+<li>can make updates more expensive</li>
+</ul>
+<p>Unique Identifier:</p>
+<ul>
+<li>Each tuple in the database is assigned a unique identifier.</li>
+<li>Most common: page id + (offset or slot).</li>
+<li>An application cannot rely on these ids to mean anything.</li>
+</ul>
+<p>Insert a new tuple:</p>
+<ul>
+<li>Check page directory to find a page with a free slot.</li>
+<li>Retrieve the page from disk (if not in memory).</li>
+<li>Check slot array to find empty space in page that will fit.</li>
+</ul>
+<p>Update an existing tuple using its record id:</p>
+<ul>
+<li>Check page directory to find location of page.</li>
+<li>Retrieve the page from disk (if not in memory).</li>
+<li>Find offset in page using slot array.</li>
+<li>If new data fits, overwrite existing data. Otherwise, mark existing tuple as deleted and insert new version in a different page.</li>
+</ul>
+<p>Tuple-Oriented Storage has following problems:</p>
+<ul>
+<li>Fragmentation: Pages are not fully utilized (unusable space, empty slots)</li>
+<li>Useless Disk I/O: DBMS must fetch entire page to update one tuple</li>
+<li>Random Disk I/O: Worse case scenario when updating multiple tuples is that each tuple is on a separate page</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="log-structured-storage">Log-Structured Storage<a href="#log-structured-storage" class="hash-link" aria-label="Direct link to Log-Structured Storage" title="Direct link to Log-Structured Storage">​</a></h3>
+<p>Instead of storing tuples in pages, the DBMS maintains a log that records changes to tuples. Each log entry represents a tuple PUT/DELETE operations. The DBMS appends new log entries to an in-memory buffer and then writes out the changes sequentially to disk.</p>
+<ul>
+<li>Each log record must contain the tuple&#x27;s unique identifier.</li>
+<li>Put records contain the tuple&#x27;s contents.</li>
+<li>Deletes marks the tuple as deleted.</li>
+<li>Log append without checking previous log records</li>
+<li>when page gets full, the DBMS writes it out disk and starts filling up next page with records<!-- -->
+<ul>
+<li>all disk writes are sequential as we mentioned and on-disk pages are immutable</li>
+</ul>
+</li>
+<li>The DBMS may also flush partially full pages for transactions.</li>
+</ul>
+<p>To read a tuple with a given id, the DBMS finds the newest log record corresponding to that id (scan log from newest to oldest). Maintain an index that maps a tuple id to the newest log record.</p>
+<ul>
+<li>if log record is in-memory, read it directly</li>
+<li>if log record is on-disk, retrieve it</li>
+</ul>
+<p>DBMS doesn&#x27;t need to maintain all older log entries for a tuple indefinitely, periodically compact pages to reduce wasted space. After a page is compacted, the DBMS does not need to maintain temporal ordering of records within the page since each tuple id is guaranteed to appear at most once in the page.</p>
+<p>DBMS can instead sort the page based on id order to improve efficiency of future look-ups (i.e. Sorted String Table, SSTable). Also embed indexes/filters in the header for reducing search times.</p>
+<p>Log-Structured Storage has following problems:</p>
+<ul>
+<li>Write Amplification: for each logical write, there could be potentially multiple physical writes</li>
+<li>Compaction Expensive: compaction is expensive and must be done periodically</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="index-organized-storage">Index-Organized Storage<a href="#index-organized-storage" class="hash-link" aria-label="Direct link to Index-Organized Storage" title="Direct link to Index-Organized Storage">​</a></h3>
+<p>DBMS stores a table&#x27;s stuples as the value of an index data structure. Tuples are typically sorted in page based on key.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-representation">Data Representation<a href="#data-representation" class="hash-link" aria-label="Direct link to Data Representation" title="Direct link to Data Representation">​</a></h2>
+<p>A tuple is essentially a sequence of bytes (i.e. no tracking of what kinds of values the attributes are). It&#x27;s the job of the DBMS to interpret those bytes into attribute types and values. The DBMS&#x27;s catalogs contain the schema information about tables that the system uses to figure out the tuple&#x27;s layout. A <strong>data representation</strong> scheme is how a DBMS stores the bytes for a value.</p>
+<p>We want all attributes in tuples are word-aligned to enable the CPU acceess it without any unexpected behavior or additional work. Two approaches are usually taken:</p>
+<ul>
+<li><strong>padding</strong>: add empty bits after attributes to ensure that tuple is word aligned.</li>
+<li><strong>reordering</strong>: switch the order of attributes in the physical layout to make sure they are aligned.</li>
+</ul>
+<p>There are five high level datatypes that can be stored in tuples: <strong>integers</strong>, <strong>variable-precision numbers</strong>, <strong>fixed-point precision numbers</strong>, <strong>variable-length values</strong>, and <strong>dates/times</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integers">Integers<a href="#integers" class="hash-link" aria-label="Direct link to Integers" title="Direct link to Integers">​</a></h3>
+<p>Most DBMSs store integers using their native C/C++ types. These values are fixed length.</p>
+<p>Examples: <code>INTEGER</code>, <code>BIGINT</code>, <code>SMALLINT</code>, <code>TINYINT</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="variable-precision-numbers">Variable Precision Numbers<a href="#variable-precision-numbers" class="hash-link" aria-label="Direct link to Variable Precision Numbers" title="Direct link to Variable Precision Numbers">​</a></h3>
+<p>These are inexact, variable-precision numeric types that use the native C/C++ types. These values are also fixed length.</p>
+<p>Operations on variable-precision numbers are faster to compute than arbitrary-precision numbers because the CPU can execute instructions on them directly. However, there may be rounding errors when performing computations due to the fact that some numbers cannot be represented precisely.</p>
+<p>Examples: <code>FLOAT</code>, <code>REAL</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed-point-precision-numbers">Fixed-Point Precision Numbers<a href="#fixed-point-precision-numbers" class="hash-link" aria-label="Direct link to Fixed-Point Precision Numbers" title="Direct link to Fixed-Point Precision Numbers">​</a></h3>
+<p>These are numeric data types with arbitrary precision and scale. They are typically stored in exact, variable length binary representation (almost like a string) with additional meta-data that will tell the system things like the length of the data and where the decimal should be.</p>
+<p>These data types are used when rounding errors are unacceptable, but the DBMS pays a performance penalty to get this accuracy.</p>
+<p>Examples: <code>NUMERIC</code>, <code>DECIMAL</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="variable-length-data">Variable-Length Data<a href="#variable-length-data" class="hash-link" aria-label="Direct link to Variable-Length Data" title="Direct link to Variable-Length Data">​</a></h3>
+<p>These represent data types of arbitrary length. They are typically stored with a header that keeps track of the length of the string to make it easy to jump to the next value. It may also contain a checksum for the data.</p>
+<p>Most DBMSs do not allow a tuple to exceed the size of a single page. This data type do store the data on a special &quot;overflow&quot; page and have the tuple contain a reference to that page. These overflow pages can contain pointers to additional overflow pages until all the data can be stored.</p>
+<p>Some systems will let you store these large values in an external file, and then the tuple will contain a pointer to that file. For example, if the database is storing photo information, the DBMS can store the photos in the external files rather than having them take up large amounts of space in the DBMS. One downside of this is that the DBMS cannot manipulate the contents of this file. Thus, there are no durability or transaction protections.</p>
+<p>Examples: <code>VARCHAR</code>, <code>VARBINARY</code>, <code>TEXT</code>, <code>BLOB</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dates-and-times">Dates and Times<a href="#dates-and-times" class="hash-link" aria-label="Direct link to Dates and Times" title="Direct link to Dates and Times">​</a></h3>
+<p>Representations for date/time vary for different systems. Typically, these are represented as some unit time (micro/milli)seconds since the unix epoch.</p>
+<p>Examples: <code>TIME</code>, <code>DATE</code>, <code>TIMESTAMP</code>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="null-data-types">Null Data Types<a href="#null-data-types" class="hash-link" aria-label="Direct link to Null Data Types" title="Direct link to Null Data Types">​</a></h3>
+<p>There are three common apporaches to represent nulls in a DBMS.</p>
+<ul>
+<li>Null Column Bitmap Header: Store a bitmap in a centralized header that specifies what attributes are null. This is the most common approach.</li>
+<li>Special Values: Designate a value to represent NULL for a data type (e.g., INT32 MIN).</li>
+<li>Per Attribute Null Flag: Store a flag that marks that a value is null. This apporach is not recommended because it is not memory-efficient. For each value, the DBMS has to use more than just a single bit to avoid messing up with word alignment.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="system-catalogs">System Catalogs<a href="#system-catalogs" class="hash-link" aria-label="Direct link to System Catalogs" title="Direct link to System Catalogs">​</a></h2>
+<p>In order for the DBMS to be able to decipher the contents of tuples, it maintains an internal catalog to tell it meta-data about the databases.</p>
+<p>Metadata Contents:</p>
+<ul>
+<li>The tables and columns the database has as well as any indexes on those tables.</li>
+<li>Users of the database and what permissions they have.</li>
+<li>Statistics about the table and what contents are contained within them (i.e., max value of an attribute).</li>
+</ul>
+<p>Most DBMSs store their catalog inside of themselves in the format that they use for their tables. They use special code to &quot;bootstrap&quot; these catalog tables.</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Database/2 Modern SQL"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modern SQL</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Database/4 Storage Models &amp; Compression"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Storage Models &amp; DataS Compression</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#disk-oriented-dbms-overview" class="table-of-contents__link toc-highlight">Disk-Oriented DBMS Overview</a></li><li><a href="#dbms-vs-os" class="table-of-contents__link toc-highlight">DBMS V.S. OS</a></li><li><a href="#file-storage" class="table-of-contents__link toc-highlight">File Storage</a></li><li><a href="#page-layout" class="table-of-contents__link toc-highlight">Page Layout</a><ul><li><a href="#tuple-oriented-storage" class="table-of-contents__link toc-highlight">Tuple-Oriented Storage</a></li><li><a href="#log-structured-storage" class="table-of-contents__link toc-highlight">Log-Structured Storage</a></li><li><a href="#index-organized-storage" class="table-of-contents__link toc-highlight">Index-Organized Storage</a></li></ul></li><li><a href="#data-representation" class="table-of-contents__link toc-highlight">Data Representation</a><ul><li><a href="#integers" class="table-of-contents__link toc-highlight">Integers</a></li><li><a href="#variable-precision-numbers" class="table-of-contents__link toc-highlight">Variable Precision Numbers</a></li><li><a href="#fixed-point-precision-numbers" class="table-of-contents__link toc-highlight">Fixed-Point Precision Numbers</a></li><li><a href="#variable-length-data" class="table-of-contents__link toc-highlight">Variable-Length Data</a></li><li><a href="#dates-and-times" class="table-of-contents__link toc-highlight">Dates and Times</a></li><li><a href="#null-data-types" class="table-of-contents__link toc-highlight">Null Data Types</a></li></ul></li><li><a href="#system-catalogs" class="table-of-contents__link toc-highlight">System Catalogs</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Notes</a></li></ul></div><div class="col footer__col"><div class="footer__title">Yorafa&#x27;s Projects</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://coder.xfttech.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">UTLeetcoder<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://utodo.yorafa.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">UTodo<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://huxulm.github.io/lc-rating/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LC-Rating<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://home.yorafa.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Yorafa&#x27;s Home<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://yorafa.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Yorafa&#x27;s Blog<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/Yorafa" target="_blank" rel="noopener noreferrer" class="footer__link-item">Yorafa&#x27;s Github<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Yorafa. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
